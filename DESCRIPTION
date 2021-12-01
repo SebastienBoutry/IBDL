@@ -22,3 +22,5 @@ Imports:
     tidyr,
     pkgdown,
     tibble
+Depends: 
+    R (>= 2.10)

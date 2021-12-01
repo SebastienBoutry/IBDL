@@ -1,8 +1,8 @@
-#' Title
+#' Harmonisation taxonomique au niveau espèce
 #'
-#' @param data
+#' @param data liste floristique dans le bon format
 #'
-#' @return
+#' @return liste floristique au niveau taxonomique espèce
 #' @export
 #' @import dplyr
 #' @examples

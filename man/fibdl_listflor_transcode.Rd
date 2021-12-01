@@ -2,18 +2,18 @@
 % Please edit documentation in R/fibdl_listflor_transcode.R
 \name{fibdl_listflor_transcode}
 \alias{fibdl_listflor_transcode}
-\title{Title}
+\title{Harmonisation taxonomique au niveau espèce}
 \usage{
 fibdl_listflor_transcode(data)
 }
 \arguments{
-\item{data}{}
+\item{data}{liste floristique dans le bon format}
 }
 \value{
-
+liste floristique au niveau taxonomique espèce
 }
 \description{
-Title
+Harmonisation taxonomique au niveau espèce
 }
 \examples{
 
