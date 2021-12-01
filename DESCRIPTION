@@ -1,0 +1,24 @@
+Package: IBDL
+Title: IBDL : cacule l indice biologique diatomique en lac
+Version: 0.0.0.9000
+Authors@R: 
+    person("Sebastien", "Boutry", , "sebastien.boutry@inrae.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8046-585X"))
+Description: Dans ce package, on trouvera les fonctions necessaires afin de calculer l indice et determiner la classe d etat ecologique du plan d eau.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    base,
+    purrr,
+    dplyr,
+    magrittr,
+    tidyr,
+    pkgdown,
+    tibble
