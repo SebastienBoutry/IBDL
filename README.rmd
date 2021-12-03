@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 
 
-# IBDL <img src='man/figures/logo.png' align="right" height="139" />
+# Indice Biologique Diatomées en Lac (IBDL) <img src='man/figures/logo.png' align="right" height="139" />
 
 <!-- badges: start -->
 [![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
@@ -28,13 +28,12 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 
-## Installation de `{IBDL}`
+# Installation de `{IBDL}`
 
 La version du paquet `{IBDL}` peut se télécharger via le site Github pour cela on aura besoin du paquet `{remotes}`: 
 
 ```{r install, eval=FALSE}
 remotes::install_github("SebastienBoutry/IBDL")
-library(diatomlakefr)
 ```
 
 _NB : Le logiciel RTools est parfois nécessaire sur les machines Windows pour pouvoir installer le package `{remotes}`, puisque l'installation ici se fait depuis un dépôt de développement (Github) et non un dépôt officiel R. Vous pouvez l'installer ici : [Rtools](https://cran.r-project.org/bin/windows/Rtools/)_
@@ -45,6 +44,34 @@ Une fois installé, vous pouvez charger le package avec :
 library(IBDL)
 ```
 
+# Utilisation
+
+Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau -ref-).
+
+_NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans le projet Phytobenthos plan d'eau financé par l'OFB-Pôle ECLA._
+
+## Les besoins 
+
+En utilisant le protocole d'échantillonnage (-ref-), on crée deux fichiers :
+
+- le premier contient les listes floristiques (id_prelevement, taxons, ab),
+- le second renseigne sur les données de contexte liées au site d'étude (id_prelevement, id_uo, nature_substrat, code_gene, date).
+
+Ces deux fichiers seront les données d'entrée pour l'utilisation du package `{IBDL}`. Les autres jeux de données qui sont nécessaires pour le calcul de l'indice, sont intégrés directement dans le package (par exemple la table des taxons d'alertes).
+
+<img src = "man/figures/1_script_IBDL_besoins.png" class="center" height="600"/>
+
+## Les étapes
+
+Dans ce package, on trouvera différentes fonctions selon le déroulé de l'évaluation.
+
+afin définir les valeurs des métriques selon le grain spatial :
+
+- liste de prélèvement,
+- site d'étude ou plutot unité d'observation, 
+- lac.
+
+<img src = "man/figures/2_phases_programmation.png" class="center" height="600"/>
 
 # Contact
 
