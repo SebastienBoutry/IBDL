@@ -117,7 +117,7 @@ table_transcodage %>%
     title = md("Taxons correspondant à l'espèce _Cymbopleura cuspidata_ (CBCU)"),
     subtitle = "(extrait de la table de transcodage)"
   ) %>% 
-  tab_options(column_labels.background.color ="#275662" ) %>% 
+  # tab_options(column_labels.background.color ="#275662" ) %>% 
    tab_source_note(
     source_note = "Table créée à partir du fichier d'Omnidia (Michel Coste)"
   ) 
@@ -140,8 +140,8 @@ Table_taxons_alertes[1:6,] %>%
     title = md("Table des taxons d'alertes"),
     subtitle = "(extrait des 6 premières lignes)"
   ) %>% 
-  tab_options(column_labels.background.color ="#275662",
-              table.align="center") %>% 
+  # tab_options(column_labels.background.color ="#275662",
+  #             table.align="center") %>% 
   tab_source_note(
     source_note = "Sortie de l'analyse Titan"
   ) 
@@ -150,7 +150,7 @@ Table_taxons_alertes[1:6,] %>%
 
 **`table_reference`**
 
-**`table_lacs`** Table possédant les informations sur la classification du lac selon l'alcalinité et nombre théoriques d'unités d'observation à échantillonner sur le plan d'eau [@afnorXP].
+**`table_lacs`** Table regroupant les informations sur la classification des lacs selon l'alcalinité et le nombre théoriques d'unités d'observation à échantillonner sur le plan d'eau selon leur superficie [@afnorXP].
 
 ```{r lacs, echo=FALSE}
 lake_infos[1:6,] %>% 

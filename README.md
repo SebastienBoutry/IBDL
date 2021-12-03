@@ -76,12 +76,12 @@ rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
 correspond à tous les taxons ayant un code taxon (indice) pour valeur
 CBCU (*Cymbopleura cuspidata*).
 
-<div id="rbryowozzr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="vwtlgewigy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#rbryowozzr .gt_table {
+#vwtlgewigy .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -106,7 +106,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-left-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_heading {
+#vwtlgewigy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -118,7 +118,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_title {
+#vwtlgewigy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -128,7 +128,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-width: 0;
 }
 
-#rbryowozzr .gt_subtitle {
+#vwtlgewigy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -138,13 +138,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-width: 0;
 }
 
-#rbryowozzr .gt_bottom_border {
+#vwtlgewigy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_col_headings {
+#vwtlgewigy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -159,9 +159,9 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #275662;
+#vwtlgewigy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -179,9 +179,9 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#rbryowozzr .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #275662;
+#vwtlgewigy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -191,15 +191,15 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 4px;
 }
 
-#rbryowozzr .gt_column_spanner_outer:first-child {
+#vwtlgewigy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rbryowozzr .gt_column_spanner_outer:last-child {
+#vwtlgewigy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rbryowozzr .gt_column_spanner {
+#vwtlgewigy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -211,7 +211,7 @@ CBCU (*Cymbopleura cuspidata*).
   width: 100%;
 }
 
-#rbryowozzr .gt_group_heading {
+#vwtlgewigy .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -233,7 +233,7 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#rbryowozzr .gt_empty_group_heading {
+#vwtlgewigy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -248,15 +248,15 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#rbryowozzr .gt_from_md > :first-child {
+#vwtlgewigy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rbryowozzr .gt_from_md > :last-child {
+#vwtlgewigy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rbryowozzr .gt_row {
+#vwtlgewigy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -275,7 +275,7 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#rbryowozzr .gt_stub {
+#vwtlgewigy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -287,7 +287,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-left: 12px;
 }
 
-#rbryowozzr .gt_summary_row {
+#vwtlgewigy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -297,7 +297,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#rbryowozzr .gt_first_summary_row {
+#vwtlgewigy .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -307,7 +307,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_grand_summary_row {
+#vwtlgewigy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -317,7 +317,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#rbryowozzr .gt_first_grand_summary_row {
+#vwtlgewigy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -327,11 +327,11 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_striped {
+#vwtlgewigy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rbryowozzr .gt_table_body {
+#vwtlgewigy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -340,7 +340,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_footnotes {
+#vwtlgewigy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -354,13 +354,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_footnote {
+#vwtlgewigy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#rbryowozzr .gt_sourcenotes {
+#vwtlgewigy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -374,41 +374,41 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#rbryowozzr .gt_sourcenote {
+#vwtlgewigy .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#rbryowozzr .gt_left {
+#vwtlgewigy .gt_left {
   text-align: left;
 }
 
-#rbryowozzr .gt_center {
+#vwtlgewigy .gt_center {
   text-align: center;
 }
 
-#rbryowozzr .gt_right {
+#vwtlgewigy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rbryowozzr .gt_font_normal {
+#vwtlgewigy .gt_font_normal {
   font-weight: normal;
 }
 
-#rbryowozzr .gt_font_bold {
+#vwtlgewigy .gt_font_bold {
   font-weight: bold;
 }
 
-#rbryowozzr .gt_font_italic {
+#vwtlgewigy .gt_font_italic {
   font-style: italic;
 }
 
-#rbryowozzr .gt_super {
+#vwtlgewigy .gt_super {
   font-size: 65%;
 }
 
-#rbryowozzr .gt_footnote_marks {
+#vwtlgewigy .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -492,12 +492,12 @@ CBCU (*Cymbopleura cuspidata*).
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
 NKJ et Ptot).
 
-<div id="kbxwnvleui" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="wofelwroxn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#kbxwnvleui .gt_table {
+#wofelwroxn .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -522,7 +522,7 @@ NKJ et Ptot).
   border-left-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_heading {
+#wofelwroxn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -534,7 +534,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_title {
+#wofelwroxn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -544,7 +544,7 @@ NKJ et Ptot).
   border-bottom-width: 0;
 }
 
-#kbxwnvleui .gt_subtitle {
+#wofelwroxn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -554,13 +554,13 @@ NKJ et Ptot).
   border-top-width: 0;
 }
 
-#kbxwnvleui .gt_bottom_border {
+#wofelwroxn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_col_headings {
+#wofelwroxn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -575,9 +575,9 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #275662;
+#wofelwroxn .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -595,9 +595,9 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#kbxwnvleui .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #275662;
+#wofelwroxn .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -607,15 +607,15 @@ NKJ et Ptot).
   padding-right: 4px;
 }
 
-#kbxwnvleui .gt_column_spanner_outer:first-child {
+#wofelwroxn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kbxwnvleui .gt_column_spanner_outer:last-child {
+#wofelwroxn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kbxwnvleui .gt_column_spanner {
+#wofelwroxn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -627,7 +627,7 @@ NKJ et Ptot).
   width: 100%;
 }
 
-#kbxwnvleui .gt_group_heading {
+#wofelwroxn .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -649,7 +649,7 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#kbxwnvleui .gt_empty_group_heading {
+#wofelwroxn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -664,15 +664,15 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#kbxwnvleui .gt_from_md > :first-child {
+#wofelwroxn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kbxwnvleui .gt_from_md > :last-child {
+#wofelwroxn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kbxwnvleui .gt_row {
+#wofelwroxn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -691,7 +691,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#kbxwnvleui .gt_stub {
+#wofelwroxn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -703,7 +703,7 @@ NKJ et Ptot).
   padding-left: 12px;
 }
 
-#kbxwnvleui .gt_summary_row {
+#wofelwroxn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -713,7 +713,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#kbxwnvleui .gt_first_summary_row {
+#wofelwroxn .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -723,7 +723,7 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_grand_summary_row {
+#wofelwroxn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -733,7 +733,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#kbxwnvleui .gt_first_grand_summary_row {
+#wofelwroxn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -743,11 +743,11 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_striped {
+#wofelwroxn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kbxwnvleui .gt_table_body {
+#wofelwroxn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -756,7 +756,7 @@ NKJ et Ptot).
   border-bottom-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_footnotes {
+#wofelwroxn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -770,13 +770,13 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_footnote {
+#wofelwroxn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#kbxwnvleui .gt_sourcenotes {
+#wofelwroxn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -790,41 +790,41 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#kbxwnvleui .gt_sourcenote {
+#wofelwroxn .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#kbxwnvleui .gt_left {
+#wofelwroxn .gt_left {
   text-align: left;
 }
 
-#kbxwnvleui .gt_center {
+#wofelwroxn .gt_center {
   text-align: center;
 }
 
-#kbxwnvleui .gt_right {
+#wofelwroxn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kbxwnvleui .gt_font_normal {
+#wofelwroxn .gt_font_normal {
   font-weight: normal;
 }
 
-#kbxwnvleui .gt_font_bold {
+#wofelwroxn .gt_font_bold {
   font-weight: bold;
 }
 
-#kbxwnvleui .gt_font_italic {
+#wofelwroxn .gt_font_italic {
   font-style: italic;
 }
 
-#kbxwnvleui .gt_super {
+#wofelwroxn .gt_super {
   font-size: 65%;
 }
 
-#kbxwnvleui .gt_footnote_marks {
+#wofelwroxn .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -898,16 +898,17 @@ NKJ et Ptot).
 
 **`table_reference`**
 
-**`table_lacs`** Table possédant les informations sur la classification
-du lac selon l’alcalinité et nombre théoriques d’unités d’observation à
-échantillonner sur le plan d’eau (Afnor 2010).
+**`table_lacs`** Table regroupant les informations sur la classification
+des lacs selon l’alcalinité et le nombre théoriques d’unités
+d’observation à échantillonner sur le plan d’eau selon leur superficie
+(Afnor 2010).
 
-<div id="fvokwvfaqh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="trqkqaiuak" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#fvokwvfaqh .gt_table {
+#trqkqaiuak .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -932,7 +933,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-left-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_heading {
+#trqkqaiuak .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -944,7 +945,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-right-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_title {
+#trqkqaiuak .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -954,7 +955,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-bottom-width: 0;
 }
 
-#fvokwvfaqh .gt_subtitle {
+#trqkqaiuak .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -964,13 +965,13 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-top-width: 0;
 }
 
-#fvokwvfaqh .gt_bottom_border {
+#trqkqaiuak .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_col_headings {
+#trqkqaiuak .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -985,7 +986,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-right-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_col_heading {
+#trqkqaiuak .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1005,7 +1006,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   overflow-x: hidden;
 }
 
-#fvokwvfaqh .gt_column_spanner_outer {
+#trqkqaiuak .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1017,15 +1018,15 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   padding-right: 4px;
 }
 
-#fvokwvfaqh .gt_column_spanner_outer:first-child {
+#trqkqaiuak .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fvokwvfaqh .gt_column_spanner_outer:last-child {
+#trqkqaiuak .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fvokwvfaqh .gt_column_spanner {
+#trqkqaiuak .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1037,7 +1038,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   width: 100%;
 }
 
-#fvokwvfaqh .gt_group_heading {
+#trqkqaiuak .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1059,7 +1060,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   vertical-align: middle;
 }
 
-#fvokwvfaqh .gt_empty_group_heading {
+#trqkqaiuak .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1074,15 +1075,15 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   vertical-align: middle;
 }
 
-#fvokwvfaqh .gt_from_md > :first-child {
+#trqkqaiuak .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fvokwvfaqh .gt_from_md > :last-child {
+#trqkqaiuak .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fvokwvfaqh .gt_row {
+#trqkqaiuak .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1101,7 +1102,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   overflow-x: hidden;
 }
 
-#fvokwvfaqh .gt_stub {
+#trqkqaiuak .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1113,7 +1114,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   padding-left: 12px;
 }
 
-#fvokwvfaqh .gt_summary_row {
+#trqkqaiuak .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1123,7 +1124,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   padding-right: 5px;
 }
 
-#fvokwvfaqh .gt_first_summary_row {
+#trqkqaiuak .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1133,7 +1134,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-top-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_grand_summary_row {
+#trqkqaiuak .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1143,7 +1144,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   padding-right: 5px;
 }
 
-#fvokwvfaqh .gt_first_grand_summary_row {
+#trqkqaiuak .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1153,11 +1154,11 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-top-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_striped {
+#trqkqaiuak .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fvokwvfaqh .gt_table_body {
+#trqkqaiuak .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1166,7 +1167,7 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-bottom-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_footnotes {
+#trqkqaiuak .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1180,13 +1181,13 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-right-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_footnote {
+#trqkqaiuak .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#fvokwvfaqh .gt_sourcenotes {
+#trqkqaiuak .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1200,41 +1201,41 @@ du lac selon l’alcalinité et nombre théoriques d’unités d’observation �
   border-right-color: #D3D3D3;
 }
 
-#fvokwvfaqh .gt_sourcenote {
+#trqkqaiuak .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#fvokwvfaqh .gt_left {
+#trqkqaiuak .gt_left {
   text-align: left;
 }
 
-#fvokwvfaqh .gt_center {
+#trqkqaiuak .gt_center {
   text-align: center;
 }
 
-#fvokwvfaqh .gt_right {
+#trqkqaiuak .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fvokwvfaqh .gt_font_normal {
+#trqkqaiuak .gt_font_normal {
   font-weight: normal;
 }
 
-#fvokwvfaqh .gt_font_bold {
+#trqkqaiuak .gt_font_bold {
   font-weight: bold;
 }
 
-#fvokwvfaqh .gt_font_italic {
+#trqkqaiuak .gt_font_italic {
   font-style: italic;
 }
 
-#fvokwvfaqh .gt_super {
+#trqkqaiuak .gt_super {
   font-size: 65%;
 }
 
-#fvokwvfaqh .gt_footnote_marks {
+#trqkqaiuak .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
