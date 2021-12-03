@@ -60,8 +60,8 @@ importe deux fichiers :
 
 ### Données internes embarquées
 
-Les autres jeux de données dit de référence sont intégrés directement
-dans le package.
+Les jeux de données internes embarquées correspondent aux jeux de
+données dit de référence. Ils sont décrits ci-dessous :
 
 **`table_transcodage`** : Table de transcodage permettant de faire
 correspondre le code\_taxon 4 lettres (type OMNIDIA) à son entité
@@ -76,12 +76,12 @@ rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
 correspond à tous les taxons ayant un code taxon (indice) pour valeur
 CBCU (*Cymbopleura cuspidata*).
 
-<div id="sprsntycmt" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="znowcppbjd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#sprsntycmt .gt_table {
+#znowcppbjd .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -106,7 +106,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-left-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_heading {
+#znowcppbjd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -118,7 +118,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_title {
+#znowcppbjd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -128,7 +128,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-width: 0;
 }
 
-#sprsntycmt .gt_subtitle {
+#znowcppbjd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -138,13 +138,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-width: 0;
 }
 
-#sprsntycmt .gt_bottom_border {
+#znowcppbjd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_col_headings {
+#znowcppbjd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -159,9 +159,9 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
+#znowcppbjd .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #275662;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -179,9 +179,9 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#sprsntycmt .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
+#znowcppbjd .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #275662;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -191,15 +191,15 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 4px;
 }
 
-#sprsntycmt .gt_column_spanner_outer:first-child {
+#znowcppbjd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#sprsntycmt .gt_column_spanner_outer:last-child {
+#znowcppbjd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#sprsntycmt .gt_column_spanner {
+#znowcppbjd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -211,7 +211,7 @@ CBCU (*Cymbopleura cuspidata*).
   width: 100%;
 }
 
-#sprsntycmt .gt_group_heading {
+#znowcppbjd .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -233,7 +233,7 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#sprsntycmt .gt_empty_group_heading {
+#znowcppbjd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -248,15 +248,15 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#sprsntycmt .gt_from_md > :first-child {
+#znowcppbjd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#sprsntycmt .gt_from_md > :last-child {
+#znowcppbjd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#sprsntycmt .gt_row {
+#znowcppbjd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -275,7 +275,7 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#sprsntycmt .gt_stub {
+#znowcppbjd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -287,7 +287,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-left: 12px;
 }
 
-#sprsntycmt .gt_summary_row {
+#znowcppbjd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -297,7 +297,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#sprsntycmt .gt_first_summary_row {
+#znowcppbjd .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -307,7 +307,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_grand_summary_row {
+#znowcppbjd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -317,7 +317,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#sprsntycmt .gt_first_grand_summary_row {
+#znowcppbjd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -327,11 +327,11 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_striped {
+#znowcppbjd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#sprsntycmt .gt_table_body {
+#znowcppbjd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -340,7 +340,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_footnotes {
+#znowcppbjd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -354,13 +354,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_footnote {
+#znowcppbjd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#sprsntycmt .gt_sourcenotes {
+#znowcppbjd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -374,41 +374,41 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#sprsntycmt .gt_sourcenote {
+#znowcppbjd .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#sprsntycmt .gt_left {
+#znowcppbjd .gt_left {
   text-align: left;
 }
 
-#sprsntycmt .gt_center {
+#znowcppbjd .gt_center {
   text-align: center;
 }
 
-#sprsntycmt .gt_right {
+#znowcppbjd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#sprsntycmt .gt_font_normal {
+#znowcppbjd .gt_font_normal {
   font-weight: normal;
 }
 
-#sprsntycmt .gt_font_bold {
+#znowcppbjd .gt_font_bold {
   font-weight: bold;
 }
 
-#sprsntycmt .gt_font_italic {
+#znowcppbjd .gt_font_italic {
   font-style: italic;
 }
 
-#sprsntycmt .gt_super {
+#znowcppbjd .gt_super {
   font-size: 65%;
 }
 
-#sprsntycmt .gt_footnote_marks {
+#znowcppbjd .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -492,12 +492,12 @@ CBCU (*Cymbopleura cuspidata*).
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
 NKJ et Ptot).
 
-<div id="strihbnhti" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="hfziiraxay" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#strihbnhti .gt_table {
+#hfziiraxay .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -522,7 +522,7 @@ NKJ et Ptot).
   border-left-color: #D3D3D3;
 }
 
-#strihbnhti .gt_heading {
+#hfziiraxay .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -534,7 +534,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#strihbnhti .gt_title {
+#hfziiraxay .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -544,7 +544,7 @@ NKJ et Ptot).
   border-bottom-width: 0;
 }
 
-#strihbnhti .gt_subtitle {
+#hfziiraxay .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -554,13 +554,13 @@ NKJ et Ptot).
   border-top-width: 0;
 }
 
-#strihbnhti .gt_bottom_border {
+#hfziiraxay .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#strihbnhti .gt_col_headings {
+#hfziiraxay .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -575,9 +575,9 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#strihbnhti .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
+#hfziiraxay .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #275662;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -595,9 +595,9 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#strihbnhti .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
+#hfziiraxay .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #275662;
   font-size: 100%;
   font-weight: normal;
   text-transform: inherit;
@@ -607,15 +607,15 @@ NKJ et Ptot).
   padding-right: 4px;
 }
 
-#strihbnhti .gt_column_spanner_outer:first-child {
+#hfziiraxay .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#strihbnhti .gt_column_spanner_outer:last-child {
+#hfziiraxay .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#strihbnhti .gt_column_spanner {
+#hfziiraxay .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -627,7 +627,7 @@ NKJ et Ptot).
   width: 100%;
 }
 
-#strihbnhti .gt_group_heading {
+#hfziiraxay .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -649,7 +649,7 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#strihbnhti .gt_empty_group_heading {
+#hfziiraxay .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -664,15 +664,15 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#strihbnhti .gt_from_md > :first-child {
+#hfziiraxay .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#strihbnhti .gt_from_md > :last-child {
+#hfziiraxay .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#strihbnhti .gt_row {
+#hfziiraxay .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -691,7 +691,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#strihbnhti .gt_stub {
+#hfziiraxay .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -703,7 +703,7 @@ NKJ et Ptot).
   padding-left: 12px;
 }
 
-#strihbnhti .gt_summary_row {
+#hfziiraxay .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -713,7 +713,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#strihbnhti .gt_first_summary_row {
+#hfziiraxay .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -723,7 +723,7 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#strihbnhti .gt_grand_summary_row {
+#hfziiraxay .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -733,7 +733,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#strihbnhti .gt_first_grand_summary_row {
+#hfziiraxay .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -743,11 +743,11 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#strihbnhti .gt_striped {
+#hfziiraxay .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#strihbnhti .gt_table_body {
+#hfziiraxay .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -756,7 +756,7 @@ NKJ et Ptot).
   border-bottom-color: #D3D3D3;
 }
 
-#strihbnhti .gt_footnotes {
+#hfziiraxay .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -770,13 +770,13 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#strihbnhti .gt_footnote {
+#hfziiraxay .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#strihbnhti .gt_sourcenotes {
+#hfziiraxay .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -790,41 +790,41 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#strihbnhti .gt_sourcenote {
+#hfziiraxay .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#strihbnhti .gt_left {
+#hfziiraxay .gt_left {
   text-align: left;
 }
 
-#strihbnhti .gt_center {
+#hfziiraxay .gt_center {
   text-align: center;
 }
 
-#strihbnhti .gt_right {
+#hfziiraxay .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#strihbnhti .gt_font_normal {
+#hfziiraxay .gt_font_normal {
   font-weight: normal;
 }
 
-#strihbnhti .gt_font_bold {
+#hfziiraxay .gt_font_bold {
   font-weight: bold;
 }
 
-#strihbnhti .gt_font_italic {
+#hfziiraxay .gt_font_italic {
   font-style: italic;
 }
 
-#strihbnhti .gt_super {
+#hfziiraxay .gt_super {
   font-size: 65%;
 }
 
-#strihbnhti .gt_footnote_marks {
+#hfziiraxay .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -879,13 +879,13 @@ NKJ et Ptot).
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">1</td></tr>
+<td class="gt_row gt_right" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">1</td></tr>
     <tr><td class="gt_row gt_left">ACOP</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td></tr>
+<td class="gt_row gt_right" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">1</td>
+<td class="gt_row gt_right" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">1</td>
+<td class="gt_row gt_right" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">1</td>
+<td class="gt_row gt_right" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">1</td></tr>
   </tbody>
   <tfoot class="gt_sourcenotes">
     <tr>
@@ -903,12 +903,20 @@ des lacs selon l’alcalinité et le nombre théoriques d’unités
 d’observation à échantillonner sur le plan d’eau selon leur superficie
 (Afnor 2010).
 
-<div id="ksxeszemcl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+Les classes d’alcalinité correspondent à :
+
+-   &lt;=0.2 LA,
+
+-   0.2&lt; &lt;=1) MA,
+
+-   =1 HA.
+
+<div id="muvsniofxi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ksxeszemcl .gt_table {
+#muvsniofxi .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -933,7 +941,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-left-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_heading {
+#muvsniofxi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -945,7 +953,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-right-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_title {
+#muvsniofxi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -955,7 +963,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-bottom-width: 0;
 }
 
-#ksxeszemcl .gt_subtitle {
+#muvsniofxi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -965,13 +973,13 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-top-width: 0;
 }
 
-#ksxeszemcl .gt_bottom_border {
+#muvsniofxi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_col_headings {
+#muvsniofxi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -986,7 +994,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-right-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_col_heading {
+#muvsniofxi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1006,7 +1014,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   overflow-x: hidden;
 }
 
-#ksxeszemcl .gt_column_spanner_outer {
+#muvsniofxi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1018,15 +1026,15 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   padding-right: 4px;
 }
 
-#ksxeszemcl .gt_column_spanner_outer:first-child {
+#muvsniofxi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ksxeszemcl .gt_column_spanner_outer:last-child {
+#muvsniofxi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ksxeszemcl .gt_column_spanner {
+#muvsniofxi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1038,7 +1046,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   width: 100%;
 }
 
-#ksxeszemcl .gt_group_heading {
+#muvsniofxi .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1060,7 +1068,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   vertical-align: middle;
 }
 
-#ksxeszemcl .gt_empty_group_heading {
+#muvsniofxi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1075,15 +1083,15 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   vertical-align: middle;
 }
 
-#ksxeszemcl .gt_from_md > :first-child {
+#muvsniofxi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ksxeszemcl .gt_from_md > :last-child {
+#muvsniofxi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ksxeszemcl .gt_row {
+#muvsniofxi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1102,7 +1110,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   overflow-x: hidden;
 }
 
-#ksxeszemcl .gt_stub {
+#muvsniofxi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1114,7 +1122,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   padding-left: 12px;
 }
 
-#ksxeszemcl .gt_summary_row {
+#muvsniofxi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1124,7 +1132,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   padding-right: 5px;
 }
 
-#ksxeszemcl .gt_first_summary_row {
+#muvsniofxi .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1134,7 +1142,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-top-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_grand_summary_row {
+#muvsniofxi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1144,7 +1152,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   padding-right: 5px;
 }
 
-#ksxeszemcl .gt_first_grand_summary_row {
+#muvsniofxi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1154,11 +1162,11 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-top-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_striped {
+#muvsniofxi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ksxeszemcl .gt_table_body {
+#muvsniofxi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1167,7 +1175,7 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-bottom-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_footnotes {
+#muvsniofxi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1181,13 +1189,13 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-right-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_footnote {
+#muvsniofxi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ksxeszemcl .gt_sourcenotes {
+#muvsniofxi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1201,41 +1209,41 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
   border-right-color: #D3D3D3;
 }
 
-#ksxeszemcl .gt_sourcenote {
+#muvsniofxi .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ksxeszemcl .gt_left {
+#muvsniofxi .gt_left {
   text-align: left;
 }
 
-#ksxeszemcl .gt_center {
+#muvsniofxi .gt_center {
   text-align: center;
 }
 
-#ksxeszemcl .gt_right {
+#muvsniofxi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ksxeszemcl .gt_font_normal {
+#muvsniofxi .gt_font_normal {
   font-weight: normal;
 }
 
-#ksxeszemcl .gt_font_bold {
+#muvsniofxi .gt_font_bold {
   font-weight: bold;
 }
 
-#ksxeszemcl .gt_font_italic {
+#muvsniofxi .gt_font_italic {
   font-style: italic;
 }
 
-#ksxeszemcl .gt_super {
+#muvsniofxi .gt_super {
   font-size: 65%;
 }
 
-#ksxeszemcl .gt_footnote_marks {
+#muvsniofxi .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1248,8 +1256,8 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_pe</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom_lac</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_gene</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">classi_alc</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">nbr_uo_theo</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Classe d'alcalinité</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Nombre d'UO théoriques</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">

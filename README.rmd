@@ -70,7 +70,7 @@ En utilisant le protocole d'échantillonnage [@Morin2018], on importe deux fichi
 
 ### Données internes embarquées
 
-Les autres jeux de données dit de référence sont intégrés directement dans le package.
+Les jeux de données internes embarquées correspondent aux jeux de données dit de référence. Ils sont décrits ci-dessous :
 
 **`table_transcodage`** : Table de transcodage permettant de faire correspondre le code_taxon 4 lettres  (type OMNIDIA) à son entité taxonomique qui a été considérée pour la construction de l'IBDL. Le choix pour l'indice est d'harmoniser les taxons à un rang taxonomique de l'espèce. On a pris en compte la synonymie et l'héritage taxonomique. 
 
@@ -117,7 +117,7 @@ table_transcodage %>%
     title = md("Taxons correspondant à l'espèce _Cymbopleura cuspidata_ (CBCU)"),
     subtitle = "(extrait de la table de transcodage)"
   ) %>% 
-  # tab_options(column_labels.background.color ="#275662" ) %>% 
+  tab_options(column_labels.background.color ="#275662" ) %>%
    tab_source_note(
     source_note = "Table créée à partir du fichier d'Omnidia (Michel Coste)"
   ) 
@@ -130,6 +130,46 @@ table_transcodage %>%
 Table_taxons_alertes[1:6,] %>% 
   rename("code_taxon"="taxons_indiciels") %>% 
   gt() %>% 
+  tab_style(
+    style = list(
+       cell_fill(color = "#66C1BF"),
+      cell_text(style = "italic",color="#FFFFFF")
+      ),
+    locations = cells_body(
+      columns = DBO5,
+      rows = DBO5==1
+    )
+  ) %>% 
+    tab_style(
+    style = list(
+       cell_fill(color = "#66C1BF"),
+      cell_text(style = "italic",color="#FFFFFF")
+      ),
+    locations = cells_body(
+      columns = MES,
+      rows = MES==1
+    )
+  ) %>% 
+    tab_style(
+    style = list(
+       cell_fill(color = "#66C1BF"),
+      cell_text(style = "italic",color="#FFFFFF")
+      ),
+    locations = cells_body(
+      columns = Ptot,
+      rows = Ptot==1
+    )
+  ) %>% 
+    tab_style(
+    style = list(
+       cell_fill(color = "#66C1BF"),
+      cell_text(style = "italic",color="#FFFFFF")
+      ),
+    locations = cells_body(
+      columns = NKJ,
+      rows = NKJ==1
+    )
+  ) %>% 
   # tab_spanner(
   #   label = "Harmonisation indicielle",
   #   columns = c("nom scientifique (indice)",
@@ -140,8 +180,8 @@ Table_taxons_alertes[1:6,] %>%
     title = md("Table des taxons d'alertes"),
     subtitle = "(extrait des 6 premières lignes)"
   ) %>%
-  # tab_options(column_labels.background.color ="#275662",
-              # table.align="center") %>%
+  tab_options(column_labels.background.color ="#275662",
+              table.align="center") %>%
   tab_source_note(
     source_note = "Sortie de l'analyse Titan"
   ) 
@@ -152,8 +192,17 @@ Table_taxons_alertes[1:6,] %>%
 
 **`table_lacs`** Table regroupant les informations sur la classification des lacs selon l'alcalinité et le nombre théoriques d'unités d'observation à échantillonner sur le plan d'eau selon leur superficie [@afnorXP].
 
+Les classes d'alcalinité correspondent à :
+
+- <=0.2 LA,
+- 0.2< <=1) MA,
+- >=1 HA.
+
+
 ```{r lacs, echo=FALSE}
 lake_infos[1:6,] %>% 
+  rename("Classe d'alcalinité"="classi_alc",
+         "Nombre d'UO théoriques"="nbr_uo_theo") %>% 
   gt()
 ```
 
