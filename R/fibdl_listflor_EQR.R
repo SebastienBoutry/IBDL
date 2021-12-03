@@ -1,5 +1,5 @@
 
-fibdl_listflor_EQR<- function(data){
+fibdl_listflor_EQR<- function(data,infos_campagne){
   ###
   data <- data %>%
     dplyr::left_join(Typo_UO,
@@ -10,7 +10,7 @@ fibdl_listflor_EQR<- function(data){
   table_listflor_EQR <- data %>%
     dplyr::filter(!is.na(classi_alc)) %>%
     tidyr::unite("join",c("metrics","classi_alc","nature_substrat"),sep="_",remove=FALSE) %>%
-    dplyr::left_join(SES_ref_type,by="join") %>%
+    dplyr::left_join(infos_campagne,by="join") %>%
     dplyr::mutate(SES=(value-Mtype)/SDtype) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(SESnor=dplyr::case_when(metrics=="DBO5"~ (SES-(-4.25))/(1.00-(-4.25)),
