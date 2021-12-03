@@ -1,5 +1,6 @@
 
 ---
+bibliography: vignettes/bibliography.bib
 output: 
   github_document:
     df_print: kable
@@ -15,7 +16,12 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-
+```{r packages, message = FALSE, warning=FALSE, echo = FALSE}
+# Chargement des packages
+library(tidyverse)
+library(here)
+library(gt)
+```
 
 
 # Indice Biologique Diatomées en Lac (IBDL) <img src='man/figures/logo.png' align="right" height="139" />
@@ -43,35 +49,130 @@ Une fois installé, vous pouvez charger le package avec :
 ```{r eval = FALSE}
 library(IBDL)
 ```
+# Objectif
 
-# Utilisation
+L'objectif de ce package `{IBDL}` est de fournir les fonctions nécessaires pour calculer l'Indice Biologique Diatomées en Lac.
 
-Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau -ref-).
 
 _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans le projet Phytobenthos plan d'eau financé par l'OFB-Pôle ECLA._
 
+# Utilisation
+
+Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@directive2000water]).
+
 ## Les besoins 
 
-En utilisant le protocole d'échantillonnage (-ref-), on crée deux fichiers :
+En utilisant le protocole d'échantillonnage [@Morin2018], on importe deux fichiers :
 
 - le premier contient les listes floristiques (id_prelevement, taxons, ab),
 - le second renseigne sur les données de contexte liées au site d'étude (id_prelevement, id_uo, nature_substrat, code_gene, date).
 
-Ces deux fichiers seront les données d'entrée pour l'utilisation du package `{IBDL}`. Les autres jeux de données qui sont nécessaires pour le calcul de l'indice, sont intégrés directement dans le package (par exemple la table des taxons d'alertes).
 
-<img src = "man/figures/1_script_IBDL_besoins.png" class="center" height="600"/>
+### Données internes embarquées
+
+Les autres jeux de données dit de référence sont intégrés directement dans le package.
+
+**`table_transcodage`** : Table de transcodage permettant de faire correspondre le code_taxon 4 lettres  (type OMNIDIA) à son entité taxonomique qui a été considérée pour la construction de l'IBDL. Le choix pour l'indice est d'harmoniser les taxons à un rang taxonomique de l'espèce. On a pris en compte la synonymie et l'héritage taxonomique. 
+
+Dans l'extrait ci-dessous, les deux premières colonnes correspondent au code taxon et le nom scientifique associé. Les trois dernières colonnes sont les informations définies lors de la construction de l'indice. Le rang taxonomique à l'espèce a été ciblé. Le tableau ci-dessous correspond à tous les taxons ayant un code taxon (indice) pour valeur CBCU (_Cymbopleura cuspidata_). 
+
+```{r echo = FALSE}
+load("R/sysdata.rda")
+table_transcodage %>% 
+  select(abre,denominations_sans_auteur.x,code_espece_boucle2,denominations_sans_auteur.y,niveau2) %>% 
+   filter(code_espece_boucle2=="CBCU") %>% 
+  rename("code_taxon"="abre",
+         "nom scientifique"="denominations_sans_auteur.x",
+         "nom scientifique (indice)"="denominations_sans_auteur.y",
+         "code_taxon (indice)"="code_espece_boucle2",
+         "rang taxonomique (indice)"="niveau2") %>% 
+  gt() %>% 
+  tab_spanner(
+    label = "Harmonisation indicielle",
+    columns = c("nom scientifique (indice)",
+         "code_taxon (indice)",
+         "rang taxonomique (indice)")
+  ) %>% 
+  tab_style(
+    style = list(
+      cell_fill(color = "#008C56"),
+      cell_text(style = "italic",color="#FFFFFF")
+      ),
+    locations = cells_body(
+      columns = c("nom scientifique (indice)",
+         "code_taxon (indice)",
+         "rang taxonomique (indice)")
+    )
+  ) %>% 
+  tab_style(
+    style = list(
+      # cell_fill(color = "#F9E3D6"),
+      cell_text(style = "italic")
+      ),
+    locations = cells_body(
+      columns = "nom scientifique"
+    )
+  ) %>% 
+  tab_header(
+    title = md("Taxons correspondant à l'espèce _Cymbopleura cuspidata_(CBCU)"),
+    subtitle = "(extrait de la table de transcodage)"
+  ) %>% 
+  tab_options(column_labels.background.color ="#275662" )
+```
+
+**`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
+
+
+```{r taxons alertes, echo=FALSE,fig.align='center'}
+Table_taxons_alertes[1:10,] %>% 
+  rename("code_taxon"="taxons_indiciels") %>% 
+  gt() %>% 
+  # tab_spanner(
+  #   label = "Harmonisation indicielle",
+  #   columns = c("nom scientifique (indice)",
+  #        "code_taxon (indice)",
+  #        "rang taxonomique (indice)")
+  # ) %>% 
+  tab_header(
+    title = md("Table des taxons d'alertes"),
+    subtitle = "(extrait des 10 premières lignes)"
+  ) %>% 
+  tab_options(column_labels.background.color ="#275662",
+              table.align="center")
+```
+
+
+**`table_reference`**
+
+**`table_lacs`**
+
+
+(la table des taxons d'alertes, la table de transcodage, la table de classification des plans d'eau, la table des valeurs de référence).
+
+<div align="center">
+
+<img src = "man/figures/1_script_IBDL_besoins.png" align="center" height="600"/>
+
+</div>
 
 ## Les étapes
 
-Dans ce package, on trouvera différentes fonctions selon le déroulé de l'évaluation.
+On trouvera les fonctions utiles selon le cheminement (-ref-) afin d'évaluer la qualité écologique de la masse d'eau à partir des communautées de diatomées benthiques. 
 
-afin définir les valeurs des métriques selon le grain spatial :
+Certaines fonctions permettent de : 
 
-- liste de prélèvement,
-- site d'étude ou plutot unité d'observation, 
-- lac.
+- harmoniser les données,
+- qualifier/valider les données ou les métriques,
+- calculer les métriques selon un grain spatial (prélèvement, unité d'observation et lac).
 
-<img src = "man/figures/2_phases_programmation.png" class="center" height="600"/>
+Toutes les fonctions seront détaillées dans la vignette du package.
+
+
+<div align="center">
+
+<img src = "man/figures/2_phases_programmation.png" label="steps" align="center" height="600"/>
+
+</div>
 
 # Contact
 
@@ -91,3 +192,5 @@ Quick Link
 
 # Références
 
+ref article
+ref rapport OFB

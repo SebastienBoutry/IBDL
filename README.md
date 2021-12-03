@@ -32,19 +32,25 @@ Une fois installé, vous pouvez charger le package avec :
 library(IBDL)
 ```
 
+# Objectif
+
+L’objectif de ce package `{IBDL}` est de fournir les fonctions
+nécessaires pour calculer l’Indice Biologique Diatomées en Lac.
+
 # Utilisation
 
 Le package `{IBDL}` sert à calculer l’indice biologique diatomées en lac
 afin de donner une valeur et une classe d’état écologique du plan d’eau
-étudié (conforme à la Directive Cadre Européenne sur l’Eau -ref-).
+étudié (conforme à la Directive Cadre Européenne sur l’Eau (Directive
+2000)).
 
 *NB : L’IBDL a été développé par l’équipe ECOVEA (INRAE, unité EABX)
 dans le projet Phytobenthos plan d’eau financé par l’OFB-Pôle ECLA.*
 
 ## Les besoins
 
-En utilisant le protocole d’échantillonnage (-ref-), on crée deux
-fichiers :
+En utilisant le protocole d’échantillonnage (Morin et al. 2018), on
+importe deux fichiers :
 
 -   le premier contient les listes floristiques (id\_prelevement,
     taxons, ab),
@@ -52,25 +58,893 @@ fichiers :
     d’étude (id\_prelevement, id\_uo, nature\_substrat, code\_gene,
     date).
 
-Ces deux fichiers seront les données d’entrée pour l’utilisation du
-package `{IBDL}`. Les autres jeux de données qui sont nécessaires pour
-le calcul de l’indice, sont intégrés directement dans le package (par
-exemple la table des taxons d’alertes).
+### Données internes embarquées
 
-<img src = "man/figures/1_script_IBDL_besoins.png" class="center" height="600"/>
+Les autres jeux de données dit de référence sont intégrés directement
+dans le package.
+
+**`table_transcodage`** : Table de transcodage permettant de faire
+correspondre le code\_taxon 4 lettres (type OMNIDIA) à son entité
+taxonomique qui a été considérée pour la construction de l’IBDL. Le
+choix pour l’indice est d’harmoniser les taxons à un rang taxonomique de
+l’espèce. On a pris en compte la synonymie et l’héritage taxonomique.
+
+Dans l’extrait ci-dessous, les deux premières colonnes correspondent au
+code taxon et le nom scientifique associé. Les trois dernières colonnes
+sont les informations définies lors de la construction de l’indice. Le
+rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
+correspond à tous les taxons ayant un code taxon (indice) pour valeur
+CBCU (*Cymbopleura cuspidata*).
+
+<div id="jokfvuvpmz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#jokfvuvpmz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jokfvuvpmz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jokfvuvpmz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #275662;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jokfvuvpmz .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #275662;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jokfvuvpmz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jokfvuvpmz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jokfvuvpmz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jokfvuvpmz .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jokfvuvpmz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jokfvuvpmz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jokfvuvpmz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jokfvuvpmz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jokfvuvpmz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#jokfvuvpmz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jokfvuvpmz .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jokfvuvpmz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jokfvuvpmz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#jokfvuvpmz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jokfvuvpmz .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#jokfvuvpmz .gt_left {
+  text-align: left;
+}
+
+#jokfvuvpmz .gt_center {
+  text-align: center;
+}
+
+#jokfvuvpmz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jokfvuvpmz .gt_font_normal {
+  font-weight: normal;
+}
+
+#jokfvuvpmz .gt_font_bold {
+  font-weight: bold;
+}
+
+#jokfvuvpmz .gt_font_italic {
+  font-style: italic;
+}
+
+#jokfvuvpmz .gt_super {
+  font-size: 65%;
+}
+
+#jokfvuvpmz .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Taxons correspondant à l'espèce <em>Cymbopleura cuspidata</em>(CBCU)</th>
+    </tr>
+    <tr>
+      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait de la table de transcodage)</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1">code_taxon</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1">nom scientifique</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3">
+        <span class="gt_column_spanner">Harmonisation indicielle</span>
+      </th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom scientifique (indice)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_taxon (indice)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">rang taxonomique (indice)</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">CABK</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbopleura apiculata var. baicalensis</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CBAP</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbopleura apiculata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CBCU</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CCAN</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata var. anglica</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CCBO</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata f. borealis</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CCIP</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata f. impressa</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CCSC</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata var. schulzii</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+    <tr><td class="gt_row gt_left">CCUS</td>
+<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+**`table_taxons_alertes`** Table binaire indiquant si le taxon est
+considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
+NKJ et Ptot).
+
+<div id="ilqrtytezg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ilqrtytezg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ilqrtytezg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ilqrtytezg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #275662;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ilqrtytezg .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #275662;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ilqrtytezg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ilqrtytezg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ilqrtytezg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ilqrtytezg .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ilqrtytezg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ilqrtytezg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ilqrtytezg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ilqrtytezg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ilqrtytezg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#ilqrtytezg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ilqrtytezg .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ilqrtytezg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ilqrtytezg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#ilqrtytezg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ilqrtytezg .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#ilqrtytezg .gt_left {
+  text-align: left;
+}
+
+#ilqrtytezg .gt_center {
+  text-align: center;
+}
+
+#ilqrtytezg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ilqrtytezg .gt_font_normal {
+  font-weight: normal;
+}
+
+#ilqrtytezg .gt_font_bold {
+  font-weight: bold;
+}
+
+#ilqrtytezg .gt_font_italic {
+  font-style: italic;
+}
+
+#ilqrtytezg .gt_super {
+  font-size: 65%;
+}
+
+#ilqrtytezg .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="6" class="gt_heading gt_title gt_font_normal" style>Table des taxons d'alertes</th>
+    </tr>
+    <tr>
+      <th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait des 10 premières lignes)</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_taxon</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">indiciel</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">DBO5</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">MES</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">NKJ</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Ptot</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">AAMB</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ABRT</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ABRY</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ACAF</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ACLI</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td></tr>
+    <tr><td class="gt_row gt_left">ACOP</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td></tr>
+    <tr><td class="gt_row gt_left">ADAM</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ADAS</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ADBA</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_left">ADCA</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">0</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+**`table_reference`**
+
+**`table_lacs`**
+
+(la table des taxons d’alertes, la table de transcodage, la table de
+classification des plans d’eau, la table des valeurs de référence).
+
+<div align="center">
+
+<img src = "man/figures/1_script_IBDL_besoins.png" align="center" height="600"/>
+
+</div>
 
 ## Les étapes
 
-Dans ce package, on trouvera différentes fonctions selon le déroulé de
-l’évaluation.
+On trouvera les fonctions utiles selon le cheminement (-ref-) afin
+d’évaluer la qualité écologique de la masse d’eau à partir des
+communautées de diatomées benthiques.
 
-afin définir les valeurs des métriques selon le grain spatial :
+Certaines fonctions permettent de :
 
--   liste de prélèvement,
--   site d’étude ou plutot unité d’observation,
--   lac.
+-   harmoniser les données,
+-   qualifier/valider les données ou les métriques,
+-   calculer les métriques selon un grain spatial (prélèvement, unité
+    d’observation et lac).
 
-<img src = "man/figures/2_phases_programmation.png" class="center" height="600"/>
+Toutes les fonctions seront détaillées dans la vignette du package.
+
+<div align="center">
+
+<img src = "man/figures/2_phases_programmation.png" label="steps" align="center" height="600"/>
+
+</div>
 
 # Contact
 
@@ -88,3 +962,24 @@ Quick Link
 </div>
 
 # Références
+
+ref article ref rapport OFB
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-directive2000water" class="csl-entry">
+
+Directive, Water Framework. 2000. “Water Framework Directive.” *Journal
+Reference OJL* 327: 1–73.
+
+</div>
+
+<div id="ref-Morin2018" class="csl-entry">
+
+Morin, Soizic, Damien Valade, Juliette Rosebery, and Vincent Bertrin.
+2018. “Echantillonnage Des Communautés de Phytobenthos En Plans d’eau.”
+Technical report. Irstea.
+
+</div>
+
+</div>
