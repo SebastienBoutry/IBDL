@@ -6,7 +6,7 @@ usethis::use_package("purrr")
 usethis::use_package("tidyr")
 usethis::use_pkgdown()
 ## data
-# usethis::use_data(table_transcodage,internal = TRUE, overwrite = TRUE)
+# usethis::use_data(table_transcodage,lake_infos,SES_ref_type,Pourcent_typologie_lacs_macrophytes,Table_taxons_alertes,internal = TRUE, overwrite = TRUE)
 # Run once to configure your package to use pkgdown
 # usethis::use_pkgdown()
 # # Run to build the website

@@ -17,7 +17,8 @@ Harmonisation taxonomique au niveau espèce
 }
 \examples{
 listflor <- tibble::tibble(id_prelevement=1,
-taxons=c("NITZ","ADPA","ABAS","PBTH","PHAO","PSDG","NXDS","GLAT","DSTE","RABB","COCE","ENCM","PSBR","PLTD","ADEU","AUPU"),
+taxons=c("NITZ","ADPA","ABAS","PBTH","PHAO","PSDG","NXDS","GLAT",
+"DSTE","RABB","COCE","ENCM","PSBR","PLTD","ADEU","AUPU"),
 ab=c(202,20,2,26,12,5,6,74,5,2,3,3,15,10,5,20))
 fibdl_listflor_transcode(listflor)
 

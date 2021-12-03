@@ -15,17 +15,43 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
+library(magrittr)
+library(tidyverse)
 library(IBDL)
 ```
 
-# Harmonisation taxonomique de la liste floristique
+# Les fonctions du package IBDL
 
-Niveau retenu espèce
+## Harmonisation taxonomique de la liste floristique
+
+A partir d'une liste floristique diatomique, on harmonise la dénomination de la flore au rang taxonomique de l'espèce.
+
+Nous avons construis une table de transcodage à partir du fichier d'Omnidia (Michel Coste) de Mars 2020.
+On prend en compte :
+
+- l'évolution taxonomique 
+- la synonymie
+- et l'héritage (les rangs taxonmiques inférieurs à l'espèce sont remontés à ce niveau)
+
+*Achnanthes abundans var. elliptica* a pour nom valide *Psammothidium abundans var. ellipticum*
+*Actinocyclus tenellus*(ACTE) a pour nom valide *Actinocyclus octonarius var. tenellus*
+
 
 ```{r fibdl_listflor_transcode}
 listflor <- tibble::tibble(id_prelevement=1,
-                   taxons=c("NITZ","ADPA","ABAS","PBTH","PHAO","PSDG","NXDS","GLAT","DSTE","RABB","COCE","ENCM","PSBR","PLTD","ADEU","AUPU"),
+                   taxons=c("AMID","ADPA","ABAS","PBTH","PHAO","PSDG","NXDS","GLAT","DSTE","RABB","COCE","ENCM","PSBR","PLTD","ADEU","AUPU"),
                    ab=c(202,20,2,26,12,5,6,74,5,2,3,3,15,10,5,20))
+listflor %>% 
+  left_join(IBDL:::table_transcodage,by=c("taxons"="abre")) %>% 
+  rename("nom_origin"="denominations_sans_auteur.x",
+         "rang_taxonomique"="niveau.x") %>% 
+  select(id_prelevement,taxons,nom_origin,rang_taxonomique,ab) %>% 
+  arrange(taxons)            
+
 fibdl_listflor_transcode(listflor)
+```
+
+```{r}
+
 ```
 
