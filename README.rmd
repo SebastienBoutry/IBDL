@@ -136,12 +136,12 @@ Table_taxons_alertes[1:6,] %>%
   #        "code_taxon (indice)",
   #        "rang taxonomique (indice)")
   # ) %>% 
-  # tab_header(
-  #   title = md("Table des taxons d'alertes"),
-  #   subtitle = "(extrait des 6 premières lignes)"
-  # ) %>% 
-  tab_options(column_labels.background.color ="#275662",
-              table.align="center") %>%
+  tab_header(
+    title = md("Table des taxons d'alertes"),
+    subtitle = "(extrait des 6 premières lignes)"
+  ) %>%
+  # tab_options(column_labels.background.color ="#275662",
+              # table.align="center") %>%
   tab_source_note(
     source_note = "Sortie de l'analyse Titan"
   ) 
