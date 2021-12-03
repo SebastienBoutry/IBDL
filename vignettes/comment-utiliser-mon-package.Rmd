@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(magrittr)
 library(tidyverse)
+library(gt)
 library(IBDL)
 ```
 
@@ -46,13 +47,18 @@ listflor <- tibble::tibble(id_prelevement=rep(1,16),
                    ab=c(202,20,2,26,12,5,6,74,5,2,3,3,15,10,5,20))
 listflor %>% 
   left_join(IBDL:::table_transcodage,by=c("taxons"="abre")) %>% 
-  rename("nom_origin"="denominations_sans_auteur.x",
-         "rang_taxonomique"="niveau.x") %>% 
-  select(id_prelevement,taxons,nom_origin,rang_taxonomique,ab) %>% 
-  arrange(taxons)            
+  rename("nom_scientifique"="denominations_sans_auteur.x") %>% 
+  select(id_prelevement,taxons,nom_scientifique,ab) %>% 
+  arrange(taxons)  %>% 
+  gt()
 
-fibdl_listflor_transcode(listflor)
+fibdl_listflor_transcode(listflor) %>% 
+  rename("nom_scientifique (transcode)"="denominations_sans_auteur.y",
+         "rang_taxonomique (transcode)"="niveau2") %>% 
+  gt()
 ```
+
+
 
 ```{r}
 
