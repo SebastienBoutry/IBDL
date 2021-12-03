@@ -33,12 +33,15 @@ On prend en compte :
 - la synonymie
 - et l'héritage (les rangs taxonmiques inférieurs à l'espèce sont remontés à ce niveau)
 
+Selon Omnidia (date) :
+
 *Achnanthes abundans var. elliptica* a pour nom valide *Psammothidium abundans var. ellipticum*
 *Actinocyclus tenellus*(ACTE) a pour nom valide *Actinocyclus octonarius var. tenellus*
 
 
+
 ```{r fibdl_listflor_transcode}
-listflor <- tibble::tibble(id_prelevement=1,
+listflor <- tibble::tibble(id_prelevement=rep(1,16),
                    taxons=c("AMID","ADPA","ABAS","PBTH","PHAO","PSDG","NXDS","GLAT","DSTE","RABB","COCE","ENCM","PSBR","PLTD","ADEU","AUPU"),
                    ab=c(202,20,2,26,12,5,6,74,5,2,3,3,15,10,5,20))
 listflor %>% 
