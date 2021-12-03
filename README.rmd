@@ -95,7 +95,7 @@ table_transcodage %>%
   ) %>% 
   tab_style(
     style = list(
-      cell_fill(color = "#008C56"),
+      cell_fill(color = "#66C1BF"),
       cell_text(style = "italic",color="#FFFFFF")
       ),
     locations = cells_body(
@@ -114,17 +114,20 @@ table_transcodage %>%
     )
   ) %>% 
   tab_header(
-    title = md("Taxons correspondant à l'espèce _Cymbopleura cuspidata_(CBCU)"),
+    title = md("Taxons correspondant à l'espèce _Cymbopleura cuspidata_ (CBCU)"),
     subtitle = "(extrait de la table de transcodage)"
   ) %>% 
-  tab_options(column_labels.background.color ="#275662" )
+  tab_options(column_labels.background.color ="#275662" ) %>% 
+   tab_source_note(
+    source_note = "Table créée à partir du fichier d'Omnidia (Michel Coste)"
+  ) 
 ```
 
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
 
 
-```{r taxons alertes, echo=FALSE,fig.align='center'}
-Table_taxons_alertes[1:10,] %>% 
+```{r taxons alertes, echo=FALSE,fig.align='center',fig.pos="center"}
+Table_taxons_alertes[1:6,] %>% 
   rename("code_taxon"="taxons_indiciels") %>% 
   gt() %>% 
   # tab_spanner(
@@ -135,16 +138,25 @@ Table_taxons_alertes[1:10,] %>%
   # ) %>% 
   tab_header(
     title = md("Table des taxons d'alertes"),
-    subtitle = "(extrait des 10 premières lignes)"
+    subtitle = "(extrait des 6 premières lignes)"
   ) %>% 
   tab_options(column_labels.background.color ="#275662",
-              table.align="center")
+              table.align="center") %>% 
+  tab_source_note(
+    source_note = "Sortie de l'analyse Titan"
+  ) 
 ```
 
 
 **`table_reference`**
 
-**`table_lacs`**
+**`table_lacs`** Table possédant les informations sur la classification du lac selon l'alcalinité et nombre théoriques d'unités d'observation à échantillonner sur le plan d'eau [@afnorXP].
+
+```{r lacs, echo=FALSE}
+lake_infos[1:6,] %>% 
+  gt()
+```
+
 
 
 (la table des taxons d'alertes, la table de transcodage, la table de classification des plans d'eau, la table des valeurs de référence).

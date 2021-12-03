@@ -37,15 +37,15 @@ library(IBDL)
 L’objectif de ce package `{IBDL}` est de fournir les fonctions
 nécessaires pour calculer l’Indice Biologique Diatomées en Lac.
 
+*NB : L’IBDL a été développé par l’équipe ECOVEA (INRAE, unité EABX)
+dans le projet Phytobenthos plan d’eau financé par l’OFB-Pôle ECLA.*
+
 # Utilisation
 
 Le package `{IBDL}` sert à calculer l’indice biologique diatomées en lac
 afin de donner une valeur et une classe d’état écologique du plan d’eau
 étudié (conforme à la Directive Cadre Européenne sur l’Eau (Directive
 2000)).
-
-*NB : L’IBDL a été développé par l’équipe ECOVEA (INRAE, unité EABX)
-dans le projet Phytobenthos plan d’eau financé par l’OFB-Pôle ECLA.*
 
 ## Les besoins
 
@@ -76,12 +76,12 @@ rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
 correspond à tous les taxons ayant un code taxon (indice) pour valeur
 CBCU (*Cymbopleura cuspidata*).
 
-<div id="jokfvuvpmz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="rbryowozzr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#jokfvuvpmz .gt_table {
+#rbryowozzr .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -106,7 +106,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-left-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_heading {
+#rbryowozzr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -118,7 +118,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_title {
+#rbryowozzr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -128,7 +128,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-width: 0;
 }
 
-#jokfvuvpmz .gt_subtitle {
+#rbryowozzr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -138,13 +138,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-width: 0;
 }
 
-#jokfvuvpmz .gt_bottom_border {
+#rbryowozzr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_col_headings {
+#rbryowozzr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -159,7 +159,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_col_heading {
+#rbryowozzr .gt_col_heading {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -179,7 +179,7 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#jokfvuvpmz .gt_column_spanner_outer {
+#rbryowozzr .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -191,15 +191,15 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 4px;
 }
 
-#jokfvuvpmz .gt_column_spanner_outer:first-child {
+#rbryowozzr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jokfvuvpmz .gt_column_spanner_outer:last-child {
+#rbryowozzr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jokfvuvpmz .gt_column_spanner {
+#rbryowozzr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -211,7 +211,7 @@ CBCU (*Cymbopleura cuspidata*).
   width: 100%;
 }
 
-#jokfvuvpmz .gt_group_heading {
+#rbryowozzr .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -233,7 +233,7 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#jokfvuvpmz .gt_empty_group_heading {
+#rbryowozzr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -248,15 +248,15 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#jokfvuvpmz .gt_from_md > :first-child {
+#rbryowozzr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jokfvuvpmz .gt_from_md > :last-child {
+#rbryowozzr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jokfvuvpmz .gt_row {
+#rbryowozzr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -275,7 +275,7 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#jokfvuvpmz .gt_stub {
+#rbryowozzr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -287,7 +287,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-left: 12px;
 }
 
-#jokfvuvpmz .gt_summary_row {
+#rbryowozzr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -297,7 +297,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#jokfvuvpmz .gt_first_summary_row {
+#rbryowozzr .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -307,7 +307,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_grand_summary_row {
+#rbryowozzr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -317,7 +317,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#jokfvuvpmz .gt_first_grand_summary_row {
+#rbryowozzr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -327,11 +327,11 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_striped {
+#rbryowozzr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jokfvuvpmz .gt_table_body {
+#rbryowozzr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -340,7 +340,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_footnotes {
+#rbryowozzr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -354,13 +354,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_footnote {
+#rbryowozzr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#jokfvuvpmz .gt_sourcenotes {
+#rbryowozzr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -374,41 +374,41 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#jokfvuvpmz .gt_sourcenote {
+#rbryowozzr .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#jokfvuvpmz .gt_left {
+#rbryowozzr .gt_left {
   text-align: left;
 }
 
-#jokfvuvpmz .gt_center {
+#rbryowozzr .gt_center {
   text-align: center;
 }
 
-#jokfvuvpmz .gt_right {
+#rbryowozzr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jokfvuvpmz .gt_font_normal {
+#rbryowozzr .gt_font_normal {
   font-weight: normal;
 }
 
-#jokfvuvpmz .gt_font_bold {
+#rbryowozzr .gt_font_bold {
   font-weight: bold;
 }
 
-#jokfvuvpmz .gt_font_italic {
+#rbryowozzr .gt_font_italic {
   font-style: italic;
 }
 
-#jokfvuvpmz .gt_super {
+#rbryowozzr .gt_super {
   font-size: 65%;
 }
 
-#jokfvuvpmz .gt_footnote_marks {
+#rbryowozzr .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -417,7 +417,7 @@ CBCU (*Cymbopleura cuspidata*).
 <table class="gt_table">
   <thead class="gt_header">
     <tr>
-      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Taxons correspondant à l'espèce <em>Cymbopleura cuspidata</em>(CBCU)</th>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Taxons correspondant à l'espèce <em>Cymbopleura cuspidata</em> (CBCU)</th>
     </tr>
     <tr>
       <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait de la table de transcodage)</th>
@@ -440,46 +440,50 @@ CBCU (*Cymbopleura cuspidata*).
   <tbody class="gt_table_body">
     <tr><td class="gt_row gt_left">CABK</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbopleura apiculata var. baicalensis</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CBAP</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbopleura apiculata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CBCU</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CCAN</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata var. anglica</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CCBO</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata f. borealis</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CCIP</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata f. impressa</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CCSC</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata var. schulzii</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
     <tr><td class="gt_row gt_left">CCUS</td>
 <td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #008C56; color: #FFFFFF; font-style: italic;">sp</td></tr>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
+<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
   </tbody>
-  
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">Table créée à partir du fichier d'Omnidia (Michel Coste)</td>
+    </tr>
+  </tfoot>
   
 </table>
 </div>
@@ -488,12 +492,12 @@ CBCU (*Cymbopleura cuspidata*).
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
 NKJ et Ptot).
 
-<div id="ilqrtytezg" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="kbxwnvleui" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ilqrtytezg .gt_table {
+#kbxwnvleui .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -518,7 +522,7 @@ NKJ et Ptot).
   border-left-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_heading {
+#kbxwnvleui .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -530,7 +534,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_title {
+#kbxwnvleui .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -540,7 +544,7 @@ NKJ et Ptot).
   border-bottom-width: 0;
 }
 
-#ilqrtytezg .gt_subtitle {
+#kbxwnvleui .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -550,13 +554,13 @@ NKJ et Ptot).
   border-top-width: 0;
 }
 
-#ilqrtytezg .gt_bottom_border {
+#kbxwnvleui .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_col_headings {
+#kbxwnvleui .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -571,7 +575,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_col_heading {
+#kbxwnvleui .gt_col_heading {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -591,7 +595,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#ilqrtytezg .gt_column_spanner_outer {
+#kbxwnvleui .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -603,15 +607,15 @@ NKJ et Ptot).
   padding-right: 4px;
 }
 
-#ilqrtytezg .gt_column_spanner_outer:first-child {
+#kbxwnvleui .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ilqrtytezg .gt_column_spanner_outer:last-child {
+#kbxwnvleui .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ilqrtytezg .gt_column_spanner {
+#kbxwnvleui .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -623,7 +627,7 @@ NKJ et Ptot).
   width: 100%;
 }
 
-#ilqrtytezg .gt_group_heading {
+#kbxwnvleui .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -645,7 +649,7 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#ilqrtytezg .gt_empty_group_heading {
+#kbxwnvleui .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -660,15 +664,15 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#ilqrtytezg .gt_from_md > :first-child {
+#kbxwnvleui .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ilqrtytezg .gt_from_md > :last-child {
+#kbxwnvleui .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ilqrtytezg .gt_row {
+#kbxwnvleui .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -687,7 +691,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#ilqrtytezg .gt_stub {
+#kbxwnvleui .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -699,7 +703,7 @@ NKJ et Ptot).
   padding-left: 12px;
 }
 
-#ilqrtytezg .gt_summary_row {
+#kbxwnvleui .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -709,7 +713,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#ilqrtytezg .gt_first_summary_row {
+#kbxwnvleui .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -719,7 +723,7 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_grand_summary_row {
+#kbxwnvleui .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -729,7 +733,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#ilqrtytezg .gt_first_grand_summary_row {
+#kbxwnvleui .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -739,11 +743,11 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_striped {
+#kbxwnvleui .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ilqrtytezg .gt_table_body {
+#kbxwnvleui .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -752,7 +756,7 @@ NKJ et Ptot).
   border-bottom-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_footnotes {
+#kbxwnvleui .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -766,13 +770,13 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_footnote {
+#kbxwnvleui .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ilqrtytezg .gt_sourcenotes {
+#kbxwnvleui .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -786,41 +790,41 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#ilqrtytezg .gt_sourcenote {
+#kbxwnvleui .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ilqrtytezg .gt_left {
+#kbxwnvleui .gt_left {
   text-align: left;
 }
 
-#ilqrtytezg .gt_center {
+#kbxwnvleui .gt_center {
   text-align: center;
 }
 
-#ilqrtytezg .gt_right {
+#kbxwnvleui .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ilqrtytezg .gt_font_normal {
+#kbxwnvleui .gt_font_normal {
   font-weight: normal;
 }
 
-#ilqrtytezg .gt_font_bold {
+#kbxwnvleui .gt_font_bold {
   font-weight: bold;
 }
 
-#ilqrtytezg .gt_font_italic {
+#kbxwnvleui .gt_font_italic {
   font-style: italic;
 }
 
-#ilqrtytezg .gt_super {
+#kbxwnvleui .gt_super {
   font-size: 65%;
 }
 
-#ilqrtytezg .gt_footnote_marks {
+#kbxwnvleui .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -832,7 +836,7 @@ NKJ et Ptot).
       <th colspan="6" class="gt_heading gt_title gt_font_normal" style>Table des taxons d'alertes</th>
     </tr>
     <tr>
-      <th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait des 10 premières lignes)</th>
+      <th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait des 6 premières lignes)</th>
     </tr>
   </thead>
   <thead class="gt_col_headings">
@@ -882,39 +886,407 @@ NKJ et Ptot).
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">1</td></tr>
-    <tr><td class="gt_row gt_left">ADAM</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td></tr>
-    <tr><td class="gt_row gt_left">ADAS</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td></tr>
-    <tr><td class="gt_row gt_left">ADBA</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td></tr>
-    <tr><td class="gt_row gt_left">ADCA</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">0</td></tr>
   </tbody>
-  
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="6">Sortie de l'analyse Titan</td>
+    </tr>
+  </tfoot>
   
 </table>
 </div>
 
 **`table_reference`**
 
-**`table_lacs`**
+**`table_lacs`** Table possédant les informations sur la classification
+du lac selon l’alcalinité et nombre théoriques d’unités d’observation à
+échantillonner sur le plan d’eau (Afnor 2010).
+
+<div id="fvokwvfaqh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#fvokwvfaqh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fvokwvfaqh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fvokwvfaqh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fvokwvfaqh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fvokwvfaqh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fvokwvfaqh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fvokwvfaqh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fvokwvfaqh .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fvokwvfaqh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fvokwvfaqh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fvokwvfaqh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fvokwvfaqh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fvokwvfaqh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#fvokwvfaqh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fvokwvfaqh .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fvokwvfaqh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fvokwvfaqh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#fvokwvfaqh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fvokwvfaqh .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#fvokwvfaqh .gt_left {
+  text-align: left;
+}
+
+#fvokwvfaqh .gt_center {
+  text-align: center;
+}
+
+#fvokwvfaqh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fvokwvfaqh .gt_font_normal {
+  font-weight: normal;
+}
+
+#fvokwvfaqh .gt_font_bold {
+  font-weight: bold;
+}
+
+#fvokwvfaqh .gt_font_italic {
+  font-style: italic;
+}
+
+#fvokwvfaqh .gt_super {
+  font-size: 65%;
+}
+
+#fvokwvfaqh .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_pe</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom_lac</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_gene</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">classi_alc</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">nbr_uo_theo</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">ABB39</td>
+<td class="gt_row gt_left">Abbaye (l' )</td>
+<td class="gt_row gt_left">V2415023</td>
+<td class="gt_row gt_center">HA</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">AGE23</td>
+<td class="gt_row gt_left">Age (l' ) [complexe de l'Age]</td>
+<td class="gt_row gt_left">L42-4103</td>
+<td class="gt_row gt_center">MA</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">AIG15</td>
+<td class="gt_row gt_left">Aigle (de l' )</td>
+<td class="gt_row gt_left">P0--5013</td>
+<td class="gt_row gt_center">MA</td>
+<td class="gt_row gt_right">6</td></tr>
+    <tr><td class="gt_row gt_left">AIG73</td>
+<td class="gt_row gt_left">Aiguebelette</td>
+<td class="gt_row gt_left">V1535003</td>
+<td class="gt_row gt_center">HA</td>
+<td class="gt_row gt_right">6</td></tr>
+    <tr><td class="gt_row gt_left">AIL02</td>
+<td class="gt_row gt_left">Ailette (barrage de l' )</td>
+<td class="gt_row gt_left">H0227103</td>
+<td class="gt_row gt_center">HA</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">ALB85</td>
+<td class="gt_row gt_left">Albert (retenue d' )  [complexe de Mervent]</td>
+<td class="gt_row gt_left">N7105103</td>
+<td class="gt_row gt_center">HA</td>
+<td class="gt_row gt_right">3</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
 
 (la table des taxons d’alertes, la table de transcodage, la table de
 classification des plans d’eau, la table des valeurs de référence).
@@ -966,6 +1338,13 @@ Quick Link
 ref article ref rapport OFB
 
 <div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-afnorXP" class="csl-entry">
+
+Afnor. 2010. “XP T90-328 Qualité de l’eau Echantillonnage Des
+Communautés de Macrophytes En Plans d’eau.”
+
+</div>
 
 <div id="ref-directive2000water" class="csl-entry">
 
