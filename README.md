@@ -76,12 +76,12 @@ rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
 correspond à tous les taxons ayant un code taxon (indice) pour valeur
 CBCU (*Cymbopleura cuspidata*).
 
-<div id="znowcppbjd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zgcfvhtvfo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#znowcppbjd .gt_table {
+#zgcfvhtvfo .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -106,7 +106,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-left-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_heading {
+#zgcfvhtvfo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -118,7 +118,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_title {
+#zgcfvhtvfo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -128,7 +128,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-width: 0;
 }
 
-#znowcppbjd .gt_subtitle {
+#zgcfvhtvfo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -138,13 +138,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-width: 0;
 }
 
-#znowcppbjd .gt_bottom_border {
+#zgcfvhtvfo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_col_headings {
+#zgcfvhtvfo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -159,7 +159,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_col_heading {
+#zgcfvhtvfo .gt_col_heading {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -179,7 +179,7 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#znowcppbjd .gt_column_spanner_outer {
+#zgcfvhtvfo .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -191,15 +191,15 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 4px;
 }
 
-#znowcppbjd .gt_column_spanner_outer:first-child {
+#zgcfvhtvfo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#znowcppbjd .gt_column_spanner_outer:last-child {
+#zgcfvhtvfo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#znowcppbjd .gt_column_spanner {
+#zgcfvhtvfo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -211,7 +211,7 @@ CBCU (*Cymbopleura cuspidata*).
   width: 100%;
 }
 
-#znowcppbjd .gt_group_heading {
+#zgcfvhtvfo .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -233,7 +233,7 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#znowcppbjd .gt_empty_group_heading {
+#zgcfvhtvfo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -248,15 +248,15 @@ CBCU (*Cymbopleura cuspidata*).
   vertical-align: middle;
 }
 
-#znowcppbjd .gt_from_md > :first-child {
+#zgcfvhtvfo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#znowcppbjd .gt_from_md > :last-child {
+#zgcfvhtvfo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#znowcppbjd .gt_row {
+#zgcfvhtvfo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -275,7 +275,7 @@ CBCU (*Cymbopleura cuspidata*).
   overflow-x: hidden;
 }
 
-#znowcppbjd .gt_stub {
+#zgcfvhtvfo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -287,7 +287,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-left: 12px;
 }
 
-#znowcppbjd .gt_summary_row {
+#zgcfvhtvfo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -297,7 +297,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#znowcppbjd .gt_first_summary_row {
+#zgcfvhtvfo .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -307,7 +307,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_grand_summary_row {
+#zgcfvhtvfo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -317,7 +317,7 @@ CBCU (*Cymbopleura cuspidata*).
   padding-right: 5px;
 }
 
-#znowcppbjd .gt_first_grand_summary_row {
+#zgcfvhtvfo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -327,11 +327,11 @@ CBCU (*Cymbopleura cuspidata*).
   border-top-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_striped {
+#zgcfvhtvfo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#znowcppbjd .gt_table_body {
+#zgcfvhtvfo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -340,7 +340,7 @@ CBCU (*Cymbopleura cuspidata*).
   border-bottom-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_footnotes {
+#zgcfvhtvfo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -354,13 +354,13 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_footnote {
+#zgcfvhtvfo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#znowcppbjd .gt_sourcenotes {
+#zgcfvhtvfo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -374,41 +374,41 @@ CBCU (*Cymbopleura cuspidata*).
   border-right-color: #D3D3D3;
 }
 
-#znowcppbjd .gt_sourcenote {
+#zgcfvhtvfo .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#znowcppbjd .gt_left {
+#zgcfvhtvfo .gt_left {
   text-align: left;
 }
 
-#znowcppbjd .gt_center {
+#zgcfvhtvfo .gt_center {
   text-align: center;
 }
 
-#znowcppbjd .gt_right {
+#zgcfvhtvfo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#znowcppbjd .gt_font_normal {
+#zgcfvhtvfo .gt_font_normal {
   font-weight: normal;
 }
 
-#znowcppbjd .gt_font_bold {
+#zgcfvhtvfo .gt_font_bold {
   font-weight: bold;
 }
 
-#znowcppbjd .gt_font_italic {
+#zgcfvhtvfo .gt_font_italic {
   font-style: italic;
 }
 
-#znowcppbjd .gt_super {
+#zgcfvhtvfo .gt_super {
   font-size: 65%;
 }
 
-#znowcppbjd .gt_footnote_marks {
+#zgcfvhtvfo .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -492,12 +492,12 @@ CBCU (*Cymbopleura cuspidata*).
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
 NKJ et Ptot).
 
-<div id="hfziiraxay" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ctmrbrinop" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#hfziiraxay .gt_table {
+#ctmrbrinop .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -522,7 +522,7 @@ NKJ et Ptot).
   border-left-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_heading {
+#ctmrbrinop .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -534,7 +534,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_title {
+#ctmrbrinop .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -544,7 +544,7 @@ NKJ et Ptot).
   border-bottom-width: 0;
 }
 
-#hfziiraxay .gt_subtitle {
+#ctmrbrinop .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -554,13 +554,13 @@ NKJ et Ptot).
   border-top-width: 0;
 }
 
-#hfziiraxay .gt_bottom_border {
+#ctmrbrinop .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_col_headings {
+#ctmrbrinop .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -575,7 +575,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_col_heading {
+#ctmrbrinop .gt_col_heading {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -595,7 +595,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#hfziiraxay .gt_column_spanner_outer {
+#ctmrbrinop .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -607,15 +607,15 @@ NKJ et Ptot).
   padding-right: 4px;
 }
 
-#hfziiraxay .gt_column_spanner_outer:first-child {
+#ctmrbrinop .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hfziiraxay .gt_column_spanner_outer:last-child {
+#ctmrbrinop .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hfziiraxay .gt_column_spanner {
+#ctmrbrinop .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -627,7 +627,7 @@ NKJ et Ptot).
   width: 100%;
 }
 
-#hfziiraxay .gt_group_heading {
+#ctmrbrinop .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -649,7 +649,7 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#hfziiraxay .gt_empty_group_heading {
+#ctmrbrinop .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -664,15 +664,15 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#hfziiraxay .gt_from_md > :first-child {
+#ctmrbrinop .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hfziiraxay .gt_from_md > :last-child {
+#ctmrbrinop .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hfziiraxay .gt_row {
+#ctmrbrinop .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -691,7 +691,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#hfziiraxay .gt_stub {
+#ctmrbrinop .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -703,7 +703,7 @@ NKJ et Ptot).
   padding-left: 12px;
 }
 
-#hfziiraxay .gt_summary_row {
+#ctmrbrinop .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -713,7 +713,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#hfziiraxay .gt_first_summary_row {
+#ctmrbrinop .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -723,7 +723,7 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_grand_summary_row {
+#ctmrbrinop .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -733,7 +733,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#hfziiraxay .gt_first_grand_summary_row {
+#ctmrbrinop .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -743,11 +743,11 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_striped {
+#ctmrbrinop .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hfziiraxay .gt_table_body {
+#ctmrbrinop .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -756,7 +756,7 @@ NKJ et Ptot).
   border-bottom-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_footnotes {
+#ctmrbrinop .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -770,13 +770,13 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_footnote {
+#ctmrbrinop .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#hfziiraxay .gt_sourcenotes {
+#ctmrbrinop .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -790,41 +790,41 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#hfziiraxay .gt_sourcenote {
+#ctmrbrinop .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#hfziiraxay .gt_left {
+#ctmrbrinop .gt_left {
   text-align: left;
 }
 
-#hfziiraxay .gt_center {
+#ctmrbrinop .gt_center {
   text-align: center;
 }
 
-#hfziiraxay .gt_right {
+#ctmrbrinop .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hfziiraxay .gt_font_normal {
+#ctmrbrinop .gt_font_normal {
   font-weight: normal;
 }
 
-#hfziiraxay .gt_font_bold {
+#ctmrbrinop .gt_font_bold {
   font-weight: bold;
 }
 
-#hfziiraxay .gt_font_italic {
+#ctmrbrinop .gt_font_italic {
   font-style: italic;
 }
 
-#hfziiraxay .gt_super {
+#ctmrbrinop .gt_super {
   font-size: 65%;
 }
 
-#hfziiraxay .gt_footnote_marks {
+#ctmrbrinop .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -898,25 +898,12 @@ NKJ et Ptot).
 
 **`table_reference`**
 
-**`table_lacs`** Table regroupant les informations sur la classification
-des lacs selon l’alcalinité et le nombre théoriques d’unités
-d’observation à échantillonner sur le plan d’eau selon leur superficie
-(Afnor 2010).
-
-Les classes d’alcalinité correspondent à :
-
--   &lt;=0.2 LA,
-
--   0.2&lt; &lt;=1) MA,
-
--   =1 HA.
-
-<div id="muvsniofxi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="hpqtmtkewc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#muvsniofxi .gt_table {
+#hpqtmtkewc .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -941,7 +928,7 @@ Les classes d’alcalinité correspondent à :
   border-left-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_heading {
+#hpqtmtkewc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -953,7 +940,7 @@ Les classes d’alcalinité correspondent à :
   border-right-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_title {
+#hpqtmtkewc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -963,7 +950,7 @@ Les classes d’alcalinité correspondent à :
   border-bottom-width: 0;
 }
 
-#muvsniofxi .gt_subtitle {
+#hpqtmtkewc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -973,13 +960,13 @@ Les classes d’alcalinité correspondent à :
   border-top-width: 0;
 }
 
-#muvsniofxi .gt_bottom_border {
+#hpqtmtkewc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_col_headings {
+#hpqtmtkewc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -994,7 +981,7 @@ Les classes d’alcalinité correspondent à :
   border-right-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_col_heading {
+#hpqtmtkewc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1014,7 +1001,7 @@ Les classes d’alcalinité correspondent à :
   overflow-x: hidden;
 }
 
-#muvsniofxi .gt_column_spanner_outer {
+#hpqtmtkewc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1026,15 +1013,15 @@ Les classes d’alcalinité correspondent à :
   padding-right: 4px;
 }
 
-#muvsniofxi .gt_column_spanner_outer:first-child {
+#hpqtmtkewc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#muvsniofxi .gt_column_spanner_outer:last-child {
+#hpqtmtkewc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#muvsniofxi .gt_column_spanner {
+#hpqtmtkewc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1046,7 +1033,7 @@ Les classes d’alcalinité correspondent à :
   width: 100%;
 }
 
-#muvsniofxi .gt_group_heading {
+#hpqtmtkewc .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1068,7 +1055,7 @@ Les classes d’alcalinité correspondent à :
   vertical-align: middle;
 }
 
-#muvsniofxi .gt_empty_group_heading {
+#hpqtmtkewc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1083,15 +1070,15 @@ Les classes d’alcalinité correspondent à :
   vertical-align: middle;
 }
 
-#muvsniofxi .gt_from_md > :first-child {
+#hpqtmtkewc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#muvsniofxi .gt_from_md > :last-child {
+#hpqtmtkewc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#muvsniofxi .gt_row {
+#hpqtmtkewc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1110,7 +1097,7 @@ Les classes d’alcalinité correspondent à :
   overflow-x: hidden;
 }
 
-#muvsniofxi .gt_stub {
+#hpqtmtkewc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1122,7 +1109,7 @@ Les classes d’alcalinité correspondent à :
   padding-left: 12px;
 }
 
-#muvsniofxi .gt_summary_row {
+#hpqtmtkewc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1132,7 +1119,7 @@ Les classes d’alcalinité correspondent à :
   padding-right: 5px;
 }
 
-#muvsniofxi .gt_first_summary_row {
+#hpqtmtkewc .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1142,7 +1129,7 @@ Les classes d’alcalinité correspondent à :
   border-top-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_grand_summary_row {
+#hpqtmtkewc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1152,7 +1139,7 @@ Les classes d’alcalinité correspondent à :
   padding-right: 5px;
 }
 
-#muvsniofxi .gt_first_grand_summary_row {
+#hpqtmtkewc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1162,11 +1149,11 @@ Les classes d’alcalinité correspondent à :
   border-top-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_striped {
+#hpqtmtkewc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#muvsniofxi .gt_table_body {
+#hpqtmtkewc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1175,7 +1162,7 @@ Les classes d’alcalinité correspondent à :
   border-bottom-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_footnotes {
+#hpqtmtkewc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1189,13 +1176,13 @@ Les classes d’alcalinité correspondent à :
   border-right-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_footnote {
+#hpqtmtkewc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#muvsniofxi .gt_sourcenotes {
+#hpqtmtkewc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1209,41 +1196,41 @@ Les classes d’alcalinité correspondent à :
   border-right-color: #D3D3D3;
 }
 
-#muvsniofxi .gt_sourcenote {
+#hpqtmtkewc .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#muvsniofxi .gt_left {
+#hpqtmtkewc .gt_left {
   text-align: left;
 }
 
-#muvsniofxi .gt_center {
+#hpqtmtkewc .gt_center {
   text-align: center;
 }
 
-#muvsniofxi .gt_right {
+#hpqtmtkewc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#muvsniofxi .gt_font_normal {
+#hpqtmtkewc .gt_font_normal {
   font-weight: normal;
 }
 
-#muvsniofxi .gt_font_bold {
+#hpqtmtkewc .gt_font_bold {
   font-weight: bold;
 }
 
-#muvsniofxi .gt_font_italic {
+#hpqtmtkewc .gt_font_italic {
   font-style: italic;
 }
 
-#muvsniofxi .gt_super {
+#hpqtmtkewc .gt_super {
   font-size: 65%;
 }
 
-#muvsniofxi .gt_footnote_marks {
+#hpqtmtkewc .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1253,11 +1240,417 @@ Les classes d’alcalinité correspondent à :
   
   <thead class="gt_col_headings">
     <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Paramètre</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Classe d'alcalinité</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Substrat</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Mtype</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">SDtype</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">DBO5</td>
+<td class="gt_row gt_left">LA</td>
+<td class="gt_row gt_left">dur</td>
+<td class="gt_row gt_right">0.98</td>
+<td class="gt_row gt_right">0.02</td></tr>
+    <tr><td class="gt_row gt_left">DBO5</td>
+<td class="gt_row gt_left">MA</td>
+<td class="gt_row gt_left">dur</td>
+<td class="gt_row gt_right">0.88</td>
+<td class="gt_row gt_right">0.12</td></tr>
+    <tr><td class="gt_row gt_left">DBO5</td>
+<td class="gt_row gt_left">HA</td>
+<td class="gt_row gt_left">dur</td>
+<td class="gt_row gt_right">0.77</td>
+<td class="gt_row gt_right">0.23</td></tr>
+    <tr><td class="gt_row gt_left">DBO5</td>
+<td class="gt_row gt_left">LA</td>
+<td class="gt_row gt_left">végétal</td>
+<td class="gt_row gt_right">0.98</td>
+<td class="gt_row gt_right">0.02</td></tr>
+    <tr><td class="gt_row gt_left">DBO5</td>
+<td class="gt_row gt_left">MA</td>
+<td class="gt_row gt_left">végétal</td>
+<td class="gt_row gt_right">0.90</td>
+<td class="gt_row gt_right">0.16</td></tr>
+    <tr><td class="gt_row gt_left">DBO5</td>
+<td class="gt_row gt_left">HA</td>
+<td class="gt_row gt_left">végétal</td>
+<td class="gt_row gt_right">0.83</td>
+<td class="gt_row gt_right">0.23</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+
+**`table_lacs`** Table regroupant les informations sur la classification
+des lacs selon l’alcalinité et le nombre théoriques d’unités
+d’observation à échantillonner sur le plan d’eau selon leur superficie
+(Afnor 2010).
+
+Les classes d’alcalinité des plans d’eau sont définis comme ceci :
+
+-   &lt;=0.2 LA,
+
+-   0.2&lt; &lt;=1) MA,
+
+-   =1 HA.
+
+<div id="yyuwggljna" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#yyuwggljna .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#yyuwggljna .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#yyuwggljna .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#yyuwggljna .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#yyuwggljna .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#yyuwggljna .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#yyuwggljna .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#yyuwggljna .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#yyuwggljna .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#yyuwggljna .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#yyuwggljna .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#yyuwggljna .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#yyuwggljna .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#yyuwggljna .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yyuwggljna .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yyuwggljna .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#yyuwggljna .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#yyuwggljna .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yyuwggljna .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#yyuwggljna .gt_left {
+  text-align: left;
+}
+
+#yyuwggljna .gt_center {
+  text-align: center;
+}
+
+#yyuwggljna .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#yyuwggljna .gt_font_normal {
+  font-weight: normal;
+}
+
+#yyuwggljna .gt_font_bold {
+  font-weight: bold;
+}
+
+#yyuwggljna .gt_font_italic {
+  font-style: italic;
+}
+
+#yyuwggljna .gt_super {
+  font-size: 65%;
+}
+
+#yyuwggljna .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Table de la classification des plans d'eau selon la typologie européenne à partir de l'alcalinité.</th>
+    </tr>
+    <tr>
+      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait des 6 premières lignes)</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_pe</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom_lac</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_gene</th>
       <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Classe d'alcalinité</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Nombre d'UO théoriques</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Nombre minimum d'UO</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -1292,7 +1685,11 @@ Les classes d’alcalinité correspondent à :
 <td class="gt_row gt_center">HA</td>
 <td class="gt_row gt_right">3</td></tr>
   </tbody>
-  
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">LA : low alkalinity ; MA : moderate alkalinity ; HA : higth alkalinity</td>
+    </tr>
+  </tfoot>
   
 </table>
 </div>

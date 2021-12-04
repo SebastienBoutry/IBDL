@@ -190,6 +190,17 @@ Table_taxons_alertes[1:6,] %>%
 
 **`table_reference`**
 
+```{r reference, echo=FALSE}
+SES_ref_type[1:6,] %>% 
+  separate("join",c("Paramètre","Classe d'alcalinité","Substrat"),sep="_") %>% 
+  gt() %>% 
+  tab_header(
+    title = md("Table de référence."),
+    subtitle = "(extrait des 6 premières lignes)"
+  )
+```
+
+
 **`table_lacs`** Table regroupant les informations sur la classification des lacs selon l'alcalinité et le nombre théoriques d'unités d'observation à échantillonner sur le plan d'eau selon leur superficie [@afnorXP].
 
 Les classes d'alcalinité des plans d'eau sont définis comme ceci :
@@ -202,8 +213,15 @@ Les classes d'alcalinité des plans d'eau sont définis comme ceci :
 ```{r lacs, echo=FALSE}
 lake_infos[1:6,] %>% 
   rename("Classe d'alcalinité"="classi_alc",
-         "Nombre d'UO théoriques"="nbr_uo_theo") %>% 
-  gt()
+         "Nombre minimum d'UO"="nbr_uo_theo") %>% 
+  gt() %>% 
+   tab_header(
+    title = md("Table de la classification des plans d'eau selon la typologie européenne à partir de l'alcalinité."),
+    subtitle = "(extrait des 6 premières lignes)"
+  ) %>% 
+   tab_source_note(
+    source_note = "LA : low alkalinity ; MA : moderate alkalinity ; HA : higth alkalinity"
+  ) 
 ```
 
 
