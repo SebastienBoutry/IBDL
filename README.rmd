@@ -126,7 +126,7 @@ table_transcodage %>%
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
 
 
-```{r taxons alertes, echo=FALSE,results='asis',fig.align='center',fig.pos="center"}
+```{r taxons alertes, echo=FALSE, results='asis'}
 Table_taxons_alertes[1:6,] %>% 
   rename("code_taxon"="taxons_indiciels") %>% 
   gt() %>% 
