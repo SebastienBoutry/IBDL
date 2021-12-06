@@ -129,62 +129,62 @@ table_transcodage %>%
 ```{r taxons alertes, echo=FALSE, results='asis'}
 Table_taxons_alertes[1:6,] %>% 
   rename("code_taxon"="taxons_indiciels") %>% 
-  gt() %>% 
-  tab_style(
-    style = list(
-       cell_fill(color = "#66C1BF"),
-      cell_text(style = "italic",color="#FFFFFF")
-      ),
-    locations = cells_body(
-      columns = DBO5,
-      rows = DBO5==1
-    )
-  ) %>% 
-    tab_style(
-    style = list(
-       cell_fill(color = "#66C1BF"),
-      cell_text(style = "italic",color="#FFFFFF")
-      ),
-    locations = cells_body(
-      columns = MES,
-      rows = MES==1
-    )
-  ) %>% 
-    tab_style(
-    style = list(
-       cell_fill(color = "#66C1BF"),
-      cell_text(style = "italic",color="#FFFFFF")
-      ),
-    locations = cells_body(
-      columns = Ptot,
-      rows = Ptot==1
-    )
-  ) %>% 
-    tab_style(
-    style = list(
-       cell_fill(color = "#66C1BF"),
-      cell_text(style = "italic",color="#FFFFFF")
-      ),
-    locations = cells_body(
-      columns = NKJ,
-      rows = NKJ==1
-    )
-  ) %>% 
-  # tab_spanner(
-  #   label = "Harmonisation indicielle",
-  #   columns = c("nom scientifique (indice)",
-  #        "code_taxon (indice)",
-  #        "rang taxonomique (indice)")
+  gt() #%>% 
+  # tab_style(
+  #   style = list(
+  #      cell_fill(color = "#66C1BF"),
+  #     cell_text(style = "italic",color="#FFFFFF")
+  #     ),
+  #   locations = cells_body(
+  #     columns = DBO5,
+  #     rows = DBO5==1
+  #   )
   # ) %>% 
-  tab_header(
-    title = md("Table des taxons d'alertes"),
-    subtitle = "(extrait des 6 premières lignes)"
-  ) %>%
-  tab_options(column_labels.background.color ="#275662",
-              table.align="center") %>%
-  tab_source_note(
-    source_note = "Sortie de l'analyse Titan"
-  ) 
+  #   tab_style(
+  #   style = list(
+  #      cell_fill(color = "#66C1BF"),
+  #     cell_text(style = "italic",color="#FFFFFF")
+  #     ),
+  #   locations = cells_body(
+  #     columns = MES,
+  #     rows = MES==1
+  #   )
+  # ) %>% 
+  #   tab_style(
+  #   style = list(
+  #      cell_fill(color = "#66C1BF"),
+  #     cell_text(style = "italic",color="#FFFFFF")
+  #     ),
+  #   locations = cells_body(
+  #     columns = Ptot,
+  #     rows = Ptot==1
+  #   )
+  # ) %>% 
+  #   tab_style(
+  #   style = list(
+  #      cell_fill(color = "#66C1BF"),
+  #     cell_text(style = "italic",color="#FFFFFF")
+  #     ),
+  #   locations = cells_body(
+  #     columns = NKJ,
+  #     rows = NKJ==1
+  #   )
+  # ) %>% 
+  # # tab_spanner(
+  # #   label = "Harmonisation indicielle",
+  # #   columns = c("nom scientifique (indice)",
+  # #        "code_taxon (indice)",
+  # #        "rang taxonomique (indice)")
+  # # ) %>% 
+  # tab_header(
+  #   title = md("Table des taxons d'alertes"),
+  #   subtitle = "(extrait des 6 premières lignes)"
+  # ) %>%
+  # tab_options(column_labels.background.color ="#275662",
+  #             table.align="center") %>%
+  # tab_source_note(
+  #   source_note = "Sortie de l'analyse Titan"
+  # ) 
 ```
 
 
