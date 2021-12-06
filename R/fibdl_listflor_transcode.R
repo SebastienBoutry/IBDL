@@ -18,8 +18,10 @@ fibdl_listflor_transcode <- function(data){
                 dplyr::select(abre, code_espece_boucle2, denominations_sans_auteur.y,niveau2),
               by = c("taxons" = "abre")
     ) %>%
-    dplyr::rename("ex_taxons" = "taxons", "taxons" = "code_espece_boucle2") %>%
+    dplyr::rename("ex_taxons" = "taxons",
+                  "taxons" = "code_espece_boucle2") %>%
     dplyr::group_by(id_prelevement, taxons,denominations_sans_auteur.y, niveau2) %>%
+    dplyr::rename("rang"="niveau2") %>%
     dplyr::summarise(ab = sum(ab)) %>%
     dplyr::ungroup()
   return(table_listflor_transcode)
