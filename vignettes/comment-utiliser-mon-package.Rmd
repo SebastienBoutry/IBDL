@@ -72,7 +72,7 @@ listflor %>%
 
 fibdl_listflor_transcode(listflor) %>% 
   rename("nom_scientifique (transcode)"="denominations_sans_auteur.y",
-         "rang_taxonomique (transcode)"="niveau2") %>% 
+         "rang_taxonomique (transcode)"="rang") %>% 
    head() %>% 
   gt()
 ```
