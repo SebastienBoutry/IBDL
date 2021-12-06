@@ -51,7 +51,7 @@ library(IBDL)
 ```
 # Objectif
 
-L'objectif de ce package `{IBDL}` est de fournir les fonctions nécessaires pour calculer l'Indice Biologique Diatomées en Lac.
+L'objectif de ce package `{IBDL}` est de fournir les fonctions nécessaires pour calculer l'Indice Biologique Diatomées en Lacs.
 
 
 _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans le projet Phytobenthos plan d'eau financé par l'OFB-Pôle ECLA._
@@ -126,7 +126,7 @@ table_transcodage %>%
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
 
 
-```{r taxons alertes, echo=FALSE,fig.align='center',fig.pos="center"}
+```{r taxons alertes, echo=FALSE,results='asis',fig.align='center',fig.pos="center"}
 Table_taxons_alertes[1:6,] %>% 
   rename("code_taxon"="taxons_indiciels") %>% 
   gt() %>% 
@@ -205,9 +205,9 @@ SES_ref_type[1:6,] %>%
 
 Les classes d'alcalinité des plans d'eau sont définis comme ceci :
 
-- <=0.2 LA,
-- 0.2< <=1) MA,
-- >=1 HA.
+- LA : alcalinité <0.2 meq.l-1; 
+- MA : 0.2 meq.l-1 < alcalinité < 1 meq.l-1; 
+- HA : alcalinité >1 meq.l-1.
 
 
 ```{r lacs, echo=FALSE}
