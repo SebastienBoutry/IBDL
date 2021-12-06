@@ -5,6 +5,8 @@ vignette: >
   %\VignetteIndexEntry{comment-utiliser-mon-package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+author: "Sébastien Boutry"
+date: "`r Sys.Date()`"
 ---
 
 ```{r, include = FALSE}
