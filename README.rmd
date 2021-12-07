@@ -46,12 +46,13 @@ _NB : Le logiciel RTools est parfois nécessaire sur les machines Windows pour p
 
 Une fois installé, vous pouvez charger le package avec :
 
-```{r eval = FALSE}
+```{r echo=TRUE}
 library(IBDL)
 ```
+
 # Objectif
 
-L'objectif de ce package `{IBDL}` est de fournir les fonctions nécessaires pour calculer l'Indice Biologique Diatomées en Lacs.
+L'objectif de ce package `{IBDL}` est de fournir les fonctions nécessaires pour calculer l'Indice Biologique Diatomées en Lac.
 
 
 _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans le projet Phytobenthos plan d'eau financé par l'OFB-Pôle ECLA._
@@ -76,8 +77,7 @@ Les jeux de données internes embarquées correspondent aux jeux de données dit
 
 Dans l'extrait ci-dessous, les deux premières colonnes correspondent au code taxon et le nom scientifique associé. Les trois dernières colonnes sont les informations définies lors de la construction de l'indice. Le rang taxonomique à l'espèce a été ciblé. Le tableau ci-dessous correspond à tous les taxons ayant un code taxon (indice) pour valeur CBCU (_Cymbopleura cuspidata_). 
 
-```{r echo = FALSE}
-load("R/sysdata.rda")
+```{r echo = FALSE, eval=FALSE}
 my_tab_transcodage <- table_transcodage %>% 
   select(abre,denominations_sans_auteur.x,code_espece_boucle2,denominations_sans_auteur.y,niveau2) %>% 
    filter(code_espece_boucle2=="CBCU") %>% 
@@ -136,8 +136,8 @@ knitr::include_graphics("man/figures/table_transcodage_ex.png")
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
 
 
-```{r taxons alertes, echo=FALSE, results='asis'}
-Table_taxons_alertes[1:6,] %>% 
+```{r taxons alertes, echo=FALSE, eval=FALSE}
+my_tab_alertes <- Table_taxons_alertes[1:6,] %>% 
   rename("code_taxon"="taxons_indiciels") %>% 
   gt() %>% 
   tab_style(
@@ -194,20 +194,37 @@ Table_taxons_alertes[1:6,] %>%
               table.align="center") %>%
   tab_source_note(
     source_note = "Sortie de l'analyse Titan"
-  ) 
+  ) %>% 
+  tab_options(table.width = pct(100))
+
+my_tab_alertes %>% 
+  gtsave("man/figures/my_tab_alertes_ex.png", vwidth = 1500)
 ```
 
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/my_tab_alertes_ex.png")
+```
 
 **`table_reference`**
 
-```{r reference, echo=FALSE}
-SES_ref_type[1:6,] %>% 
+```{r reference, echo=FALSE, eval=FALSE}
+my_tab_SES <- SES_ref_type[1:6,] %>% 
   separate("join",c("Paramètre","Classe d'alcalinité","Substrat"),sep="_") %>% 
   gt() %>% 
   tab_header(
     title = md("Table de référence."),
     subtitle = "(extrait des 6 premières lignes)"
-  )
+  ) %>% 
+  tab_options(column_labels.background.color ="#275662" ,
+              table.align="center",
+              table.width = pct(100)
+              )
+
+my_tab_SES %>% 
+  gtsave("man/figures/my_tab_SES_ex.png", vwidth = 1500)
+```
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/my_tab_SES_ex.png")
 ```
 
 
@@ -220,8 +237,8 @@ Les classes d'alcalinité des plans d'eau sont définis comme ceci :
 - HA : alcalinité >1 meq.l-1.
 
 
-```{r lacs, echo=FALSE}
-lake_infos[1:6,] %>% 
+```{r lacs, echo=FALSE, eval=FALSE}
+my_tab_lacs <- lake_infos[1:6,] %>% 
   rename("Classe d'alcalinité"="classi_alc",
          "Nombre minimum d'UO"="nbr_uo_theo") %>% 
   gt() %>% 
@@ -231,12 +248,16 @@ lake_infos[1:6,] %>%
   ) %>% 
    tab_source_note(
     source_note = "LA : low alkalinity ; MA : moderate alkalinity ; HA : higth alkalinity"
-  ) 
+  ) %>% 
+  tab_options(column_labels.background.color ="#275662",
+               table.width = pct(100))
+my_tab_lacs %>% 
+  gtsave("man/figures/my_tab_lacs_ex.png", vwidth = 1500)
 ```
 
-
-
-(la table des taxons d'alertes, la table de transcodage, la table de classification des plans d'eau, la table des valeurs de référence).
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/my_tab_lacs_ex.png")
+```
 
 <div align="center">
 

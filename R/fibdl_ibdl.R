@@ -13,6 +13,7 @@ fibdl_ibdl<- function(data){
     dplyr::ungroup() %>%
     tidyr::unite("join",c("code_pe","type_dominant"),remove=FALSE) %>%
     dplyr::select(-type_dominant) %>%
+    ##
     dplyr::left_join(Pourcent_typologie_lacs_macrophytes,
               by="join") %>%
     dplyr::select(-join,-code_lac) %>%
