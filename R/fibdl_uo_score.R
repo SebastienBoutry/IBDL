@@ -13,7 +13,7 @@ fibdl_uo_score <- function(data){
     dplyr::ungroup() %>%
     dplyr::arrange(id_uo) %>%
     dplyr::group_by(code_pe,id_uo,type_dominant,id_campagne,datedebut) %>%
-    dplyr::summarise(Note_UO=min(Moy_EQR)) %>% # pire note selon l'UO
+    dplyr::summarise(Note_UO=min(Moy_EQR)) %>% # la valeur minimale selon les deux substrat sur l'UO
     dplyr::ungroup()
   return(table_score_ibdl)
 }
