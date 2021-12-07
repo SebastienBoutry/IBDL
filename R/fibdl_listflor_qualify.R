@@ -2,7 +2,8 @@
 #'
 #' @param data
 #' @param seuil_nbr_valves nombre de valves compte dans le prélèvement. Dans la norme, il est demande de compter 400 valves.
-#' @param seuil_pour_valves_sp  seuil en pourcentage de valves déterminees au rang taxonomique espece dans le prelevement. Petite specificite, on ne prend pas compte le code taxon ADMI.
+#' @param seuil_pour_valves_sp  seuil en pourcentage de valves déterminees au rang taxonomique espece dans le prelevement.
+#' Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).
 #' @param seuil_pour_taxons_indiciels seuil en pourcentage des taxons indiciels dans le prelevement
 #'
 #' @return tableau avec les informations liees au prelevement. La colonne validation rensigne la selection finale.
@@ -41,5 +42,6 @@ fibdl_listflor_qualify <- function(data,
                                       r_taxons_indiciels==TRUE,
                                     TRUE,
                                     FALSE))
+  ##
   return(table_validation)
 }
