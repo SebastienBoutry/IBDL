@@ -1,5 +1,4 @@
-
-#' Title
+#' Calcul des métriques au niveau du prélèvement
 #'
 #' @param data
 #'

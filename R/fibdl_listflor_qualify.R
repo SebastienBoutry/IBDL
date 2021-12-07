@@ -1,4 +1,4 @@
-#' Title
+#' Qualification des listes floristiques
 #'
 #' @param data
 #' @param seuil_nbr_valves

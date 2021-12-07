@@ -1,4 +1,4 @@
-#' Title
+#' Calcul du score au niveau de l'unité d'observation
 #'
 #' @param data
 #'

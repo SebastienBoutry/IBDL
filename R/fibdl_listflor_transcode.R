@@ -1,4 +1,4 @@
-#' Harmonisation taxonomique au niveau espèce
+#' Harmonisation taxonomique au niveau espèce de la liste flroistique
 #'
 #' @param data liste floristique dans le bon format
 #'

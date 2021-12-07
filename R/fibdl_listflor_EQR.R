@@ -1,4 +1,4 @@
-#' Title
+#' Transformation en EQR au niveau du prélèvement
 #'
 #' @param data
 #' @param add_information_station

@@ -1,4 +1,4 @@
-#' Title
+#' Standardisation des EQR au niveau du prélèvement
 #'
 #' @param data
 #'

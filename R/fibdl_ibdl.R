@@ -1,5 +1,4 @@
-
-#' Title
+#' Calcul de l'IBDL et la classe d'état
 #'
 #' @param data
 #'
