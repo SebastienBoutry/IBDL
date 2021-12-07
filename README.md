@@ -76,428 +76,20 @@ rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
 correspond à tous les taxons ayant un code taxon (indice) pour valeur
 CBCU (*Cymbopleura cuspidata*).
 
-<div id="jtohyjcjvp" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-#jtohyjcjvp .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#jtohyjcjvp .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#jtohyjcjvp .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #275662;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#jtohyjcjvp .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #275662;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#jtohyjcjvp .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#jtohyjcjvp .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#jtohyjcjvp .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#jtohyjcjvp .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#jtohyjcjvp .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#jtohyjcjvp .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#jtohyjcjvp .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#jtohyjcjvp .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#jtohyjcjvp .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#jtohyjcjvp .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jtohyjcjvp .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#jtohyjcjvp .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#jtohyjcjvp .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#jtohyjcjvp .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#jtohyjcjvp .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#jtohyjcjvp .gt_left {
-  text-align: left;
-}
-
-#jtohyjcjvp .gt_center {
-  text-align: center;
-}
-
-#jtohyjcjvp .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#jtohyjcjvp .gt_font_normal {
-  font-weight: normal;
-}
-
-#jtohyjcjvp .gt_font_bold {
-  font-weight: bold;
-}
-
-#jtohyjcjvp .gt_font_italic {
-  font-style: italic;
-}
-
-#jtohyjcjvp .gt_super {
-  font-size: 65%;
-}
-
-#jtohyjcjvp .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
-}
-</style>
-<table class="gt_table">
-  <thead class="gt_header">
-    <tr>
-      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Taxons correspondant à l'espèce <em>Cymbopleura cuspidata</em> (CBCU)</th>
-    </tr>
-    <tr>
-      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>(extrait de la table de transcodage)</th>
-    </tr>
-  </thead>
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1">code_taxon</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1">nom scientifique</th>
-      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3">
-        <span class="gt_column_spanner">Harmonisation indicielle</span>
-      </th>
-    </tr>
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom scientifique (indice)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">code_taxon (indice)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">rang taxonomique (indice)</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left">CABK</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbopleura apiculata var. baicalensis</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CBAP</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbopleura apiculata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CBCU</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CCAN</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata var. anglica</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CCBO</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata f. borealis</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CCIP</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata f. impressa</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CCSC</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata var. schulzii</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-    <tr><td class="gt_row gt_left">CCUS</td>
-<td class="gt_row gt_left" style="font-style: italic;">Cymbella cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">Cymbopleura cuspidata</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">CBCU</td>
-<td class="gt_row gt_left" style="background-color: #66C1BF; color: #FFFFFF; font-style: italic;">sp</td></tr>
-  </tbody>
-  <tfoot class="gt_sourcenotes">
-    <tr>
-      <td class="gt_sourcenote" colspan="5">Table créée à partir du fichier d'Omnidia (Michel Coste)</td>
-    </tr>
-  </tfoot>
-  
-</table>
-</div>
+<img src="man/figures/table_transcodage_ex.png" width="100%" />
 
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
 NKJ et Ptot).
 
-<div id="qcgepafjvn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="sfeohejedj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#qcgepafjvn .gt_table {
+#sfeohejedj .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -522,7 +114,7 @@ NKJ et Ptot).
   border-left-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_heading {
+#sfeohejedj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -534,7 +126,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_title {
+#sfeohejedj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -544,7 +136,7 @@ NKJ et Ptot).
   border-bottom-width: 0;
 }
 
-#qcgepafjvn .gt_subtitle {
+#sfeohejedj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -554,13 +146,13 @@ NKJ et Ptot).
   border-top-width: 0;
 }
 
-#qcgepafjvn .gt_bottom_border {
+#sfeohejedj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_col_headings {
+#sfeohejedj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -575,7 +167,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_col_heading {
+#sfeohejedj .gt_col_heading {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -595,7 +187,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#qcgepafjvn .gt_column_spanner_outer {
+#sfeohejedj .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #275662;
   font-size: 100%;
@@ -607,15 +199,15 @@ NKJ et Ptot).
   padding-right: 4px;
 }
 
-#qcgepafjvn .gt_column_spanner_outer:first-child {
+#sfeohejedj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qcgepafjvn .gt_column_spanner_outer:last-child {
+#sfeohejedj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qcgepafjvn .gt_column_spanner {
+#sfeohejedj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -627,7 +219,7 @@ NKJ et Ptot).
   width: 100%;
 }
 
-#qcgepafjvn .gt_group_heading {
+#sfeohejedj .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -649,7 +241,7 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#qcgepafjvn .gt_empty_group_heading {
+#sfeohejedj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -664,15 +256,15 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#qcgepafjvn .gt_from_md > :first-child {
+#sfeohejedj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qcgepafjvn .gt_from_md > :last-child {
+#sfeohejedj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qcgepafjvn .gt_row {
+#sfeohejedj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -691,7 +283,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#qcgepafjvn .gt_stub {
+#sfeohejedj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -703,7 +295,7 @@ NKJ et Ptot).
   padding-left: 12px;
 }
 
-#qcgepafjvn .gt_summary_row {
+#sfeohejedj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -713,7 +305,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#qcgepafjvn .gt_first_summary_row {
+#sfeohejedj .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -723,7 +315,7 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_grand_summary_row {
+#sfeohejedj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -733,7 +325,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#qcgepafjvn .gt_first_grand_summary_row {
+#sfeohejedj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -743,11 +335,11 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_striped {
+#sfeohejedj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qcgepafjvn .gt_table_body {
+#sfeohejedj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -756,7 +348,7 @@ NKJ et Ptot).
   border-bottom-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_footnotes {
+#sfeohejedj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -770,13 +362,13 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_footnote {
+#sfeohejedj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#qcgepafjvn .gt_sourcenotes {
+#sfeohejedj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -790,41 +382,41 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#qcgepafjvn .gt_sourcenote {
+#sfeohejedj .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#qcgepafjvn .gt_left {
+#sfeohejedj .gt_left {
   text-align: left;
 }
 
-#qcgepafjvn .gt_center {
+#sfeohejedj .gt_center {
   text-align: center;
 }
 
-#qcgepafjvn .gt_right {
+#sfeohejedj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qcgepafjvn .gt_font_normal {
+#sfeohejedj .gt_font_normal {
   font-weight: normal;
 }
 
-#qcgepafjvn .gt_font_bold {
+#sfeohejedj .gt_font_bold {
   font-weight: bold;
 }
 
-#qcgepafjvn .gt_font_italic {
+#sfeohejedj .gt_font_italic {
   font-style: italic;
 }
 
-#qcgepafjvn .gt_super {
+#sfeohejedj .gt_super {
   font-size: 65%;
 }
 
-#qcgepafjvn .gt_footnote_marks {
+#sfeohejedj .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -898,12 +490,12 @@ NKJ et Ptot).
 
 **`table_reference`**
 
-<div id="pyhclzwurv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="gqfzejtxnn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#pyhclzwurv .gt_table {
+#gqfzejtxnn .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -928,7 +520,7 @@ NKJ et Ptot).
   border-left-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_heading {
+#gqfzejtxnn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -940,7 +532,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_title {
+#gqfzejtxnn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -950,7 +542,7 @@ NKJ et Ptot).
   border-bottom-width: 0;
 }
 
-#pyhclzwurv .gt_subtitle {
+#gqfzejtxnn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -960,13 +552,13 @@ NKJ et Ptot).
   border-top-width: 0;
 }
 
-#pyhclzwurv .gt_bottom_border {
+#gqfzejtxnn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_col_headings {
+#gqfzejtxnn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -981,7 +573,7 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_col_heading {
+#gqfzejtxnn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1001,7 +593,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#pyhclzwurv .gt_column_spanner_outer {
+#gqfzejtxnn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1013,15 +605,15 @@ NKJ et Ptot).
   padding-right: 4px;
 }
 
-#pyhclzwurv .gt_column_spanner_outer:first-child {
+#gqfzejtxnn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pyhclzwurv .gt_column_spanner_outer:last-child {
+#gqfzejtxnn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pyhclzwurv .gt_column_spanner {
+#gqfzejtxnn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1033,7 +625,7 @@ NKJ et Ptot).
   width: 100%;
 }
 
-#pyhclzwurv .gt_group_heading {
+#gqfzejtxnn .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1055,7 +647,7 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#pyhclzwurv .gt_empty_group_heading {
+#gqfzejtxnn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1070,15 +662,15 @@ NKJ et Ptot).
   vertical-align: middle;
 }
 
-#pyhclzwurv .gt_from_md > :first-child {
+#gqfzejtxnn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#pyhclzwurv .gt_from_md > :last-child {
+#gqfzejtxnn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#pyhclzwurv .gt_row {
+#gqfzejtxnn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1097,7 +689,7 @@ NKJ et Ptot).
   overflow-x: hidden;
 }
 
-#pyhclzwurv .gt_stub {
+#gqfzejtxnn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1109,7 +701,7 @@ NKJ et Ptot).
   padding-left: 12px;
 }
 
-#pyhclzwurv .gt_summary_row {
+#gqfzejtxnn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1119,7 +711,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#pyhclzwurv .gt_first_summary_row {
+#gqfzejtxnn .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1129,7 +721,7 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_grand_summary_row {
+#gqfzejtxnn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1139,7 +731,7 @@ NKJ et Ptot).
   padding-right: 5px;
 }
 
-#pyhclzwurv .gt_first_grand_summary_row {
+#gqfzejtxnn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1149,11 +741,11 @@ NKJ et Ptot).
   border-top-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_striped {
+#gqfzejtxnn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pyhclzwurv .gt_table_body {
+#gqfzejtxnn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1162,7 +754,7 @@ NKJ et Ptot).
   border-bottom-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_footnotes {
+#gqfzejtxnn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1176,13 +768,13 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_footnote {
+#gqfzejtxnn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#pyhclzwurv .gt_sourcenotes {
+#gqfzejtxnn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1196,41 +788,41 @@ NKJ et Ptot).
   border-right-color: #D3D3D3;
 }
 
-#pyhclzwurv .gt_sourcenote {
+#gqfzejtxnn .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#pyhclzwurv .gt_left {
+#gqfzejtxnn .gt_left {
   text-align: left;
 }
 
-#pyhclzwurv .gt_center {
+#gqfzejtxnn .gt_center {
   text-align: center;
 }
 
-#pyhclzwurv .gt_right {
+#gqfzejtxnn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pyhclzwurv .gt_font_normal {
+#gqfzejtxnn .gt_font_normal {
   font-weight: normal;
 }
 
-#pyhclzwurv .gt_font_bold {
+#gqfzejtxnn .gt_font_bold {
   font-weight: bold;
 }
 
-#pyhclzwurv .gt_font_italic {
+#gqfzejtxnn .gt_font_italic {
   font-style: italic;
 }
 
-#pyhclzwurv .gt_super {
+#gqfzejtxnn .gt_super {
   font-size: 65%;
 }
 
-#pyhclzwurv .gt_footnote_marks {
+#gqfzejtxnn .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1302,12 +894,12 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 -   MA : 0.2 meq.l-1 &lt; alcalinité &lt; 1 meq.l-1;
 -   HA : alcalinité &gt;1 meq.l-1.
 
-<div id="zemluqpbhs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="yfnozhzxwm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zemluqpbhs .gt_table {
+#yfnozhzxwm .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1332,7 +924,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-left-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_heading {
+#yfnozhzxwm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1344,7 +936,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-right-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_title {
+#yfnozhzxwm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1354,7 +946,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-bottom-width: 0;
 }
 
-#zemluqpbhs .gt_subtitle {
+#yfnozhzxwm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1364,13 +956,13 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-top-width: 0;
 }
 
-#zemluqpbhs .gt_bottom_border {
+#yfnozhzxwm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_col_headings {
+#yfnozhzxwm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1385,7 +977,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-right-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_col_heading {
+#yfnozhzxwm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1405,7 +997,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   overflow-x: hidden;
 }
 
-#zemluqpbhs .gt_column_spanner_outer {
+#yfnozhzxwm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1417,15 +1009,15 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   padding-right: 4px;
 }
 
-#zemluqpbhs .gt_column_spanner_outer:first-child {
+#yfnozhzxwm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zemluqpbhs .gt_column_spanner_outer:last-child {
+#yfnozhzxwm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zemluqpbhs .gt_column_spanner {
+#yfnozhzxwm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1437,7 +1029,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   width: 100%;
 }
 
-#zemluqpbhs .gt_group_heading {
+#yfnozhzxwm .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1459,7 +1051,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   vertical-align: middle;
 }
 
-#zemluqpbhs .gt_empty_group_heading {
+#yfnozhzxwm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1474,15 +1066,15 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   vertical-align: middle;
 }
 
-#zemluqpbhs .gt_from_md > :first-child {
+#yfnozhzxwm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zemluqpbhs .gt_from_md > :last-child {
+#yfnozhzxwm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zemluqpbhs .gt_row {
+#yfnozhzxwm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1501,7 +1093,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   overflow-x: hidden;
 }
 
-#zemluqpbhs .gt_stub {
+#yfnozhzxwm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1513,7 +1105,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   padding-left: 12px;
 }
 
-#zemluqpbhs .gt_summary_row {
+#yfnozhzxwm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1523,7 +1115,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   padding-right: 5px;
 }
 
-#zemluqpbhs .gt_first_summary_row {
+#yfnozhzxwm .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1533,7 +1125,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-top-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_grand_summary_row {
+#yfnozhzxwm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1543,7 +1135,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   padding-right: 5px;
 }
 
-#zemluqpbhs .gt_first_grand_summary_row {
+#yfnozhzxwm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1553,11 +1145,11 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-top-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_striped {
+#yfnozhzxwm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zemluqpbhs .gt_table_body {
+#yfnozhzxwm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1566,7 +1158,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-bottom-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_footnotes {
+#yfnozhzxwm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1580,13 +1172,13 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-right-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_footnote {
+#yfnozhzxwm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zemluqpbhs .gt_sourcenotes {
+#yfnozhzxwm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1600,41 +1192,41 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
   border-right-color: #D3D3D3;
 }
 
-#zemluqpbhs .gt_sourcenote {
+#yfnozhzxwm .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zemluqpbhs .gt_left {
+#yfnozhzxwm .gt_left {
   text-align: left;
 }
 
-#zemluqpbhs .gt_center {
+#yfnozhzxwm .gt_center {
   text-align: center;
 }
 
-#zemluqpbhs .gt_right {
+#yfnozhzxwm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zemluqpbhs .gt_font_normal {
+#yfnozhzxwm .gt_font_normal {
   font-weight: normal;
 }
 
-#zemluqpbhs .gt_font_bold {
+#yfnozhzxwm .gt_font_bold {
   font-weight: bold;
 }
 
-#zemluqpbhs .gt_font_italic {
+#yfnozhzxwm .gt_font_italic {
   font-style: italic;
 }
 
-#zemluqpbhs .gt_super {
+#yfnozhzxwm .gt_super {
   font-size: 65%;
 }
 
-#zemluqpbhs .gt_footnote_marks {
+#yfnozhzxwm .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;

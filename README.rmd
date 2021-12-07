@@ -78,7 +78,7 @@ Dans l'extrait ci-dessous, les deux premières colonnes correspondent au code ta
 
 ```{r echo = FALSE}
 load("R/sysdata.rda")
-table_transcodage %>% 
+my_tab_transcodage <- table_transcodage %>% 
   select(abre,denominations_sans_auteur.x,code_espece_boucle2,denominations_sans_auteur.y,niveau2) %>% 
    filter(code_espece_boucle2=="CBCU") %>% 
   rename("code_taxon"="abre",
@@ -120,8 +120,18 @@ table_transcodage %>%
   tab_options(column_labels.background.color ="#275662" ) %>%
    tab_source_note(
     source_note = "Table créée à partir du fichier d'Omnidia (Michel Coste)"
-  ) 
+  )  %>%
+  tab_options(table.width = pct(100))
+
+my_tab_transcodage %>% 
+  gtsave("man/figures/table_transcodage_ex.png", vwidth = 1500)
 ```
+
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/table_transcodage_ex.png")
+```
+
+
 
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
 
