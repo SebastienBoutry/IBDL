@@ -21,10 +21,10 @@ fibdl_ibdl_qualify<- function(data){
                             ClassIBDL),
            comment_1=ifelse(SommePourcent>=0.75,"","Pourcentage du linéaire inferieur à 75% (non representatif)"),
            comment_2=ifelse(nbr_uo>=(3),"","Nbr d UO inferieur à 3"),
-           commentaires=case_when(comment_1!="" & comment_2!="" ~ paste(comment_1,comment_2,sep="\n"),
-                                  comment_1=="" & comment_2!="" ~ comment_2,
-                                  comment_1!="" & comment_2=="" ~ comment_1,
-                                  ~ "")
+           commentaires=case_when((comment_1!="" & comment_2!="") ~ paste(comment_1,comment_2,sep="\n"),
+                                  (comment_1=="" & comment_2!="") ~ comment_2,
+                                  (comment_1!="" & comment_2=="") ~ comment_1,
+                                  TRUE ~ "")
     ) %>%
     dplyr::mutate(ClassIBDL=factor(ClassIBDL,
                             levels=c("B","P","M","G","HG")[5:1])) %>%
