@@ -16,7 +16,7 @@ fibdl_listflor_metrics <- function(data){
     ## calcul des métriques
     dplyr::mutate(indiciel = tidyr::replace_na(indiciel, 0)) %>%
     dplyr::mutate_at(dplyr::vars(params),
-                     dplyr::funs(tidyr::replace_na(., 0))) %>%
+                    tidyr::replace_na(., 0)) %>%
     dplyr::filter(indiciel == 1) %>%
     dplyr::group_by(id_prelevement) %>%
     dplyr::mutate(tot=sum(ab)) %>%
