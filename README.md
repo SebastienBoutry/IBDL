@@ -74,20 +74,22 @@ l’espèce. On a pris en compte la synonymie et l’héritage taxonomique.
 
 Dans l’extrait ci-dessous, les deux premières colonnes correspondent au
 code taxon et le nom scientifique associé. Les trois dernières colonnes
-sont les informations définies lors de la construction de l’indice. Le
-rang taxonomique à l’espèce a été ciblé. Le tableau ci-dessous
-correspond à tous les taxons ayant un code taxon (indice) pour valeur
-CBCU (*Cymbopleura cuspidata*).
+sont les informations liées à la construction de l’indice. Le tableau
+ci-dessous correspond à tous les taxons ayant un code taxon (indice)
+pour valeur CBCU (*Cymbopleura cuspidata*).
 
 <img src="man/figures/table_transcodage_ex.png" width="100%" />
 
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
-NKJ et Ptot).
+NKJ et Ptot). Le nombre 1 indique si le taxon est considéré comme un
+taxon d’alerte.
 
 <img src="man/figures/my_tab_alertes_ex.png" width="100%" />
 
-**`table_reference`**
+**`table_reference`** table regroupant les informations afin de calculer
+les SES pour chaque métrique selon le substrat et la classe
+d’alcalinité.
 
 <img src="man/figures/my_tab_SES_ex.png" width="100%" />
 
@@ -112,9 +114,10 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 
 ## Les étapes
 
-On trouvera les fonctions utiles selon le cheminement (-ref-) afin
-d’évaluer la qualité écologique de la masse d’eau à partir des
-communautées de diatomées benthiques.
+On trouve 10 fonctions dans ce package. L’une d’elle **fibdl** est une
+fonction intégratrice (utilisant les 9 autres) afin de définir l’indice
+IBDL. Il est possible de faire une partir du cheminement afin de voir
+les résultats intermédiaires.
 
 Certaines fonctions permettent de :
 

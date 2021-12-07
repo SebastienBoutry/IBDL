@@ -77,7 +77,7 @@ Les jeux de données internes embarquées correspondent aux jeux de données dit
 
 **`table_transcodage`** : Table de transcodage permettant de faire correspondre le code_taxon 4 lettres  (type OMNIDIA) à son entité taxonomique qui a été considérée pour la construction de l'IBDL. Le choix pour l'indice est d'harmoniser les taxons à un rang taxonomique de l'espèce. On a pris en compte la synonymie et l'héritage taxonomique. 
 
-Dans l'extrait ci-dessous, les deux premières colonnes correspondent au code taxon et le nom scientifique associé. Les trois dernières colonnes sont les informations définies lors de la construction de l'indice. Le rang taxonomique à l'espèce a été ciblé. Le tableau ci-dessous correspond à tous les taxons ayant un code taxon (indice) pour valeur CBCU (_Cymbopleura cuspidata_). 
+Dans l'extrait ci-dessous, les deux premières colonnes correspondent au code taxon et le nom scientifique associé. Les trois dernières colonnes sont les informations liées à la construction de l'indice. Le tableau ci-dessous correspond à tous les taxons ayant un code taxon (indice) pour valeur CBCU (_Cymbopleura cuspidata_). 
 
 ```{r echo = FALSE, eval=FALSE}
 my_tab_transcodage <- table_transcodage %>% 
@@ -135,7 +135,7 @@ knitr::include_graphics("man/figures/table_transcodage_ex.png")
 
 
 
-**`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). 
+**`table_taxons_alertes`** Table binaire indiquant si le taxon est considéré comme indiciel et/ou d'alerte selon les paramètres (DBO5, MES, NKJ et Ptot). Le nombre 1 indique si le taxon est considéré comme un taxon d'alerte.
 
 
 ```{r taxons alertes, echo=FALSE, eval=FALSE}
@@ -207,7 +207,7 @@ my_tab_alertes %>%
 knitr::include_graphics("man/figures/my_tab_alertes_ex.png")
 ```
 
-**`table_reference`**
+**`table_reference`** table regroupant les informations afin de calculer les SES pour chaque métrique selon le substrat et la classe d'alcalinité.
 
 ```{r reference, echo=FALSE, eval=FALSE}
 my_tab_SES <- SES_ref_type[1:6,] %>% 
@@ -269,7 +269,8 @@ knitr::include_graphics("man/figures/my_tab_lacs_ex.png")
 
 ## Les étapes
 
-On trouvera les fonctions utiles selon le cheminement (-ref-) afin d'évaluer la qualité écologique de la masse d'eau à partir des communautées de diatomées benthiques. 
+On trouve 10 fonctions dans ce package. L'une d'elle **fibdl** est une fonction intégratrice (utilisant les 9 autres) afin de définir l'indice IBDL.
+Il est possible de faire une partir du cheminement afin de voir les résultats intermédiaires.
 
 Certaines fonctions permettent de : 
 
