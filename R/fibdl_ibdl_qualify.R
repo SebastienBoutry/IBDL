@@ -19,9 +19,12 @@ fibdl_ibdl_qualify<- function(data){
            ClassIBDL=ifelse(Fiabilite=="pas fiable",
                             NA,
                             ClassIBDL),
-           comment_1=ifelse(SommePourcent>=0.75,"","Pourcentage du linéaire inferieur à 75% (non representatif)"),
+           comment_1=ifelse(SommePourcent>=0.75,NULL,"Pourcentage du linéaire inferieur à 75% (non representatif)"),
            comment_2=ifelse(nbr_uo>=(3),"","Nbr d UO inferieur à 3"),
-           commentaires=paste(comment_1,comment_2,sep="\n")
+           commentaires=case_when(!is.null(comment_1) & !is.null(comment_2) ~ paste(comment_1,comment_2,sep="\n"),
+                                  is.null(comment_1) & !is.null(comment_2) ~ comment_2,
+                                  !is.null(comment_1) & is.null(comment_2) ~ comment_1,
+                                  )
     ) %>%
     dplyr::mutate(ClassIBDL=factor(ClassIBDL,
                             levels=c("B","P","M","G","HG")[5:1])) %>%
