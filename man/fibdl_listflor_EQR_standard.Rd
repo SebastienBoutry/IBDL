@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_listflor_EQR_standard.R
 \name{fibdl_listflor_EQR_standard}
 \alias{fibdl_listflor_EQR_standard}
-\title{Title}
+\title{Standardisation des EQR au niveau du prélèvement}
 \usage{
 fibdl_listflor_EQR_standard(data)
 }
@@ -13,5 +13,5 @@ fibdl_listflor_EQR_standard(data)
 
 }
 \description{
-Title
+Standardisation des EQR au niveau du prélèvement
 }

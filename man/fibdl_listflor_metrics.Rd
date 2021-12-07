@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_listflor_metrics.R
 \name{fibdl_listflor_metrics}
 \alias{fibdl_listflor_metrics}
-\title{Title}
+\title{Calcul des métriques au niveau du prélèvement}
 \usage{
 fibdl_listflor_metrics(data)
 }
@@ -13,5 +13,5 @@ fibdl_listflor_metrics(data)
 
 }
 \description{
-Title
+Calcul des métriques au niveau du prélèvement
 }

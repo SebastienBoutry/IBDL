@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_uo_score.R
 \name{fibdl_uo_score}
 \alias{fibdl_uo_score}
-\title{Title}
+\title{Calcul du score au niveau de l'unité d'observation}
 \usage{
 fibdl_uo_score(data)
 }
@@ -13,5 +13,5 @@ fibdl_uo_score(data)
 
 }
 \description{
-Title
+Calcul du score au niveau de l'unité d'observation
 }

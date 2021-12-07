@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_ibdl.R
 \name{fibdl_ibdl}
 \alias{fibdl_ibdl}
-\title{Title}
+\title{Calcul de l'IBDL et la classe d'état}
 \usage{
 fibdl_ibdl(data)
 }
@@ -13,5 +13,5 @@ fibdl_ibdl(data)
 
 }
 \description{
-Title
+Calcul de l'IBDL et la classe d'état
 }

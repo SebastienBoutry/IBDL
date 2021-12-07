@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_listflor_transcode.R
 \name{fibdl_listflor_transcode}
 \alias{fibdl_listflor_transcode}
-\title{Harmonisation taxonomique au niveau espèce}
+\title{Harmonisation taxonomique au niveau espèce de la liste flroistique}
 \usage{
 fibdl_listflor_transcode(data)
 }
@@ -13,7 +13,7 @@ fibdl_listflor_transcode(data)
 liste floristique au niveau taxonomique espèce
 }
 \description{
-Harmonisation taxonomique au niveau espèce
+Harmonisation taxonomique au niveau espèce de la liste flroistique
 }
 \examples{
 listflor <- tibble::tibble(id_prelevement=1,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_listflor_EQR.R
 \name{fibdl_listflor_EQR}
 \alias{fibdl_listflor_EQR}
-\title{Title}
+\title{Transformation en EQR au niveau du prélèvement}
 \usage{
 fibdl_listflor_EQR(data, add_information_station)
 }
@@ -13,5 +13,5 @@ fibdl_listflor_EQR(data, add_information_station)
 
 }
 \description{
-Title
+Transformation en EQR au niveau du prélèvement
 }

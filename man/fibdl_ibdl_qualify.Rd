@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_ibdl_qualify.R
 \name{fibdl_ibdl_qualify}
 \alias{fibdl_ibdl_qualify}
-\title{Title}
+\title{Qualification de l'IBDL}
 \usage{
 fibdl_ibdl_qualify(data)
 }
@@ -13,5 +13,5 @@ fibdl_ibdl_qualify(data)
 
 }
 \description{
-Title
+Qualification de l'IBDL
 }

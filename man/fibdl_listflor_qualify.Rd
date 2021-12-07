@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl_listflor_qualify.R
 \name{fibdl_listflor_qualify}
 \alias{fibdl_listflor_qualify}
-\title{Title}
+\title{Qualification des listes floristiques}
 \usage{
 fibdl_listflor_qualify(
   data,
@@ -18,5 +18,5 @@ fibdl_listflor_qualify(
 
 }
 \description{
-Title
+Qualification des listes floristiques
 }
