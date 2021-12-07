@@ -1,8 +1,8 @@
-"";"id_prelevement";"id_uo";"nature_substrat";"id_campagne";"type_dominant";"code_pe";"datedebut"
-"1";314;224;"végétal";1;2;"ORX40";"2021-07-15"
-"2";315;225;"végétal";1;4;"ORX40";"2021-07-15"
-"3";316;226;"dur";1;4;"ORX40";"2021-07-15"
-"4";317;226;"végétal";1;4;"ORX40";"2021-07-15"
-"5";318;227;"végétal";1;4;"ORX40";"2021-07-15"
-"6";319;228;"végétal";1;1;"ORX40";"2021-07-15"
-"7";320;229;"végétal";1;1;"ORX40";"2021-07-15"
+id_prelevement;id_uo;nature_substrat;id_campagne;type_dominant;code_pe;datedebut
+314;224;végétal;1;2;ORX40;2021-07-15
+315;225;végétal;1;4;ORX40;2021-07-15
+316;226;dur;1;4;ORX40;2021-07-15
+317;226;végétal;1;4;ORX40;2021-07-15
+318;227;végétal;1;4;ORX40;2021-07-15
+319;228;végétal;1;1;ORX40;2021-07-15
+320;229;végétal;1;1;ORX40;2021-07-15
