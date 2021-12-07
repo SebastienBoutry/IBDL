@@ -1,5 +1,4 @@
-
-#' Fonction intégrative
+#' Fonction intégratrice
 #'
 #' @param listflor
 #' @param info_uo
