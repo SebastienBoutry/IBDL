@@ -1,6 +1,6 @@
 Package: IBDL
 Title: IBDL : cacule l indice biologique diatomique en lac
-Version: 0.0.0.9000
+Version: 0.0.0.9
 Authors@R: 
     person("Sebastien", "Boutry", , "sebastien.boutry@inrae.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8046-585X"))
