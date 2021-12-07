@@ -1,4 +1,12 @@
-
+#' Title
+#'
+#' @param data
+#' @param add_information_station
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fibdl_listflor_EQR<- function(data,add_information_station){
   ###
   data <- data %>%

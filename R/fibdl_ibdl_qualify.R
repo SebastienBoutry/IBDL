@@ -1,4 +1,11 @@
-
+#' Title
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fibdl_ibdl_qualify<- function(data){
   ibdl_qualify <- data %>%
     dplyr::left_join(lake_infos,by=c("code_lac"="code_pe")) %>%

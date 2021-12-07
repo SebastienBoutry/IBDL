@@ -1,4 +1,14 @@
-
+#' Title
+#'
+#' @param data
+#' @param seuil_nbr_valves
+#' @param seuil_pour_valves_sp
+#' @param seuil_pour_taxons_indiciels
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fibdl_listflor_qualify <- function(data,
                                    seuil_nbr_valves = 350,
                                    seuil_pour_valves_sp = 0.25,

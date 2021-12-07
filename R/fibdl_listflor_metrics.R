@@ -1,4 +1,12 @@
 
+#' Title
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fibdl_listflor_metrics <- function(data){
   params <- c("MES","DBO5","NKJ","Ptot")
   data %>%

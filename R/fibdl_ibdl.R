@@ -1,4 +1,12 @@
 
+#' Title
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fibdl_ibdl<- function(data){
   table_ibdl <- data %>%
     dplyr::group_by(code_pe,id_campagne,datedebut) %>%

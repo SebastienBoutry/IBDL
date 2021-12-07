@@ -1,4 +1,11 @@
-
+#' Title
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fibdl_listflor_EQR_standard <- function(data){
   table_listflor_EQR_standard <- data %>%
     dplyr::mutate(EQR=dplyr::case_when(EQR>=0.934 & metrics=="DBO5"~EQR*3.05-2.05,
