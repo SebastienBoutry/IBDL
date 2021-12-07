@@ -29,7 +29,7 @@ fibdl_ibdl_qualify<- function(data){
     ) %>%
     dplyr::mutate(ClassIBDL=factor(ClassIBDL,
                             levels=c("B","P","M","G","HG")[5:1])) %>%
-    select(-comment_1,comment_2) %>%
+    select(-comment_1,-comment_2) %>%
     dplyr::ungroup()
   ##
   return(ibdl_qualify)
