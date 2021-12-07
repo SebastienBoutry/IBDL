@@ -47,6 +47,9 @@ afin de donner une valeur et une classe d’état écologique du plan d’eau
 étudié (conforme à la Directive Cadre Européenne sur l’Eau (Directive
 2000)).
 
+Dans le rapport suivant (Boutry et al. 2021) décrit la démarche
+scientifique mis en place pour la création de l’IBDL.
+
 ## Les besoins
 
 En utilisant le protocole d’échantillonnage (Morin et al. 2018), on
@@ -101,9 +104,6 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 
 <img src="man/figures/my_tab_lacs_ex.png" width="100%" />
 
-(la table des taxons d’alertes, la table de transcodage, la table de
-classification des plans d’eau, la table des valeurs de référence).
-
 <div align="center">
 
 <img src = "man/figures/1_script_IBDL_besoins.png" align="center" height="600"/>
@@ -156,6 +156,14 @@ ref article ref rapport OFB
 
 Afnor. 2010. “XP T90-328 Qualité de l’eau Echantillonnage Des
 Communautés de Macrophytes En Plans d’eau.”
+
+</div>
+
+<div id="ref-Boutry2021" class="csl-entry">
+
+Boutry, Sébastien, Soizic Morin, Vincent Bertrin, and Juliette Rosebery.
+2021. “Évaluation écologique Des Plans d’eau Basée Sur Les Communautés
+de Diatomées Benthiques.” INRAE, UR EABX, équipe ECOVEA.
 
 </div>
 
