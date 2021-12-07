@@ -61,7 +61,7 @@ _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans 
 
 Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@directive2000water]).
 
-Dans le rapport suivant [@Boutry2021] décrit la démarche scientifique mis en place pour la création de l'IBDL.
+Dans le rapport technique [@Boutry2021], la démarche scientifique décrit les différentes pour la création de l'IBDL.
 
 ## Les besoins 
 
@@ -304,5 +304,4 @@ Quick Link
 
 # Références
 
-ref article
-ref rapport OFB
+

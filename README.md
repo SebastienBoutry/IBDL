@@ -47,8 +47,8 @@ afin de donner une valeur et une classe d’état écologique du plan d’eau
 étudié (conforme à la Directive Cadre Européenne sur l’Eau (Directive
 2000)).
 
-Dans le rapport suivant (Boutry et al. 2021) décrit la démarche
-scientifique mis en place pour la création de l’IBDL.
+Dans le rapport technique (Boutry et al. 2021), la démarche scientifique
+décrit les différentes pour la création de l’IBDL.
 
 ## Les besoins
 
@@ -147,8 +147,6 @@ Quick Link
 </div>
 
 # Références
-
-ref article ref rapport OFB
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 
