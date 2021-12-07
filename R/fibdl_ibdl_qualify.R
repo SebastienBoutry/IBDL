@@ -8,6 +8,7 @@
 #' @examples
 fibdl_ibdl_qualify<- function(data){
   ibdl_qualify <- data %>%
+    dplyr::ungroup() %>%
     dplyr::left_join(lake_infos,by=c("code_lac"="code_pe")) %>%
     ###
     dplyr::mutate(Fiabilite=ifelse(SommePourcent>=0.75 & nbr_uo>=(3),
@@ -32,7 +33,6 @@ fibdl_ibdl_qualify<- function(data){
     select(-comment_1,-comment_2,-nbr_uo_theo) %>%
     rename("Classe alcalinité"="classi_alc",
            "Somme des Pourcentages selon la typologie"="SommePourcent")
-    dplyr::ungroup()
   ##
   return(ibdl_qualify)
 }
