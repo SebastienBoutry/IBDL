@@ -19,7 +19,7 @@ fibdl_ibdl<- function(data){
     dplyr::rename("code_lac"="code_pe") %>%
     ##
     dplyr::group_by(id_campagne,datedebut,code_lac,pourcentage,value,nbr_uo) %>%
-    dplyr::summarise(Moy_type=mean(Note_UO)) %>%
+    dplyr::summarise(Moy_type=mean(Note_UO,na.rm=TRUE)) %>%
     dplyr::ungroup() %>%
     dplyr::arrange(id_campagne) %>%
     dplyr::mutate(Note_type=Moy_type*(value/100)) %>%
