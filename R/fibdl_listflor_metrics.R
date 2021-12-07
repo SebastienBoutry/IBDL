@@ -20,11 +20,11 @@ fibdl_listflor_metrics <- function(data){
     dplyr::group_by(id_prelevement) %>%
     dplyr::mutate(tot=sum(ab)) %>%
     dplyr::mutate(ab_rel = ab / tot) %>%
-    dplyr::mutate_at(dplyr::vars(params),
-                     dplyr::funs(. * ab_rel)) %>%
+    dplyr::mutate_at(params,
+                     ~(. * ab_rel)) %>%
     dplyr::group_by(id_prelevement) %>%
-    dplyr::summarise_at(dplyr::vars(params),
-                        dplyr::funs(1 - sum(.))) %>%
+    dplyr::summarise_at(params,
+                        ~(1 - sum(.))) %>%
     tidyr::pivot_longer(cols=params,
                  names_to="metrics",
                  values_to="value") %>%
