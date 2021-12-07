@@ -24,10 +24,11 @@ fibdl_ibdl_qualify<- function(data){
            commentaires=case_when(!is.null(comment_1) & !is.null(comment_2) ~ paste(comment_1,comment_2,sep="\n"),
                                   is.null(comment_1) & !is.null(comment_2) ~ comment_2,
                                   !is.null(comment_1) & is.null(comment_2) ~ comment_1,
-                                  )
+                                  ~ "")
     ) %>%
     dplyr::mutate(ClassIBDL=factor(ClassIBDL,
                             levels=c("B","P","M","G","HG")[5:1])) %>%
+    select(-comment_1,comment_2) %>%
     dplyr::ungroup()
   ##
   return(ibdl_qualify)
