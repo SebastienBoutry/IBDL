@@ -1,6 +1,7 @@
 usethis::use_package("magrittr")
 usethis::use_package("tibble")
 usethis::use_package("dplyr")
+# usethis::use_package("tidyverse",type="Depends")
 usethis::use_package("base")
 usethis::use_package("purrr")
 usethis::use_package("tidyr")
