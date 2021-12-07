@@ -2,7 +2,7 @@
 % Please edit documentation in R/fibdl.R
 \name{fibdl}
 \alias{fibdl}
-\title{Fonction intégrative}
+\title{Fonction intégratrice}
 \usage{
 fibdl(listflor, info_uo)
 }
@@ -13,5 +13,5 @@ fibdl(listflor, info_uo)
 
 }
 \description{
-Fonction intégrative
+Fonction intégratrice
 }
