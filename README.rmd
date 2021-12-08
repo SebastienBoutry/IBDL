@@ -59,13 +59,24 @@ _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans 
 
 # Utilisation
 
-Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@directive2000water]).
+Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@Directive2000]).
 
 Dans le rapport technique [@Boutry2021], la démarche scientifique décrit les différentes pour la création de l'IBDL.
 
 ## Les besoins 
 
-En utilisant le protocole d'échantillonnage [@Morin2018], on importe deux fichiers :
+L'Indice Biologique Diatomées en Lac s'appuie sur un protocole d'échantillonnage [@morin:hal-02594105]. 
+
+### Protocle d'échantillonnage
+
+Plusieurs stations (ou unité d'observation) sont échantillonnées sur divers substrats (minéral/dur ou végétal). Le positionnement des unités d'obersvation se base sur la norme macrophytes plan d'eau [@afnorXP], la méthode de positionnement des stations, se basant sur les travaux de Jensen [@Jensen1977], a été incrémentée dans le package [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
+
+### Acquisition des données
+
+Plusieurs formats sont disponibles pour la saisie des données soit sur .
+La mise en forme des fichiers peuvent se faire à l'aide du package [`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
+
+Des informations liées à la campagne et à la station sont acquises avec les listes floristiques, ces deux fichiers sont transmis dans deux fichiers distincts :
 
 - le premier contient les listes floristiques (id_prelevement, taxons, ab),
 - le second renseigne sur les données de contexte liées au site d'étude (id_prelevement, id_uo, nature_substrat, code_gene, date).
@@ -270,15 +281,42 @@ knitr::include_graphics("man/figures/my_tab_lacs_ex.png")
 ## Les étapes
 
 On trouve 10 fonctions dans ce package. L'une d'elle **fibdl** est une fonction intégratrice (utilisant les 9 autres) afin de définir l'indice IBDL.
-Il est possible de faire une partir du cheminement afin de voir les résultats intermédiaires.
+Il est possible de faire une seule partie du cheminement afin de d'avoir les résultats intermédiaires à différentes échelles spatiales.
 
-Certaines fonctions permettent de : 
+```{r ibdl}
+# ## Chargement du package
+# if(!require("remotes")) {install.packages("remotes")} 
+# remotes::install_github("SebastienBoutry/IBDL",force = TRUE)
+# library(IBDL)
 
-- harmoniser les données,
-- qualifier/valider les données ou les métriques,
-- calculer les métriques selon un grain spatial (prélèvement, unité d'observation et lac).
+## Chemins
+chemin_flore <- system.file("listflor.csv", package = "IBDL") # A remplacer par votre chemin
+chemin_uo <- system.file("info_uo.csv", package = "IBDL") # A remplacer par votre chemin
 
-Toutes les fonctions seront détaillées dans la vignette du package.
+### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue
+# chemin_flore <- rstudioapi::selectFile()
+# chemin_uo <- restudioapi::selectFile()
+
+## Import
+listflor <- read.csv2(chemin_flore, fileEncoding = "utf-8")
+info_uo <- read.csv2(chemin_uo, fileEncoding = "utf-8")
+
+## Calcul de l'IBDL
+ibdl <- fibdl(listflor,info_uo)
+
+## Affichage des résultats
+ibdl
+
+```
+
+
+<!-- Certaines fonctions permettent de :  -->
+
+<!-- - harmoniser les données, -->
+<!-- - qualifier/valider les données ou les métriques, -->
+<!-- - calculer les métriques selon un grain spatial (prélèvement, unité d'observation et lac). -->
+
+Toutes les fonctions sont détaillées dans la vignette du package.
 
 
 <div align="center">

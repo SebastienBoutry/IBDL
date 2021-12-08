@@ -44,7 +44,7 @@ dans le projet Phytobenthos plan d’eau financé par l’OFB-Pôle ECLA.*
 
 Le package `{IBDL}` sert à calculer l’indice biologique diatomées en lac
 afin de donner une valeur et une classe d’état écologique du plan d’eau
-étudié (conforme à la Directive Cadre Européenne sur l’Eau (Directive
+étudié (conforme à la Directive Cadre Européenne sur l’Eau (Commission
 2000)).
 
 Dans le rapport technique (Boutry et al. 2021), la démarche scientifique
@@ -52,8 +52,26 @@ décrit les différentes pour la création de l’IBDL.
 
 ## Les besoins
 
-En utilisant le protocole d’échantillonnage (Morin et al. 2018), on
-importe deux fichiers :
+L’Indice Biologique Diatomées en Lac s’appuie sur un protocole
+d’échantillonnage (Morin et al. 2010). Des informations liées à la
+campagne et à la station sont acquises avec les listes floristiques.
+
+### Protocle d’échantillonnage
+
+Plusieurs stations (ou unité d’observation) sont échantillonnées sur
+divers substrats (minéral/dur ou végétal). Le positionnement des unités
+d’obersvation se base sur la norme macrophytes plan d’eau (Afnor 2010),
+la méthode de positionnement des stations, se basant sur les travaux de
+Jensen (Jensén 1977), a été incrémentée dans le package suivant
+[`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
+
+### Acquisition des données
+
+Plusieurs formats sont disponibles pour la saisie des données soit sur .
+La mise en forme des fichiers peuvent se faire à l’aide du package
+[`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
+
+Deux fichiers :
 
 -   le premier contient les listes floristiques (id\_prelevement,
     taxons, ab),
@@ -116,17 +134,48 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 
 On trouve 10 fonctions dans ce package. L’une d’elle **fibdl** est une
 fonction intégratrice (utilisant les 9 autres) afin de définir l’indice
-IBDL. Il est possible de faire une partir du cheminement afin de voir
-les résultats intermédiaires.
+IBDL. Il est possible de faire une seule partie du cheminement afin de
+d’avoir les résultats intermédiaires à différentes échelles spatiales.
 
-Certaines fonctions permettent de :
+``` r
+# ## Chargement du package
+# if(!require("remotes")) {install.packages("remotes")} 
+# remotes::install_github("SebastienBoutry/IBDL",force = TRUE)
+# library(IBDL)
 
--   harmoniser les données,
--   qualifier/valider les données ou les métriques,
--   calculer les métriques selon un grain spatial (prélèvement, unité
-    d’observation et lac).
+## Chemins
+chemin_flore <- system.file("listflor.csv", package = "IBDL") # A remplacer par votre chemin
+chemin_uo <- system.file("info_uo.csv", package = "IBDL") # A remplacer par votre chemin
 
-Toutes les fonctions seront détaillées dans la vignette du package.
+### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue
+# chemin_flore <- rstudioapi::selectFile()
+# chemin_uo <- restudioapi::selectFile()
+
+## Import
+listflor <- read.csv2(chemin_flore, fileEncoding = "utf-8")
+info_uo <- read.csv2(chemin_uo, fileEncoding = "utf-8")
+
+## Calcul de l'IBDL
+ibdl <- fibdl(listflor,info_uo)
+
+## Affichage des résultats
+ibdl
+```
+
+<div class="kable-table">
+
+| id\_campagne | datedebut  | code\_lac | nbr\_uo |      IBDL | Somme des Pourcentages selon la typologie | Classe d’état IBDL | nom\_lac         | code\_gene | Classe alcalinité | Fiabilite | commentaires |
+|-------------:|:-----------|:----------|--------:|----------:|------------------------------------------:|:-------------------|:-----------------|:-----------|:------------------|:----------|:-------------|
+|            1 | 2021-07-15 | ORX40     |       4 | 0.1739731 |                                         1 | B                  | Orx (marais d’ ) | S43-5003   | MA                | ok        |              |
+
+</div>
+
+<!-- Certaines fonctions permettent de :  -->
+<!-- - harmoniser les données, -->
+<!-- - qualifier/valider les données ou les métriques, -->
+<!-- - calculer les métriques selon un grain spatial (prélèvement, unité d'observation et lac). -->
+
+Toutes les fonctions sont détaillées dans la vignette du package.
 
 <div align="center">
 
@@ -168,18 +217,28 @@ de Diatomées Benthiques.” INRAE, UR EABX, équipe ECOVEA.
 
 </div>
 
-<div id="ref-directive2000water" class="csl-entry">
+<div id="ref-Directive2000" class="csl-entry">
 
-Directive, Water Framework. 2000. “Water Framework Directive.” *Journal
+Commission, European. 2000. “Water Framework Directive.” *Journal
 Reference OJL* 327: 1–73.
 
 </div>
 
-<div id="ref-Morin2018" class="csl-entry">
+<div id="ref-Jensen1977" class="csl-entry">
 
-Morin, Soizic, Damien Valade, Juliette Rosebery, and Vincent Bertrin.
-2018. “Echantillonnage Des Communautés de Phytobenthos En Plans d’eau.”
-Technical report. Irstea.
+Jensén, Sven. 1977. “An Objective Method for Sampling the Macrophyte
+Vegetation in Lakes.” *Vegetatio* 33 (2): 107–18.
+
+</div>
+
+<div id="ref-morin:hal-02594105" class="csl-entry">
+
+Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M.
+Cellamare, and Alain Dutartre. 2010. “<span class="nocase">Utilisation
+du phytobenthos pour la bioindication en plans d’eau : Etat de l’art des
+m<span class="nocase">é</span>thodes disponibles et test de m<span
+class="nocase">é</span>triques sur les plans d’eau aquitains</span>.”
+Research Report. Irstea. <https://hal.inrae.fr/hal-02594105>.
 
 </div>
 
