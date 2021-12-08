@@ -30,6 +30,7 @@ Une fois installé, vous pouvez charger le package avec :
 
 ``` r
 library(IBDL)
+load("R/sysdata.rda")
 ```
 
 # Objectif
@@ -108,20 +109,20 @@ sont les informations liées à la construction de l’indice. Le tableau
 ci-dessous correspond à tous les taxons ayant un code taxon (indice)
 pour valeur CBCU (*Cymbopleura cuspidata*).
 
-<img src="man/figures/table_transcodage_ex.png" width="100%" />
+<img src="man/figures/README-table_transcodage_ex.png" width="100%" />
 
 **`table_taxons_alertes`** Table binaire indiquant si le taxon est
 considéré comme indiciel et/ou d’alerte selon les paramètres (DBO5, MES,
 NKJ et Ptot). Le nombre 1 indique si le taxon est considéré comme un
 taxon d’alerte.
 
-<img src="man/figures/my_tab_alertes_ex.png" width="100%" />
+<img src="man/figures/README-my_tab_alertes_ex.png" width="100%" />
 
 **`table_reference`** table regroupant les informations afin de calculer
 les métriques au niveau du prélèvement pour chaque paramètre, type de
 substrat et la classe d’alcalinité du plan d’eau.
 
-<img src="man/figures/my_tab_SES_ex.png" width="100%" />
+<img src="man/figures/README-my_tab_SES_ex.png" width="100%" />
 
 **`table_lacs`** Table regroupant les informations sur la classification
 des lacs selon l’alcalinité (Kelly et al. 2014) et le nombre minimal
@@ -134,7 +135,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 -   MA (moyenne) : 0.2 meq.l-1 &lt;= alcalinité &lt; 1 meq.l-1;
 -   HA (haute) : alcalinité alcalinité &gt;=1 meq.l-1.
 
-<img src="man/figures/my_tab_lacs_ex.png" width="100%" />
+<img src="man/figures/README-my_tab_lacs_ex.png" width="100%" />
 
 <div align="center">
 

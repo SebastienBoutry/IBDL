@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/",
+  fig.path = "man/figures/README-",
   out.width = "100%"
 )
 ```
@@ -48,6 +48,7 @@ Une fois installé, vous pouvez charger le package avec :
 
 ```{r echo=TRUE}
 library(IBDL)
+load("R/sysdata.rda")
 ```
 
 # Objectif
@@ -140,11 +141,11 @@ my_tab_transcodage <- table_transcodage %>%
   tab_options(table.width = pct(100))
 
 my_tab_transcodage %>% 
-  gtsave("man/figures/table_transcodage_ex.png", vwidth = 1500)
+  gtsave("man/figures/README-table_transcodage_ex.png", vwidth = 1500)
 ```
 
 ```{r, echo=FALSE}
-knitr::include_graphics("man/figures/table_transcodage_ex.png")
+knitr::include_graphics("man/figures/README-table_transcodage_ex.png")
 ```
 
 
@@ -214,11 +215,11 @@ my_tab_alertes <- Table_taxons_alertes[1:6,] %>%
   tab_options(table.width = pct(100))
 
 my_tab_alertes %>% 
-  gtsave("man/figures/my_tab_alertes_ex.png", vwidth = 1500)
+  gtsave("man/figures/README-my_tab_alertes_ex.png", vwidth = 1500)
 ```
 
 ```{r, echo=FALSE}
-knitr::include_graphics("man/figures/my_tab_alertes_ex.png")
+knitr::include_graphics("man/figures/README-my_tab_alertes_ex.png")
 ```
 
 **`table_reference`** table regroupant les informations afin de calculer les métriques au niveau du prélèvement pour chaque paramètre, type de substrat et la classe d'alcalinité du plan d'eau.
@@ -237,10 +238,10 @@ my_tab_SES <- SES_ref_type[1:6,] %>%
               )
 
 my_tab_SES %>% 
-  gtsave("man/figures/my_tab_SES_ex.png", vwidth = 1500)
+  gtsave("man/figures/README-my_tab_SES_ex.png", vwidth = 1500)
 ```
 ```{r, echo=FALSE}
-knitr::include_graphics("man/figures/my_tab_SES_ex.png")
+knitr::include_graphics("man/figures/README-my_tab_SES_ex.png")
 ```
 
 
@@ -268,11 +269,11 @@ my_tab_lacs <- lake_infos[1:6,] %>%
   tab_options(column_labels.background.color ="#275662",
                table.width = pct(100))
 my_tab_lacs %>% 
-  gtsave("man/figures/my_tab_lacs_ex.png", vwidth = 1500)
+  gtsave("man/figures/README-my_tab_lacs_ex.png", vwidth = 1500)
 ```
 
 ```{r, echo=FALSE}
-knitr::include_graphics("man/figures/my_tab_lacs_ex.png")
+knitr::include_graphics("man/figures/README-my_tab_lacs_ex.png")
 ```
 
 <div align="center">
