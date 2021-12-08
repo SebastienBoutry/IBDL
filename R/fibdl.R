@@ -1,7 +1,7 @@
 #' Fonction intégratrice
 #'
-#' @param listflor
-#' @param info_uo
+#' @param listflor table renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab
+#' @param info_uo table d'informations complémentaires sur le prélevement.
 #'
 #' @return
 #' @export

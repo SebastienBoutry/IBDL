@@ -7,7 +7,9 @@
 fibdl(listflor, info_uo)
 }
 \arguments{
-\item{info_uo}{}
+\item{listflor}{table renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab}
+
+\item{info_uo}{table d'informations complémentaires sur le prélevement.}
 }
 \value{
 
