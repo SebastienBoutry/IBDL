@@ -30,7 +30,6 @@ Une fois installé, vous pouvez charger le package avec :
 
 ``` r
 library(IBDL)
-load("R/sysdata.rda")
 ```
 
 # Objectif
