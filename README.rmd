@@ -36,7 +36,7 @@ library(gt)
 
 # Installation de `{IBDL}`
 
-La version du paquet `{IBDL}` peut se télécharger via le site Github pour cela on aura besoin du paquet `{remotes}`: 
+La version du package `{IBDL}` peut se télécharger via le site Github pour cela on aura besoin du package `{remotes}`: 
 
 ```{r install, eval=FALSE}
 remotes::install_github("SebastienBoutry/IBDL")
