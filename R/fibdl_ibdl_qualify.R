@@ -1,4 +1,4 @@
-#' Qualification de l'IBDL
+#' Qualification de l IBDL
 #'
 #' @param data
 #'
