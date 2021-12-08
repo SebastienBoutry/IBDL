@@ -174,13 +174,7 @@ ibdl <- fibdl(listflor,info_uo)
 ibdl
 ```
 
-<div class="kable-table">
-
-| id\_campagne | datedebut  | code\_lac | nbr\_uo |      IBDL | Somme des Pourcentages selon la typologie | Classe d’état IBDL | nom\_lac         | code\_gene | Classe alcalinité | Fiabilite | commentaires |
-|-------------:|:-----------|:----------|--------:|----------:|------------------------------------------:|:-------------------|:-----------------|:-----------|:------------------|:----------|:-------------|
-|            1 | 2021-07-15 | ORX40     |       4 | 0.1739731 |                                         1 | B                  | Orx (marais d’ ) | S43-5003   | MA                | ok        |              |
-
-</div>
+<img src="man/figures/README-ibdl_ex.png" width="100%" />
 
 <!-- Certaines fonctions permettent de :  -->
 <!-- - harmoniser les données, -->

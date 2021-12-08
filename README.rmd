@@ -286,7 +286,7 @@ knitr::include_graphics("man/figures/README-my_tab_lacs_ex.png")
 On trouve 10 fonctions dans ce package. L'une d'elle **fibdl** est une fonction intégratrice (utilisant les 9 autres) afin de définir l'indice IBDL.
 Il est possible de faire une seule partie du cheminement afin de d'avoir les résultats intermédiaires à différentes échelles spatiales.
 
-```{r ibdl}
+```{r ibdl, echo=TRUE, eval=FALSE}
 # ## Chargement du package
 # if(!require("remotes")) {install.packages("remotes")} 
 # remotes::install_github("SebastienBoutry/IBDL",force = TRUE)
@@ -312,6 +312,141 @@ ibdl
 
 ```
 
+```{r, echo=FALSE, eval=FALSE}
+## Chemins
+chemin_flore <- system.file("listflor.csv", package = "IBDL") # A remplacer par votre chemin
+chemin_uo <- system.file("info_uo.csv", package = "IBDL") # A remplacer par votre chemin
+
+### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue
+# chemin_flore <- rstudioapi::selectFile()
+# chemin_uo <- restudioapi::selectFile()
+
+## Import
+listflor <- read.csv2(chemin_flore, fileEncoding = "utf-8")
+info_uo <- read.csv2(chemin_uo, fileEncoding = "utf-8")
+
+## Calcul de l'IBDL
+ibdl <- fibdl(listflor,info_uo)
+
+
+# values=c("HG"="royalblue3", "G"="springgreen3", "M"="gold","P"= "darkorange","B"= "firebrick3")
+
+## Affichage des résultats
+my_tab_lacs <- ibdl%>% 
+  gt() %>% 
+   tab_header(
+    title = md("Exemple de sortie de la fonction fibdl_ibdl()."),
+    # subtitle = "(extrait des 6 premières lignes)"
+  ) %>% 
+  tab_style(
+  style = list(
+     cell_fill(color = "royalblue3"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = IBDL,
+    rows = IBDL>=0.8
+  )
+  ) %>%
+    tab_style(
+  style = list(
+     cell_fill(color = "springgreen3"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = IBDL,
+    rows = between(IBDL,right = 0.8,left = 0.6)
+  )
+  ) %>%
+      tab_style(
+  style = list(
+     cell_fill(color = "gold"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = IBDL,
+    rows = between(IBDL,right = 0.6,left = 0.4)
+  )
+  ) %>%
+    tab_style(
+  style = list(
+     cell_fill(color = "darkorange"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = IBDL,
+    rows = between(IBDL,right = 0.4,left =0.2)
+  )
+  ) %>%
+      tab_style(
+  style = list(
+     cell_fill(color = "firebrick3"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = IBDL,
+    rows = IBDL<0.2
+  )
+  ) %>% 
+  tab_style(
+  style = list(
+     cell_fill(color = "royalblue3"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = `Classe d'etat IBDL`,
+    rows = `Classe d'etat IBDL`=="HG"
+  )
+  ) %>%
+    tab_style(
+  style = list(
+     cell_fill(color = "springgreen3"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = `Classe d'etat IBDL`,
+    rows = `Classe d'etat IBDL`=="G"
+  )
+  ) %>%
+      tab_style(
+  style = list(
+     cell_fill(color = "gold"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = `Classe d'etat IBDL`,
+    rows = `Classe d'etat IBDL`=="M"
+  )
+  ) %>%
+    tab_style(
+  style = list(
+     cell_fill(color = "darkorange"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = `Classe d'etat IBDL`,
+    rows =`Classe d'etat IBDL`=="P"
+  )
+  ) %>%
+      tab_style(
+  style = list(
+     cell_fill(color = "firebrick3"),
+    cell_text(style = "italic",color="#FFFFFF")
+    ),
+  locations = cells_body(
+    columns = `Classe d'etat IBDL`,
+    rows = `Classe d'etat IBDL`=="B"
+  )
+  ) %>% 
+  tab_options(column_labels.background.color ="#275662",
+               table.width = pct(100))
+my_tab_lacs %>% 
+  gtsave("man/figures/README-ibdl_ex.png", vwidth = 1500)
+```
+
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/README-ibdl_ex.png")
+```
 
 <!-- Certaines fonctions permettent de :  -->
 
