@@ -138,7 +138,7 @@ Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 
 <div align="center">
 
-<img src = "man/figures/1_script_IBDL_besoins.png" align="center" height="600"/>
+<img src="man/figures/1_script_IBDL_besoins.png" width="600px" />
 
 </div>
 
@@ -185,7 +185,7 @@ Toutes les fonctions sont détaillées dans la vignette du package.
 
 <div align="center">
 
-<img src = "man/figures/2_phases_programmation.png" label="steps" align="center" height="600"/>
+<img src="man/figures/2_phases_programmation.png" width="600px" />
 
 </div>
 

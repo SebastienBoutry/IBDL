@@ -277,9 +277,12 @@ knitr::include_graphics("man/figures/README-my_tab_lacs_ex.png")
 
 <div align="center">
 
-<img src = "man/figures/1_script_IBDL_besoins.png" align="center" height="600"/>
+```{r, echo=FALSE, out.width = "600px"}
+knitr::include_graphics("man/figures/1_script_IBDL_besoins.png")
+```
 
 </div>
+
 
 ## Les étapes
 
@@ -459,7 +462,9 @@ Toutes les fonctions sont détaillées dans la vignette du package.
 
 <div align="center">
 
-<img src = "man/figures/2_phases_programmation.png" label="steps" align="center" height="600"/>
+```{r, echo=FALSE, out.width = "600px"}
+knitr::include_graphics("man/figures/2_phases_programmation.png")
+```
 
 </div>
 
