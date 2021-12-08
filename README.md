@@ -65,16 +65,17 @@ l’indice.
 ### Protocole d’échantillonnage
 
 Plusieurs stations (ou unités d’observation) sont échantillonnées sur un
-ou deux types de substrat (minéral/dur ou végétal). Le positionnement
-des unités d’obersvation se base sur la norme macrophytes plan d’eau
-(Afnor 2010), la méthode de positionnement des stations, se basant sur
-les travaux de Jensen (Jensén 1977), a été incrémentée dans le package
+ou deux types de substrat (minéral/dur ou végétal). Le positionnement de
+ces unités d’observation est décrite dans la norme macrophytes plan
+d’eau (Afnor 2010) elle utilise la méthode de Jensen (Jensén 1977) qui a
+été incrémentée dans le package
 [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
 
 ### Acquisition des données
 
-Plusieurs formats sont disponibles pour la saisie des données soit sur .
-La mise en forme des fichiers peuvent se faire à l’aide du package
+Il est conseillé d’utiliser les formats distribués sur le site
+[OFB](https://professionnels.ofb.fr/node/398). La mise en forme des
+fichiers peuvent se faire à l’aide du package
 [`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
 
 Des données mésologiques (au niveau de la campagne et l’unité
