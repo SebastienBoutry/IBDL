@@ -1,5 +1,5 @@
 Package: IBDL
-Title: IBDL : calcul l Indice Biologique diatomées en lac
+Title: Outil de calcul l'Indice Biologique Diatomées en Lac
 Version: 0.0.0.9
 Authors@R: 
     c(person("Sebastien", "Boutry", , "sebastien.boutry@inrae.fr", role = c("aut", "cre"),
