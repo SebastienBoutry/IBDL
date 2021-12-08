@@ -4,8 +4,13 @@ Version: 0.0.0.9
 Authors@R: 
     c(person("Sebastien", "Boutry", , "sebastien.boutry@inrae.fr", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8046-585X")),
+           person("Soizic", "Morin", , "", role = c("aut"),
+           comment = c(ORCID = "0000-0003-0360-9383")),
+              person("Vincent", "Bertrin", , "", role = c("aut"),
+           comment = c(ORCID = "0000-0002-3888-8282")),
            person("Juliette", "Rosebery", , "", role = c("aut"),
            comment = c(ORCID = "0000-0003-1090-7020"))
+           )
 Description: Dans ce package, on trouvera les fonctions necessaires afin de calculer l indice et determiner la classe d etat ecologique du plan d eau.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
