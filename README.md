@@ -47,8 +47,8 @@ Le package `{IBDL}` sert à calculer l’Indice Biologique Diatomées en Lac
 d’eau étudié (conforme à la Directive Cadre Européenne sur l’Eau
 (Commission 2000)).
 
-Dans le rapport technique (Boutry et al. 2021), la démarche scientifique
-décrit les différentes étapes de la construction de l’IBDL.
+*NB Dans le rapport scientifique (Boutry et al. 2021), les différentes
+étapes de la construction de l’IBDL y est décrite.*
 
 ## Les besoins
 
@@ -77,9 +77,9 @@ Plusieurs formats sont disponibles pour la saisie des données soit sur .
 La mise en forme des fichiers peuvent se faire à l’aide du package
 [`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
 
-Des informations liées à la campagne et à la station sont acquises avec
-les listes floristiques, ces deux fichiers sont transmis dans deux
-fichiers distincts :
+Des données mésologiques (au niveau de la campagne et l’unité
+d’observation) et des listes floristiques sont acquises sont réparties
+dans deux fichiers distincts :
 
 -   le premier contient les listes floristiques (id\_prelevement,
     taxons, ab),
@@ -114,15 +114,15 @@ taxon d’alerte.
 <img src="man/figures/my_tab_alertes_ex.png" width="100%" />
 
 **`table_reference`** table regroupant les informations afin de calculer
-les SES pour chaque métrique selon le substrat et la classe
-d’alcalinité.
+les métriques au niveau du prélèvement pour chaque paramètre, type de
+substrat et la classe d’alcalinité du plan d’eau.
 
 <img src="man/figures/my_tab_SES_ex.png" width="100%" />
 
 **`table_lacs`** Table regroupant les informations sur la classification
-des lacs selon l’alcalinité (Kelly et al. 2014) et le nombre théoriques
-d’unités d’observation à échantillonner sur le plan d’eau selon leur
-superficie (Afnor 2010).
+des lacs selon l’alcalinité (Kelly et al. 2014) et le nombre minimal
+théorique d’unités d’observation à échantillonner sur chaque plan d’eau
+selon leur superficie (Afnor 2010).
 
 Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 

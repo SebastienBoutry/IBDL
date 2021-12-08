@@ -61,7 +61,7 @@ _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans 
 
 Le package `{IBDL}` sert à calculer l'Indice Biologique Diatomées en Lac (IBDL) afin de donner une valeur et une classe d'état écologique au plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@Directive2000]).
 
-Dans le rapport technique [@Boutry2021], la démarche scientifique décrit les différentes étapes de la construction de l'IBDL.
+_NB Dans le rapport scientifique [@Boutry2021], les différentes étapes de la construction de l'IBDL y est décrite._
 
 ## Les besoins 
 
@@ -71,7 +71,7 @@ Afin d'être réprésentatif de la masse d'eau, plusieurs stations sont échanti
 
 ### Protocole d'échantillonnage
 
-Plusieurs stations (ou unités d'observation) sont échantillonnées sur un ou deux types de substrat (minéral/dur ou végétal). Le positionnement des unités d'obersvation se base sur la norme macrophytes plan d'eau [@afnorXP], la méthode de positionnement des stations, se basant sur les travaux de Jensen [@Jensen1977], a été incrémentée dans le package [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
+Plusieurs stations (ou unités d'observation) sont échantillonnées sur un ou deux types de substrat (minéral/dur ou végétal). Le positionnement de ces unités d'observation est décrite dans la norme macrophytes plan d'eau [@afnorXP] elle utilise la méthode de Jensen [@Jensen1977] qui a été incrémentée dans le package [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
 
 ### Acquisition des données
 
@@ -220,7 +220,7 @@ my_tab_alertes %>%
 knitr::include_graphics("man/figures/my_tab_alertes_ex.png")
 ```
 
-**`table_reference`** table regroupant les informations afin de calculer les SES pour chaque métrique selon le substrat et la classe d'alcalinité.
+**`table_reference`** table regroupant les informations afin de calculer les métriques au niveau du prélèvement pour chaque paramètre, type de substrat et la classe d'alcalinité du plan d'eau.
 
 ```{r reference, echo=FALSE, eval=FALSE}
 my_tab_SES <- SES_ref_type[1:6,] %>% 
@@ -243,7 +243,7 @@ knitr::include_graphics("man/figures/my_tab_SES_ex.png")
 ```
 
 
-**`table_lacs`** Table regroupant les informations sur la classification des lacs selon l'alcalinité [@Kelly2014] et le nombre théoriques d'unités d'observation à échantillonner sur le plan d'eau selon leur superficie [@afnorXP].
+**`table_lacs`** Table regroupant les informations sur la classification des lacs selon l'alcalinité [@Kelly2014] et le nombre minimal théorique d'unités d'observation à échantillonner sur chaque plan d'eau selon leur superficie [@afnorXP].
 
 Les classes d'alcalinité des plans d'eau sont définis comme ceci :
 

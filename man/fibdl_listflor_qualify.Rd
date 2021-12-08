@@ -12,10 +12,15 @@ fibdl_listflor_qualify(
 )
 }
 \arguments{
-\item{seuil_pour_taxons_indiciels}{}
+\item{seuil_nbr_valves}{nombre de valves compte dans le prélèvement. Dans la norme, il est demande de compter 400 valves.}
+
+\item{seuil_pour_valves_sp}{seuil en pourcentage de valves determinees au rang taxonomique espece dans le prelevement.
+Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).}
+
+\item{seuil_pour_taxons_indiciels}{seuil en pourcentage des taxons indiciels dans le prelevement}
 }
 \value{
-
+tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.
 }
 \description{
 Qualification des listes floristiques

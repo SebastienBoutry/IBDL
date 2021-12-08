@@ -1,5 +1,5 @@
 ---
-title: "IBDL : Indice Biologique Diatomique en Lac"
+title: "IBDL : Indice Biologique Diatomées en Lac"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{comment-utiliser-mon-package}
