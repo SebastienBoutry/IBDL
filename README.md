@@ -42,27 +42,32 @@ dans le projet Phytobenthos plan d’eau financé par l’OFB-Pôle ECLA.*
 
 # Utilisation
 
-Le package `{IBDL}` sert à calculer l’indice biologique diatomées en lac
-afin de donner une valeur et une classe d’état écologique du plan d’eau
-étudié (conforme à la Directive Cadre Européenne sur l’Eau (Commission
-2000)).
+Le package `{IBDL}` sert à calculer l’Indice Biologique Diatomées en Lac
+(IBDL) afin de donner une valeur et une classe d’état écologique au plan
+d’eau étudié (conforme à la Directive Cadre Européenne sur l’Eau
+(Commission 2000)).
 
 Dans le rapport technique (Boutry et al. 2021), la démarche scientifique
-décrit les différentes pour la création de l’IBDL.
+décrit les différentes de la création de l’IBDL.
 
 ## Les besoins
 
 L’Indice Biologique Diatomées en Lac s’appuie sur un protocole
-d’échantillonnage (Morin et al. 2010). Des informations liées à la
-campagne et à la station sont acquises avec les listes floristiques.
+d’échantillonnage (Morin et al. 2010) et la norme macrophytes plan d’eau
+(Afnor 2010).
 
-### Protocle d’échantillonnage
+Afin d’être réprésentatif du la masse d’eau, plusieurs stations sont
+échantillonnés. L’étape de retranscription sur des fichiers standardisés
+facilite l’alimentation des bases des données et le calcul de l’indice
+se fera à partir de deux fichiers de données.
 
-Plusieurs stations (ou unité d’observation) sont échantillonnées sur
-divers substrats (minéral/dur ou végétal). Le positionnement des unités
-d’obersvation se base sur la norme macrophytes plan d’eau (Afnor 2010),
-la méthode de positionnement des stations, se basant sur les travaux de
-Jensen (Jensén 1977), a été incrémentée dans le package suivant
+### Protocole d’échantillonnage
+
+Plusieurs stations (ou unités d’observation) sont échantillonnées sur un
+ou deux types de substrat (minéral/dur ou végétal). Le positionnement
+des unités d’obersvation se base sur la norme macrophytes plan d’eau
+(Afnor 2010), la méthode de positionnement des stations, se basant sur
+les travaux de Jensen (Jensén 1977), a été incrémentée dans le package
 [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
 
 ### Acquisition des données
@@ -71,7 +76,9 @@ Plusieurs formats sont disponibles pour la saisie des données soit sur .
 La mise en forme des fichiers peuvent se faire à l’aide du package
 [`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
 
-Deux fichiers :
+Des informations liées à la campagne et à la station sont acquises avec
+les listes floristiques, ces deux fichiers sont transmis dans deux
+fichiers distincts :
 
 -   le premier contient les listes floristiques (id\_prelevement,
     taxons, ab),
@@ -119,8 +126,8 @@ d’observation à échantillonner sur le plan d’eau selon leur superficie
 Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 
 -   LA : alcalinité &lt;0.2 meq.l-1;
--   MA : 0.2 meq.l-1 &lt; alcalinité &lt; 1 meq.l-1;
--   HA : alcalinité &gt;1 meq.l-1.
+-   MA : 0.2 meq.l-1 &lt;= alcalinité &lt; 1 meq.l-1;
+-   HA : alcalinité &gt;=1 meq.l-1.
 
 <img src="man/figures/my_tab_lacs_ex.png" width="100%" />
 

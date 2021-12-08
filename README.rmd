@@ -59,17 +59,19 @@ _NB : L'IBDL a été développé par l'équipe ECOVEA (INRAE, unité EABX) dans 
 
 # Utilisation
 
-Le package `{IBDL}` sert à calculer l'indice biologique diatomées en lac afin de donner une valeur et une classe d'état écologique du plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@Directive2000]).
+Le package `{IBDL}` sert à calculer l'Indice Biologique Diatomées en Lac (IBDL) afin de donner une valeur et une classe d'état écologique au plan d'eau étudié (conforme à la Directive Cadre Européenne sur l'Eau [@Directive2000]).
 
-Dans le rapport technique [@Boutry2021], la démarche scientifique décrit les différentes pour la création de l'IBDL.
+Dans le rapport technique [@Boutry2021], la démarche scientifique décrit les différentes de la création de l'IBDL.
 
 ## Les besoins 
 
-L'Indice Biologique Diatomées en Lac s'appuie sur un protocole d'échantillonnage [@morin:hal-02594105]. 
+L'Indice Biologique Diatomées en Lac s'appuie sur un protocole d'échantillonnage décrit dans [@morin:hal-02594105] et dans la norme macrophytes plan d'eau [@afnorXP].
 
-### Protocle d'échantillonnage
+Afin d'être réprésentatif de la masse d'eau, plusieurs stations sont échantillonnés (échantillonnage stratifiée). La deuxième étape de retranscription sur des fichiers standardisés facilite l'alimentation des bases des données et la troisième étape consiste au calcul de l'indice.
 
-Plusieurs stations (ou unité d'observation) sont échantillonnées sur divers substrats (minéral/dur ou végétal). Le positionnement des unités d'obersvation se base sur la norme macrophytes plan d'eau [@afnorXP], la méthode de positionnement des stations, se basant sur les travaux de Jensen [@Jensen1977], a été incrémentée dans le package [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
+### Protocole d'échantillonnage
+
+Plusieurs stations (ou unités d'observation) sont échantillonnées sur un ou deux types de substrat (minéral/dur ou végétal). Le positionnement des unités d'obersvation se base sur la norme macrophytes plan d'eau [@afnorXP], la méthode de positionnement des stations, se basant sur les travaux de Jensen [@Jensen1977], a été incrémentée dans le package [`{lakemetrics}`](https://github.com/SebastienBoutry/diatomfrLake).
 
 ### Acquisition des données
 
@@ -246,8 +248,8 @@ knitr::include_graphics("man/figures/my_tab_SES_ex.png")
 Les classes d'alcalinité des plans d'eau sont définis comme ceci :
 
 - LA : alcalinité <0.2 meq.l-1; 
-- MA : 0.2 meq.l-1 < alcalinité < 1 meq.l-1; 
-- HA : alcalinité >1 meq.l-1.
+- MA : 0.2 meq.l-1 <= alcalinité < 1 meq.l-1; 
+- HA : alcalinité >=1 meq.l-1.
 
 
 ```{r lacs, echo=FALSE, eval=FALSE}
