@@ -1,6 +1,10 @@
 ---
 title: "IBDL : Indice Biologique Diatomées en Lac"
 output: rmarkdown::html_vignette
+# output: 
+#   rmarkdown::html_vignette:
+#     css:
+#       - "style/inrae.css"
 vignette: >
   %\VignetteIndexEntry{comment-utiliser-mon-package}
   %\VignetteEngine{knitr::rmarkdown}

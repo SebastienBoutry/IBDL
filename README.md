@@ -13,8 +13,8 @@
 
 # Installation de `{IBDL}`
 
-La version du paquet `{IBDL}` peut se télécharger via le site Github
-pour cela on aura besoin du paquet `{remotes}`:
+La version du package `{IBDL}` peut se télécharger via le site Github
+pour cela on aura besoin du package `{remotes}`:
 
 ``` r
 remotes::install_github("SebastienBoutry/IBDL")
@@ -73,9 +73,12 @@ d’eau (Afnor 2010) elle utilise la méthode de Jensen (Jensén 1977) qui a
 
 ### Acquisition des données
 
-Il est conseillé d’utiliser les formats distribués sur le site
-[OFB](https://professionnels.ofb.fr/node/398). La mise en forme des
-fichiers peuvent se faire à l’aide du package
+Deux sources de “template” de fichiers de données sont disponibles
+[Hydrobio-DCE](https://hydrobio-dce.inrae.fr/) et
+[OFB](https://professionnels.ofb.fr/node/398). Il est conseillé
+d’utiliser ce dernier.
+
+La mise en forme des fichiers peuvent se faire à l’aide du package
 [`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
 
 Des données mésologiques (au niveau de la campagne et l’unité
