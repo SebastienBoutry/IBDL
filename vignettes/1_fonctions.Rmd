@@ -29,7 +29,7 @@ library(IBDL)
 
 # Les fonctions du package IBDL
 
-## Harmonisation taxonomique de la liste floristique
+## Harmonisation taxonomique de la liste floristique - fibdl_listflor_transcode()
 
 A partir d'une liste floristique diatomique, on harmonise la dénomination de la flore au rang taxonomique de l'espèce.
 
@@ -81,7 +81,205 @@ fibdl_listflor_transcode(listflor) %>%
   gt()
 ```
 
+## Validation des listes floristiques - fibdl_listflor_validate
 
+### Qualification - fibdl_listflor_qualify 
+
+fibdl_listflor_validate
+
+## Calcul des métriques au niveau de la liste floristique
+
+### - fibdl_listflor_metrics
+### - fibdl_listflor_EQR
+### - fibdl_listflor_EQR_standard
+
+## Score au niveau de l'unité d'observation - fibdl_uo_score
+
+## Calcul de l'IBDL - fibdl
+
+
+
+```{r ibdl, echo=TRUE, eval=FALSE}
+# ## Chargement du package
+# if(!require("remotes")) {install.packages("remotes")} 
+# remotes::install_github("SebastienBoutry/IBDL",force = TRUE)
+# library(IBDL)
+
+## Chemins
+chemin_flore <- system.file("listflor.csv", package = "IBDL") # A remplacer par votre chemin
+chemin_uo <- system.file("info_uo.csv", package = "IBDL") # A remplacer par votre chemin
+
+### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue
+# chemin_flore <- rstudioapi::selectFile()
+# chemin_uo <- restudioapi::selectFile()
+
+## Import
+listflor <- read.csv2(chemin_flore, fileEncoding = "utf-8")
+info_uo <- read.csv2(chemin_uo, fileEncoding = "utf-8")
+
+## Calcul de l'IBDL
+ibdl <- fibdl(listflor,info_uo)
+
+## Affichage des résultats
+ibdl
+
+```
+
+<!-- ```{r, echo=FALSE, eval=FALSE} -->
+<!-- ## Chemins -->
+<!-- chemin_flore <- system.file("listflor.csv", package = "IBDL") # A remplacer par votre chemin -->
+<!-- chemin_uo <- system.file("info_uo.csv", package = "IBDL") # A remplacer par votre chemin -->
+
+<!-- ### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue -->
+<!-- # chemin_flore <- rstudioapi::selectFile() -->
+<!-- # chemin_uo <- restudioapi::selectFile() -->
+
+<!-- ## Import -->
+<!-- listflor <- read.csv2(chemin_flore, fileEncoding = "utf-8") -->
+<!-- info_uo <- read.csv2(chemin_uo, fileEncoding = "utf-8") -->
+
+<!-- ## Calcul de l'IBDL -->
+<!-- ibdl <- fibdl(listflor,info_uo) -->
+
+
+<!-- # values=c("HG"="royalblue3", "G"="springgreen3", "M"="gold","P"= "darkorange","B"= "firebrick3") -->
+<!-- values <- c("HG"="#0072B2", "G"="#009E73", "M"="#F0E442","P"= "#E69F00","B"= "#D55E00") -->
+<!-- ## Affichage des résultats -->
+<!-- my_tab_lacs <- ibdl%>%  -->
+<!--   gt() %>%  -->
+<!--    tab_header( -->
+<!--     title = md("Exemple de sortie de la fonction fibdl_ibdl()."), -->
+<!--     # subtitle = "(extrait des 6 premières lignes)" -->
+<!--   ) %>%  -->
+<!--   tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "royalblue3"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = IBDL, -->
+<!--     rows = IBDL>=0.8 -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--     tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "springgreen3"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = IBDL, -->
+<!--     rows = between(IBDL,right = 0.8,left = 0.6) -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--       tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "gold"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = IBDL, -->
+<!--     rows = between(IBDL,right = 0.6,left = 0.4) -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--     tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "darkorange"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = IBDL, -->
+<!--     rows = between(IBDL,right = 0.4,left =0.2) -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--       tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "firebrick3"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = IBDL, -->
+<!--     rows = IBDL<0.2 -->
+<!--   ) -->
+<!--   ) %>%  -->
+<!--   tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "royalblue3"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = `Classe d'etat IBDL`, -->
+<!--     rows = `Classe d'etat IBDL`=="HG" -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--     tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "springgreen3"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = `Classe d'etat IBDL`, -->
+<!--     rows = `Classe d'etat IBDL`=="G" -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--       tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "gold"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = `Classe d'etat IBDL`, -->
+<!--     rows = `Classe d'etat IBDL`=="M" -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--     tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "darkorange"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = `Classe d'etat IBDL`, -->
+<!--     rows =`Classe d'etat IBDL`=="P" -->
+<!--   ) -->
+<!--   ) %>% -->
+<!--       tab_style( -->
+<!--   style = list( -->
+<!--      cell_fill(color = "firebrick3"), -->
+<!--     cell_text(style = "italic",color="#FFFFFF") -->
+<!--     ), -->
+<!--   locations = cells_body( -->
+<!--     columns = `Classe d'etat IBDL`, -->
+<!--     rows = `Classe d'etat IBDL`=="B" -->
+<!--   ) -->
+<!--   ) %>%  -->
+<!--   fmt_percent( -->
+<!--         columns = c("Somme des % types de rive"), -->
+<!--         decimals = 1, -->
+<!--         scale_values = FALSE -->
+<!--     ) %>%  -->
+<!--   text_transform( -->
+<!--     locations = cells_body(columns = c(Fiabilite), rows = Fiabilite == "ok"), -->
+<!--     fn = function(x){gt::html((fontawesome::fa("check-circle", fill = "green",height=px(30))))} -->
+<!--   ) %>%  -->
+<!--    text_transform( -->
+<!--     locations = cells_body(columns = c(Fiabilite), rows = Fiabilite != "ok"), -->
+<!--     fn = function(x){gt::html((fontawesome::fa("times-circle", fill = "red",height=px(30))))} -->
+<!--   ) %>%  -->
+<!--   cols_align(align = "center", columns = c(Fiabilite)) %>%  -->
+<!--   # cols_width(c(Fiabilite)~px(40)) %>%  -->
+<!--   tab_options(column_labels.background.color ="#275662", -->
+<!--                table.width = pct(100)) -->
+<!-- my_tab_lacs %>%  -->
+<!--   gtsave("man/figures/README-ibdl_ex.png", vwidth = 1500) -->
+<!-- ``` -->
+
+```{r, echo=FALSE}
+knitr::include_graphics("man/figures/README-ibdl_ex.png")
+```
+
+
+ 
+### - fibdl_ibdl
+### - fibdl_ibdl_qualify
 
 ```{r}
 
