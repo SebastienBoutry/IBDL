@@ -14,7 +14,7 @@ usethis::use_pkgdown()
 # # Run to build the website
 pkgdown::build_site()
 devtools::document() # mettre à jour le namespace
-
+devtools::build_vignettes()
 
 
 # repo_url <- "https://github.com/SebastienBoutry/IBDL.git"
