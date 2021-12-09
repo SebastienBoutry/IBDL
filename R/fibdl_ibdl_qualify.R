@@ -37,8 +37,9 @@ fibdl_ibdl_qualify<- function(data){
                             levels=c("B","P","M","G","HG")[5:1])) %>%
     dplyr::select(-comment_1,-comment_2,-nbr_uo_theo) %>%
     select(id_campagne,datedebut,code_gene,code_lac,nom_lac,classi_alc,IBDL,Fiabilite,ClassIBDL,nbr_uo,SommePourcent,commentaires) %>%
+    mutate(SommePourcent=SommePourcent*100) %>%
     dplyr::rename("Classe alcalinite"="classi_alc",
-           "Somme des Pourcentages selon la typologie"="SommePourcent",
+           "Somme des % types de rive"="SommePourcent",
            "Classe d'etat IBDL"="ClassIBDL")
   ##
   return(ibdl_qualify)
