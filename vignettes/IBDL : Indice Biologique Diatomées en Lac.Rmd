@@ -1,12 +1,12 @@
 ---
-title: "IBDL : Indice Biologique Diatomées en Lac"
+title: "Les fonctions"
 output: rmarkdown::html_vignette
 # output: 
 #   rmarkdown::html_vignette:
 #     css:
 #       - "style/inrae.css"
 vignette: >
-  %\VignetteIndexEntry{IBDL : Indice Biologique Diatomées en Lac}
+  %\VignetteIndexEntry{Les fonctions}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 author: "Sébastien Boutry"
