@@ -76,7 +76,7 @@ d’eau (Afnor 2010) elle utilise la méthode de Jensen (Jensén 1977) qui a
 Deux sources de “template” de fichiers de données sont disponibles
 [Hydrobio-DCE](https://hydrobio-dce.inrae.fr/) et
 [OFB](https://professionnels.ofb.fr/node/398). Il est conseillé
-d’utiliser ce dernier.
+d’utiliser la version OFB.
 
 La mise en forme des fichiers peuvent se faire à l’aide du package
 [`{diatomfrLake}`](https://github.com/SebastienBoutry/diatomfrLake).
