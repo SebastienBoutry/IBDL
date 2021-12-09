@@ -1,12 +1,17 @@
 #' Qualification de l IBDL
 #'
-#' @param data
+#' @param data tableau de sortie de la fonction fibl_ibdl()
 #'
-#' @return
+#' @return tableau d'évaluation de la qualité écologique avec l'indice IBDL et la classe d'état, prenant en compte la bonne représentativité des données.
+#' Plus de 75% de la typologie des rives pris en compte dans le calcul de l'indice et au moins 3 unités d'observation échantillonnés
+#'
 #' @export
 #'
 #' @examples
 fibdl_ibdl_qualify<- function(data){
+  ##
+
+  ##
   ibdl_qualify <- data %>%
     dplyr::ungroup() %>%
     dplyr::left_join(lake_infos,by=c("code_lac"="code_pe")) %>%

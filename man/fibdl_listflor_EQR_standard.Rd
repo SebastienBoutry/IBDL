@@ -7,10 +7,10 @@
 fibdl_listflor_EQR_standard(data)
 }
 \arguments{
-\item{data}{}
+\item{data}{tableau de sortie de la fonction fibdl_listflor_EQR()}
 }
 \value{
-
+tableau des résultats en EQR standardisés, avec des répartitions identiques et donc des seuils identiques
 }
 \description{
 Standardisation des EQR au niveau du prélèvement

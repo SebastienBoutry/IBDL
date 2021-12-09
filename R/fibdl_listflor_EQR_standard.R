@@ -1,8 +1,9 @@
 #' Standardisation des EQR au niveau du prélèvement
 #'
-#' @param data
+#' @param data tableau de sortie de la fonction fibdl_listflor_EQR()
 #'
-#' @return
+#' @return tableau des résultats en EQR standardisés, avec des répartitions identiques et donc des seuils identiques
+#'
 #' @export
 #'
 #' @examples

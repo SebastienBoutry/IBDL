@@ -8,7 +8,8 @@ fibdl_listflor_qualify(
   data,
   seuil_nbr_valves = 350,
   seuil_pour_valves_sp = 0.25,
-  seuil_pour_taxons_indiciels = 0.75
+  seuil_pour_taxons_indiciels = 0.75,
+  table_tax_alerts = Table_taxons_alertes
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ fibdl_listflor_qualify(
 Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).}
 
 \item{seuil_pour_taxons_indiciels}{seuil en pourcentage des taxons indiciels dans le prelevement}
+
+\item{table_tax_alerts}{tableau de référence au format binaire des taxons d'alertes et indiciels, par défaut Table_taxons_alertes (table interne embarquée)}
 }
 \value{
 tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.

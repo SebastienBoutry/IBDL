@@ -5,6 +5,7 @@
 #' @param seuil_pour_valves_sp  seuil en pourcentage de valves determinees au rang taxonomique espece dans le prelevement.
 #' Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).
 #' @param seuil_pour_taxons_indiciels seuil en pourcentage des taxons indiciels dans le prelevement
+#' @param table_tax_alerts tableau de référence au format binaire des taxons d'alertes et indiciels, par défaut Table_taxons_alertes (table interne embarquée)
 #'
 #' @return tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.
 #' @export
@@ -13,11 +14,12 @@
 fibdl_listflor_qualify <- function(data,
                                    seuil_nbr_valves = 350,
                                    seuil_pour_valves_sp = 0.25,
-                                   seuil_pour_taxons_indiciels = 0.75){
+                                   seuil_pour_taxons_indiciels = 0.75,
+                                   table_tax_alerts=Table_taxons_alertes){
   ## create table validation
   table_validation <- data %>%
     ## récupération des taxons d'alertes
-    dplyr::left_join(Table_taxons_alertes,
+    dplyr::left_join(table_tax_alerts,
               by = c("taxons" = "taxons_indiciels")
     ) %>%
     ## validation des taxons

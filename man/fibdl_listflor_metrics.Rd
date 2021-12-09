@@ -2,16 +2,18 @@
 % Please edit documentation in R/fibdl_listflor_metrics.R
 \name{fibdl_listflor_metrics}
 \alias{fibdl_listflor_metrics}
-\title{Calcul des métriques au niveau du prélèvement}
+\title{Calcul des métriques MES, DBO5, NKJ et Ptot au niveau du prélèvement}
 \usage{
-fibdl_listflor_metrics(data)
+fibdl_listflor_metrics(data, table_tax_alerts = Table_taxons_alertes)
 }
 \arguments{
-\item{data}{}
+\item{data}{listes floristiques harmonisées via la fonction fibdl_listflor_transcode}
+
+\item{table_tax_alerts}{tableau de référence au format binaire des taxons d'alertes et indiciels, par défaut Table_taxons_alertes (table interne embarquée)}
 }
 \value{
-
+tableau avec l'id_prelevement, la métrique (metrics) et la valeur (value)
 }
 \description{
-Calcul des métriques au niveau du prélèvement
+Calcul des métriques MES, DBO5, NKJ et Ptot au niveau du prélèvement
 }

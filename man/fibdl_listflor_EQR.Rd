@@ -7,7 +7,9 @@
 fibdl_listflor_EQR(data, add_information_station)
 }
 \arguments{
-\item{add_information_station}{}
+\item{data}{tableau de sortie de la fonction fibdl_listflor_metrics()}
+
+\item{add_information_station}{tableau d'entrée renseignant sur les la nature du substrat et la classe d'alcalinité du plan d'eau échantillonné.}
 }
 \value{
 

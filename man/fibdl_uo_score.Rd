@@ -7,10 +7,10 @@
 fibdl_uo_score(data)
 }
 \arguments{
-\item{data}{}
+\item{data}{tableau de sortie de la fonction fibdl_listflor_EQR_standard, correspondant à un tableau de résultats des métriques exprimées en EQR standardisées.}
 }
 \value{
-
+tableau des métriques au niveau de l'unité d'observation (moyenne des EQR) puis la valeur minimale entre les deux type de substrat.
 }
 \description{
 Calcul du score au niveau de l'unité d'observation

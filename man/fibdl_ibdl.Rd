@@ -7,10 +7,10 @@
 fibdl_ibdl(data)
 }
 \arguments{
-\item{data}{}
+\item{data}{tableau de sortie de la fonction fibdl_uo_score}
 }
 \value{
-
+tableau d'évaluation au niveau du lac avec l'IBDL et la classe d'état
 }
 \description{
 Calcul de l'IBDL et la classe d'état

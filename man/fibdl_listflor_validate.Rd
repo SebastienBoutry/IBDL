@@ -7,10 +7,15 @@
 fibdl_listflor_validate(data)
 }
 \arguments{
-\item{data}{}
+\item{data}{listes floristiques harmonisées via la fonction fibdl_listflor_transcode}
 }
 \value{
-
+tableau des listes floristiques validées selon trois critères :
+\itemize{
+\item un nombre total de valves comptés supérieur à 350
+\item un ratio de valves déterminées au rang taxonomique de l'espère surpérieur à 25\%
+\item un ratio de valves comptées étant indiciels surpérieur à 75\%
+}
 }
 \description{
 Validation des listes floristiques

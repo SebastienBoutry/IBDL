@@ -1,12 +1,15 @@
 #' Calcul de l'IBDL et la classe d'état
 #'
-#' @param data
+#' @param data tableau de sortie de la fonction fibdl_uo_score
 #'
-#' @return
+#' @return tableau d'évaluation au niveau du lac avec l'IBDL et la classe d'état
 #' @export
 #'
 #' @examples
 fibdl_ibdl<- function(data){
+  ## à modifier pour la prise en compte de données externes sur le pourcentage de linéaire selon la typologie des rives
+  table_pourcentage_type <- Pourcent_typologie_lacs_macrophytes
+  ##
   table_ibdl <- data %>%
     dplyr::group_by(code_pe,id_campagne,datedebut) %>%
     dplyr::mutate(nbr_uo=length(id_uo)) %>%
@@ -14,7 +17,7 @@ fibdl_ibdl<- function(data){
     tidyr::unite("join",c("code_pe","type_dominant"),remove=FALSE) %>%
     dplyr::select(-type_dominant) %>%
     ##
-    dplyr::left_join(Pourcent_typologie_lacs_macrophytes,
+    dplyr::left_join(table_pourcentage_type,
               by="join") %>%
     dplyr::select(-join,-code_lac) %>%
     dplyr::rename("code_lac"="code_pe") %>%

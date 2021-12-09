@@ -1,7 +1,7 @@
 #' Transformation en EQR au niveau du prélèvement
 #'
-#' @param data
-#' @param add_information_station
+#' @param data tableau de sortie de la fonction fibdl_listflor_metrics()
+#' @param add_information_station tableau d'entrée renseignant sur les la nature du substrat et la classe d'alcalinité du plan d'eau échantillonné.
 #'
 #' @return
 #' @export
@@ -35,5 +35,6 @@ fibdl_listflor_EQR<- function(data,add_information_station){
     )
     ) %>%
     dplyr::select(-join,-Mtype,-SDtype)
+  ##
   return(table_listflor_EQR)
 }

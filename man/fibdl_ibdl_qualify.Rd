@@ -7,10 +7,11 @@
 fibdl_ibdl_qualify(data)
 }
 \arguments{
-\item{data}{}
+\item{data}{tableau de sortie de la fonction fibl_ibdl()}
 }
 \value{
-
+tableau d'évaluation de la qualité écologique avec l'indice IBDL et la classe d'état, prenant en compte la bonne représentativité des données.
+Plus de 75\% de la typologie des rives pris en compte dans le calcul de l'indice et au moins 3 unités d'observation échantillonnés
 }
 \description{
 Qualification de l IBDL
