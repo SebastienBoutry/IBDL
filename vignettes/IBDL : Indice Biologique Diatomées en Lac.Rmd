@@ -6,7 +6,7 @@ output: rmarkdown::html_vignette
 #     css:
 #       - "style/inrae.css"
 vignette: >
-  %\VignetteIndexEntry{comment-utiliser-mon-package}
+  %\VignetteIndexEntry{IBDL : Indice Biologique Diatomées en Lac}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 author: "Sébastien Boutry"
