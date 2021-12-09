@@ -441,6 +441,21 @@ my_tab_lacs <- ibdl%>%
     rows = `Classe d'etat IBDL`=="B"
   )
   ) %>% 
+  fmt_percent(
+        columns = c("Somme des % types de rive"),
+        decimals = 1,
+        scale_values = FALSE
+    ) %>% 
+  text_transform(
+    locations = cells_body(columns = c(Fiabilite), rows = Fiabilite == "ok"),
+    fn = function(x){gt::html((fontawesome::fa("check-circle", fill = "green",height=px(30))))}
+  ) %>% 
+   text_transform(
+    locations = cells_body(columns = c(Fiabilite), rows = Fiabilite != "ok"),
+    fn = function(x){gt::html((fontawesome::fa("times-circle", fill = "red",height=px(30))))}
+  ) %>% 
+  cols_align(align = "center", columns = c(Fiabilite)) %>% 
+  # cols_width(c(Fiabilite)~px(40)) %>% 
   tab_options(column_labels.background.color ="#275662",
                table.width = pct(100))
 my_tab_lacs %>% 
