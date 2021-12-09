@@ -87,26 +87,32 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org" class="external-link">magrittr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-<span class="co">#&gt; ── <span style="font-weight: bold;">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.1 ──</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">ggplot2</span> 3.3.5     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">purrr  </span> 0.3.4</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">tibble </span> 3.1.6     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">dplyr  </span> 1.0.7</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">tidyr  </span> 1.1.4     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">stringr</span> 1.4.0</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">readr  </span> 2.1.1     <span style="color: #00BB00;">✓</span> <span style="color: #0000BB;">forcats</span> 0.5.1</span>
-<span class="co">#&gt; ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span>
-<span class="co">#&gt; <span style="color: #BB0000;">x</span> <span style="color: #0000BB;">tidyr</span>::<span style="color: #00BB00;">extract()</span>   masks <span style="color: #0000BB;">magrittr</span>::extract()</span>
-<span class="co">#&gt; <span style="color: #BB0000;">x</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span>    masks <span style="color: #0000BB;">stats</span>::filter()</span>
-<span class="co">#&gt; <span style="color: #BB0000;">x</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>       masks <span style="color: #0000BB;">stats</span>::lag()</span>
-<span class="co">#&gt; <span style="color: #BB0000;">x</span> <span style="color: #0000BB;">purrr</span>::<span style="color: #00BB00;">set_names()</span> masks <span style="color: #0000BB;">magrittr</span>::set_names()</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com/" class="external-link">gt</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">IBDL</span><span class="op">)</span></code></pre></div>
+<div class="section level1">
+<h1 id="le-jeu-de-données-test">Le jeu de données test<a class="anchor" aria-label="anchor" href="#le-jeu-de-donn%C3%A9es-test"></a>
+</h1>
+<p>Pour faciliter la prise en main du package, un jeu de données est mis à disposition pour faire tourner les différentes fonctions.</p>
+<p>Il représente une campagne d’échantillonage sur un plan d’eau donné à l’aide du protocole <span class="citation">(Morin et al. 2010)</span>.</p>
+<div class="section level2">
+<h2 id="les-listes-floristiques">Les listes floristiques<a class="anchor" aria-label="anchor" href="#les-listes-floristiques"></a>
+</h2>
+<pre><code><span class="co">#&gt;   id_prelevement taxons ab</span>
+<span class="co">#&gt; 1            314   AAMB 17</span>
+<span class="co">#&gt; 2            314   ADEG  1</span>
+<span class="co">#&gt; 3            314   ADMI  3</span>
+<span class="co">#&gt; 4            314   ALFF  1</span>
+<span class="co">#&gt; 5            314   APED  2</span>
+<span class="co">#&gt; 6            314   AUAJ 69</span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="les-informations-complémentaires-sur-la-station">Les informations complémentaires sur la station<a class="anchor" aria-label="anchor" href="#les-informations-compl%C3%A9mentaires-sur-la-station"></a>
+</h2>
+</div>
+</div>
 <div class="section level1">
 <h1 id="les-fonctions-du-package-ibdl">Les fonctions du package IBDL<a class="anchor" aria-label="anchor" href="#les-fonctions-du-package-ibdl"></a>
 </h1>
 <div class="section level2">
-<h2 id="harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode">Harmonisation taxonomique de la liste floristique - fibdl_listflor_transcode()<a class="anchor" aria-label="anchor" href="#harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode"></a>
+<h2 id="harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode">Harmonisation taxonomique de la liste floristique - <strong>fibdl_listflor_transcode</strong><a class="anchor" aria-label="anchor" href="#harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode"></a>
 </h2>
 <p>A partir d’une liste floristique diatomique, on harmonise la dénomination de la flore au rang taxonomique de l’espèce.</p>
 <p>Nous avons construis une table de transcodage à partir du fichier d’Omnidia (Michel Coste) de Mars 2020. On prend en compte :</p>
@@ -117,38 +123,12 @@
 </ul>
 <p>Selon Omnidia (date) :</p>
 <p><em>Achnanthes abundans var. elliptica</em> a pour nom valide <em>Psammothidium abundans var. ellipticum</em> <em>Actinocyclus tenellus</em>(ACTE) a pour nom valide <em>Actinocyclus octonarius var. tenellus</em></p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># listflor &lt;- tibble::tibble(id_prelevement=rep(1,16),</span>
-<span class="co">#                            taxons=c("AMID","ADPA","ABAS","PBTH","PHAO","PSDG","NXDS","GLAT","DSTE","RABB","COCE","ENCM","PSBR","PLTD","ADEU","AUPU"),</span>
-<span class="co">#                            ab=c(202,20,2,26,12,5,6,74,5,2,3,3,15,10,5,20))</span>
-
-<span class="va">listflor</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span>id_prelevement<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">314</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">315</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">316</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">317</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">318</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">319</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span>,<span class="fl">320</span><span class="op">)</span>,
-                            taxons<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'AAMB'</span>,<span class="st">'ADEG'</span>,<span class="st">'ADMI'</span>,<span class="st">'ALFF'</span>,<span class="st">'APED'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUGR'</span>,<span class="st">'AUPU'</span>,<span class="st">'CMED'</span>,<span class="st">'CMEN'</span>,<span class="st">'DPST'</span>,<span class="st">'ENMI'</span>,<span class="st">'ESLE'</span>,<span class="st">'EUNO'</span>,<span class="st">'FCVA'</span>,<span class="st">'FPEC'</span>,<span class="st">'GANG'</span>,<span class="st">'GAUR'</span>,<span class="st">'GMIN'</span>,<span class="st">'GPAR'</span>,<span class="st">'NACI'</span>,<span class="st">'NADA'</span>,<span class="st">'NCPL'</span>,<span class="st">'NCTE'</span>,<span class="st">'NIGR'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NSUA'</span>,<span class="st">'RABB'</span>,<span class="st">'SPUP'</span>,<span class="st">'STRU'</span>,<span class="st">'AAMB'</span>,<span class="st">'ADCS'</span>,<span class="st">'ADMI'</span>,<span class="st">'AMUZ'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUGR'</span>,<span class="st">'CMED'</span>,<span class="st">'ENMI'</span>,<span class="st">'EOMI'</span>,<span class="st">'FRAG'</span>,<span class="st">'GBOB'</span>,<span class="st">'GPAR'</span>,<span class="st">'NAGN'</span>,<span class="st">'NCPL'</span>,<span class="st">'NCRY'</span>,<span class="st">'NDIS'</span>,<span class="st">'NFIL'</span>,<span class="st">'NIGR'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NSIA'</span>,<span class="st">'STRU'</span>,<span class="st">'AAMB'</span>,<span class="st">'ADEG'</span>,<span class="st">'ADMI'</span>,<span class="st">'ALFF'</span>,<span class="st">'AMUZ'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUPU'</span>,<span class="st">'CMED'</span>,<span class="st">'CMEN'</span>,<span class="st">'ENMI'</span>,<span class="st">'EOMI'</span>,<span class="st">'ESBM'</span>,<span class="st">'ESLE'</span>,<span class="st">'FPEC'</span>,<span class="st">'GAUR'</span>,<span class="st">'GBOB'</span>,<span class="st">'GMIN'</span>,<span class="st">'GPAR'</span>,<span class="st">'MPMI'</span>,<span class="st">'NACI'</span>,<span class="st">'NCRY'</span>,<span class="st">'NCTE'</span>,<span class="st">'NIGR'</span>,<span class="st">'NIVA'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NSIA'</span>,<span class="st">'NSUA'</span>,<span class="st">'NVEN'</span>,<span class="st">'SBRV'</span>,<span class="st">'SPUP'</span>,<span class="st">'SSEM'</span>,<span class="st">'STRU'</span>,<span class="st">'AAMB'</span>,<span class="st">'ACOP'</span>,<span class="st">'ADEU'</span>,<span class="st">'ADRI'</span>,<span class="st">'ALFF'</span>,<span class="st">'APED'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUGR'</span>,<span class="st">'AUPU'</span>,<span class="st">'CEUG'</span>,<span class="st">'CMED'</span>,<span class="st">'ENMI'</span>,<span class="st">'ENNG'</span>,<span class="st">'EOMI'</span>,<span class="st">'ESBM'</span>,<span class="st">'FCVA'</span>,<span class="st">'FPEC'</span>,<span class="st">'FPIN'</span>,<span class="st">'GBOB'</span>,<span class="st">'GMIN'</span>,<span class="st">'GPAR'</span>,<span class="st">'GPRI'</span>,<span class="st">'KOBG'</span>,<span class="st">'MPMI'</span>,<span class="st">'MVAR'</span>,<span class="st">'NAGN'</span>,<span class="st">'NAMP'</span>,<span class="st">'NANT'</span>,<span class="st">'NCPL'</span>,<span class="st">'NCRY'</span>,<span class="st">'NCTE'</span>,<span class="st">'NDIS'</span>,<span class="st">'NGRE'</span>,<span class="st">'NIGR'</span>,<span class="st">'NINC'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NRCH'</span>,<span class="st">'NSTS'</span>,<span class="st">'NTPT'</span>,<span class="st">'PLFR'</span>,<span class="st">'PTDE'</span>,<span class="st">'RSIN'</span>,<span class="st">'SSVE'</span>,<span class="st">'STRU'</span>,<span class="st">'AAMB'</span>,<span class="st">'ADMI'</span>,<span class="st">'AMUZ'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUGR'</span>,<span class="st">'AUPU'</span>,<span class="st">'CCOS'</span>,<span class="st">'CMED'</span>,<span class="st">'CMEN'</span>,<span class="st">'DPST'</span>,<span class="st">'DSTE'</span>,<span class="st">'ENMI'</span>,<span class="st">'EOMI'</span>,<span class="st">'ESLE'</span>,<span class="st">'ESUM'</span>,<span class="st">'FCVA'</span>,<span class="st">'FDEL'</span>,<span class="st">'FPEC'</span>,<span class="st">'FRAG'</span>,<span class="st">'GBOB'</span>,<span class="st">'GMIN'</span>,<span class="st">'GOMP'</span>,<span class="st">'GPAR'</span>,<span class="st">'GPRI'</span>,<span class="st">'MVAR'</span>,<span class="st">'NACI'</span>,<span class="st">'NCPL'</span>,<span class="st">'NIGR'</span>,<span class="st">'NPAD'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NSIA'</span>,<span class="st">'NSUA'</span>,<span class="st">'PLHU'</span>,<span class="st">'SEXG'</span>,<span class="st">'SSLE'</span>,<span class="st">'STRU'</span>,<span class="st">'AAMB'</span>,<span class="st">'ADEU'</span>,<span class="st">'ADMI'</span>,<span class="st">'AMUZ'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUGR'</span>,<span class="st">'AUPU'</span>,<span class="st">'CDUB'</span>,<span class="st">'CMED'</span>,<span class="st">'ENMI'</span>,<span class="st">'ESLE'</span>,<span class="st">'EUNO'</span>,<span class="st">'FCVA'</span>,<span class="st">'FPIN'</span>,<span class="st">'FPRU'</span>,<span class="st">'FRAG'</span>,<span class="st">'GMIN'</span>,<span class="st">'GOMP'</span>,<span class="st">'GPAR'</span>,<span class="st">'NACI'</span>,<span class="st">'NCPL'</span>,<span class="st">'NIGR'</span>,<span class="st">'NINT'</span>,<span class="st">'NPAD'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NSUA'</span>,<span class="st">'PINU'</span>,<span class="st">'SPUP'</span>,<span class="st">'SSLE'</span>,<span class="st">'STRU'</span>,<span class="st">'AAMB'</span>,<span class="st">'ADMI'</span>,<span class="st">'AUAJ'</span>,<span class="st">'AUPU'</span>,<span class="st">'CMED'</span>,<span class="st">'CMEN'</span>,<span class="st">'EMIN'</span>,<span class="st">'ENMI'</span>,<span class="st">'ESLE'</span>,<span class="st">'EUNO'</span>,<span class="st">'FRUM'</span>,<span class="st">'GAUR'</span>,<span class="st">'GBOB'</span>,<span class="st">'GMIN'</span>,<span class="st">'GOMP'</span>,<span class="st">'GPAR'</span>,<span class="st">'MVAR'</span>,<span class="st">'NACI'</span>,<span class="st">'NCRY'</span>,<span class="st">'NIGR'</span>,<span class="st">'NPAD'</span>,<span class="st">'NPAL'</span>,<span class="st">'NPML'</span>,<span class="st">'NSUA'</span>,<span class="st">'SPUP'</span>,<span class="st">'STRU'</span><span class="op">)</span>,
-ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">17</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">69</span>,<span class="fl">7</span>,<span class="fl">42</span>,<span class="fl">62</span>,<span class="fl">6</span>,<span class="fl">2</span>,<span class="fl">8</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">17</span>,<span class="fl">4</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">6</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">6</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">14</span>,<span class="fl">5</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">110</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">9</span>,<span class="fl">2</span>,<span class="fl">17</span>,<span class="fl">2</span>,<span class="fl">8</span>,<span class="fl">25</span>,<span class="fl">4</span>,<span class="fl">286</span>,<span class="fl">4</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">12</span>,<span class="fl">7</span>,<span class="fl">1</span>,<span class="fl">11</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">11</span>,<span class="fl">6</span>,<span class="fl">5</span>,<span class="fl">52</span>,<span class="fl">2</span>,<span class="fl">16</span>,<span class="fl">5</span>,<span class="fl">8</span>,<span class="fl">132</span>,<span class="fl">1</span>,<span class="fl">28</span>,<span class="fl">6</span>,<span class="fl">2</span>,<span class="fl">11</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">15</span>,<span class="fl">11</span>,<span class="fl">13</span>,<span class="fl">4</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">2</span>,<span class="fl">13</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">25</span>,<span class="fl">3</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">4</span>,<span class="fl">12</span>,<span class="fl">22</span>,<span class="fl">1</span>,<span class="fl">6</span>,<span class="fl">4</span>,<span class="fl">13</span>,<span class="fl">59</span>,<span class="fl">2</span>,<span class="fl">5</span>,<span class="fl">18</span>,<span class="fl">4</span>,<span class="fl">19</span>,<span class="fl">4</span>,<span class="fl">23</span>,<span class="fl">13</span>,<span class="fl">12</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">5</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">29</span>,<span class="fl">26</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">47</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">6</span>,<span class="fl">1</span>,<span class="fl">19</span>,<span class="fl">3</span>,<span class="fl">7</span>,<span class="fl">1</span>,<span class="fl">31</span>,<span class="fl">1</span>,<span class="fl">10</span>,<span class="fl">2</span>,<span class="fl">8</span>,<span class="fl">7</span>,<span class="fl">5</span>,<span class="fl">2</span>,<span class="fl">16</span>,<span class="fl">1</span>,<span class="fl">38</span>,<span class="fl">1</span>,<span class="fl">4</span>,<span class="fl">2</span>,<span class="fl">15</span>,<span class="fl">64</span>,<span class="fl">4</span>,<span class="fl">10</span>,<span class="fl">29</span>,<span class="fl">7</span>,<span class="fl">3</span>,<span class="fl">1</span>,<span class="fl">41</span>,<span class="fl">6</span>,<span class="fl">19</span>,<span class="fl">1</span>,<span class="fl">51</span>,<span class="fl">2</span>,<span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">5</span>,<span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">48</span>,<span class="fl">1</span>,<span class="fl">13</span>,<span class="fl">1</span>,<span class="fl">12</span>,<span class="fl">15</span>,<span class="fl">41</span>,<span class="fl">3</span>,<span class="fl">3</span>,<span class="fl">1</span>,<span class="fl">6</span>,<span class="fl">8</span>,<span class="fl">4</span>,<span class="fl">60</span>,<span class="fl">23</span>,<span class="fl">18</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">1</span>,<span class="fl">11</span>,<span class="fl">81</span>,<span class="fl">2</span>,<span class="fl">9</span>,<span class="fl">2</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">19</span>,<span class="fl">5</span>,<span class="fl">1</span>,<span class="fl">22</span>,<span class="fl">15</span>,<span class="fl">11</span>,<span class="fl">1</span>,<span class="fl">8</span>,<span class="fl">9</span>,<span class="fl">25</span>,<span class="fl">5</span>,<span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">2</span>,<span class="fl">179</span>,<span class="fl">46</span>,<span class="fl">1</span>,<span class="fl">15</span>,<span class="fl">3</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">24</span>,<span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">2</span>,<span class="fl">14</span><span class="op">)</span>
-<span class="op">)</span> 
-
-<span class="va">info_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span>id_prelevement<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">314</span><span class="op">:</span><span class="fl">320</span><span class="op">)</span>,
-                  id_uo<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">224</span><span class="op">:</span><span class="fl">226</span>,<span class="fl">226</span>,<span class="fl">227</span><span class="op">:</span><span class="fl">229</span><span class="op">)</span>,
-                  nature_substrat<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"végétal"</span>,<span class="fl">2</span><span class="op">)</span>,<span class="st">"mineral"</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="st">"végétal"</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span>,
-                  id_campagne<span class="op">=</span><span class="fl">1</span>,
-                  type_dominant<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">4</span>,<span class="fl">4</span><span class="op">)</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,
-                  code_pe<span class="op">=</span><span class="st">"ORX40"</span>,
-                  datedebut<span class="op">=</span><span class="st">"2021-07-15"</span><span class="op">)</span>
-
-
-<span class="va">listflor</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="fu">IBDL</span><span class="fu">:::</span><span class="va">table_transcodage</span>,by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"taxons"</span><span class="op">=</span><span class="st">"abre"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span><span class="st">"nom_scientifique"</span><span class="op">=</span><span class="st">"denominations_sans_auteur.x"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">id_prelevement</span>,<span class="va">taxons</span>,<span class="va">nom_scientifique</span>,<span class="va">ab</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="co"># arrange(taxons)  %&gt;% </span>
-  <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html" class="external-link">gt</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<div id="qvjtazflrr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="jcymzjahcn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#qvjtazflrr .gt_table {
+#jcymzjahcn .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -173,7 +153,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-left-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_heading {
+#jcymzjahcn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -185,7 +165,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-right-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_title {
+#jcymzjahcn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -195,7 +175,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-bottom-width: 0;
 }
 
-#qvjtazflrr .gt_subtitle {
+#jcymzjahcn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -205,13 +185,13 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-top-width: 0;
 }
 
-#qvjtazflrr .gt_bottom_border {
+#jcymzjahcn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_col_headings {
+#jcymzjahcn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -226,7 +206,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-right-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_col_heading {
+#jcymzjahcn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -246,7 +226,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   overflow-x: hidden;
 }
 
-#qvjtazflrr .gt_column_spanner_outer {
+#jcymzjahcn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -258,15 +238,15 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   padding-right: 4px;
 }
 
-#qvjtazflrr .gt_column_spanner_outer:first-child {
+#jcymzjahcn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qvjtazflrr .gt_column_spanner_outer:last-child {
+#jcymzjahcn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qvjtazflrr .gt_column_spanner {
+#jcymzjahcn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -278,7 +258,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   width: 100%;
 }
 
-#qvjtazflrr .gt_group_heading {
+#jcymzjahcn .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -300,7 +280,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   vertical-align: middle;
 }
 
-#qvjtazflrr .gt_empty_group_heading {
+#jcymzjahcn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -315,15 +295,15 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   vertical-align: middle;
 }
 
-#qvjtazflrr .gt_from_md > :first-child {
+#jcymzjahcn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qvjtazflrr .gt_from_md > :last-child {
+#jcymzjahcn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qvjtazflrr .gt_row {
+#jcymzjahcn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -342,7 +322,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   overflow-x: hidden;
 }
 
-#qvjtazflrr .gt_stub {
+#jcymzjahcn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -354,7 +334,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   padding-left: 12px;
 }
 
-#qvjtazflrr .gt_summary_row {
+#jcymzjahcn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -364,7 +344,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   padding-right: 5px;
 }
 
-#qvjtazflrr .gt_first_summary_row {
+#jcymzjahcn .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -374,7 +354,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-top-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_grand_summary_row {
+#jcymzjahcn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -384,7 +364,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   padding-right: 5px;
 }
 
-#qvjtazflrr .gt_first_grand_summary_row {
+#jcymzjahcn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -394,11 +374,11 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-top-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_striped {
+#jcymzjahcn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qvjtazflrr .gt_table_body {
+#jcymzjahcn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -407,7 +387,7 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-bottom-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_footnotes {
+#jcymzjahcn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -421,13 +401,13 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-right-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_footnote {
+#jcymzjahcn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#qvjtazflrr .gt_sourcenotes {
+#jcymzjahcn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -441,41 +421,41 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
   border-right-color: #D3D3D3;
 }
 
-#qvjtazflrr .gt_sourcenote {
+#jcymzjahcn .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#qvjtazflrr .gt_left {
+#jcymzjahcn .gt_left {
   text-align: left;
 }
 
-#qvjtazflrr .gt_center {
+#jcymzjahcn .gt_center {
   text-align: center;
 }
 
-#qvjtazflrr .gt_right {
+#jcymzjahcn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qvjtazflrr .gt_font_normal {
+#jcymzjahcn .gt_font_normal {
   font-weight: normal;
 }
 
-#qvjtazflrr .gt_font_bold {
+#jcymzjahcn .gt_font_bold {
   font-weight: bold;
 }
 
-#qvjtazflrr .gt_font_italic {
+#jcymzjahcn .gt_font_italic {
   font-style: italic;
 }
 
-#qvjtazflrr .gt_super {
+#jcymzjahcn .gt_super {
   font-size: 65%;
 }
 
-#qvjtazflrr .gt_footnote_marks {
+#jcymzjahcn .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -525,21 +505,165 @@ ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.ht
 <td class="gt_row gt_left">Aulacoseira ambigua f. japonica</td>
 <td class="gt_row gt_right">69</td>
 </tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">AUGR</td>
+<td class="gt_row gt_left">Aulacoseira granulata</td>
+<td class="gt_row gt_right">7</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">AUPU</td>
+<td class="gt_row gt_left">Aulacoseira pusilla</td>
+<td class="gt_row gt_right">42</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">CMED</td>
+<td class="gt_row gt_left">Cyclotella meduanae</td>
+<td class="gt_row gt_right">62</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">CMEN</td>
+<td class="gt_row gt_left">Cyclotella meneghiniana</td>
+<td class="gt_row gt_right">6</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">DPST</td>
+<td class="gt_row gt_left">Discostella pseudostelligera</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">ENMI</td>
+<td class="gt_row gt_left">Encyonema minutum</td>
+<td class="gt_row gt_right">8</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">ESLE</td>
+<td class="gt_row gt_left">Encyonema silesiacum</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">EUNO</td>
+<td class="gt_row gt_left">Eunotia</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">FCVA</td>
+<td class="gt_row gt_left">Fragilaria capucina var. vaucheriae</td>
+<td class="gt_row gt_right">17</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">FPEC</td>
+<td class="gt_row gt_left">Fragilaria pectinalis</td>
+<td class="gt_row gt_right">4</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GANG</td>
+<td class="gt_row gt_left">Gomphonema angustatum</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GAUR</td>
+<td class="gt_row gt_left">Gomphonema auritum</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GMIN</td>
+<td class="gt_row gt_left">Gomphonema minutum f. minutum</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GPAR</td>
+<td class="gt_row gt_left">Gomphonema parvulum var. parvulum f. parvulum</td>
+<td class="gt_row gt_right">6</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NACI</td>
+<td class="gt_row gt_left">Nitzschia acicularis</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NADA</td>
+<td class="gt_row gt_left">Navicula adamata</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NCPL</td>
+<td class="gt_row gt_left">Nitzschia capitellata</td>
+<td class="gt_row gt_right">6</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NCTE</td>
+<td class="gt_row gt_left">Navicula cryptotenella</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NIGR</td>
+<td class="gt_row gt_left">Nitzschia gracilis</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NPAL</td>
+<td class="gt_row gt_left">Nitzschia palea var. palea</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NPML</td>
+<td class="gt_row gt_left">Nitzschia pumila</td>
+<td class="gt_row gt_right">14</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NSUA</td>
+<td class="gt_row gt_left">Nitzschia subacicularis</td>
+<td class="gt_row gt_right">5</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">RABB</td>
+<td class="gt_row gt_left">Rhoicosphenia abbreviata</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">SPUP</td>
+<td class="gt_row gt_left">Sellaphora pupula</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">STRU</td>
+<td class="gt_row gt_left">Stephanodiscus triporus</td>
+<td class="gt_row gt_right">110</td>
+</tr>
 </tbody>
 </table>
 </div>
-
-fibdl_listflor_transcode(listflor) %&gt;% 
-  rename("nom_scientifique (transcode)"="denominations_sans_auteur.y",
-         "rang_taxonomique (transcode)"="rang") %&gt;% 
-   head() %&gt;% 
-  gt()
-<div id="plizxmreip" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="lfkcgbjele" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#plizxmreip .gt_table {
+#lfkcgbjele .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -564,7 +688,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-left-color: #D3D3D3;
 }
 
-#plizxmreip .gt_heading {
+#lfkcgbjele .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -576,7 +700,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#plizxmreip .gt_title {
+#lfkcgbjele .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -586,7 +710,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-bottom-width: 0;
 }
 
-#plizxmreip .gt_subtitle {
+#lfkcgbjele .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -596,13 +720,13 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-top-width: 0;
 }
 
-#plizxmreip .gt_bottom_border {
+#lfkcgbjele .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#plizxmreip .gt_col_headings {
+#lfkcgbjele .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -617,7 +741,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#plizxmreip .gt_col_heading {
+#lfkcgbjele .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -637,7 +761,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   overflow-x: hidden;
 }
 
-#plizxmreip .gt_column_spanner_outer {
+#lfkcgbjele .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -649,15 +773,15 @@ fibdl_listflor_transcode(listflor) %&gt;%
   padding-right: 4px;
 }
 
-#plizxmreip .gt_column_spanner_outer:first-child {
+#lfkcgbjele .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#plizxmreip .gt_column_spanner_outer:last-child {
+#lfkcgbjele .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#plizxmreip .gt_column_spanner {
+#lfkcgbjele .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -669,7 +793,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   width: 100%;
 }
 
-#plizxmreip .gt_group_heading {
+#lfkcgbjele .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -691,7 +815,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   vertical-align: middle;
 }
 
-#plizxmreip .gt_empty_group_heading {
+#lfkcgbjele .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -706,15 +830,15 @@ fibdl_listflor_transcode(listflor) %&gt;%
   vertical-align: middle;
 }
 
-#plizxmreip .gt_from_md > :first-child {
+#lfkcgbjele .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#plizxmreip .gt_from_md > :last-child {
+#lfkcgbjele .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#plizxmreip .gt_row {
+#lfkcgbjele .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -733,7 +857,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   overflow-x: hidden;
 }
 
-#plizxmreip .gt_stub {
+#lfkcgbjele .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -745,7 +869,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   padding-left: 12px;
 }
 
-#plizxmreip .gt_summary_row {
+#lfkcgbjele .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -755,7 +879,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   padding-right: 5px;
 }
 
-#plizxmreip .gt_first_summary_row {
+#lfkcgbjele .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -765,7 +889,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#plizxmreip .gt_grand_summary_row {
+#lfkcgbjele .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -775,7 +899,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   padding-right: 5px;
 }
 
-#plizxmreip .gt_first_grand_summary_row {
+#lfkcgbjele .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -785,11 +909,11 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-top-color: #D3D3D3;
 }
 
-#plizxmreip .gt_striped {
+#lfkcgbjele .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#plizxmreip .gt_table_body {
+#lfkcgbjele .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -798,7 +922,7 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#plizxmreip .gt_footnotes {
+#lfkcgbjele .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -812,13 +936,13 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#plizxmreip .gt_footnote {
+#lfkcgbjele .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#plizxmreip .gt_sourcenotes {
+#lfkcgbjele .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -832,41 +956,41 @@ fibdl_listflor_transcode(listflor) %&gt;%
   border-right-color: #D3D3D3;
 }
 
-#plizxmreip .gt_sourcenote {
+#lfkcgbjele .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#plizxmreip .gt_left {
+#lfkcgbjele .gt_left {
   text-align: left;
 }
 
-#plizxmreip .gt_center {
+#lfkcgbjele .gt_center {
   text-align: center;
 }
 
-#plizxmreip .gt_right {
+#lfkcgbjele .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#plizxmreip .gt_font_normal {
+#lfkcgbjele .gt_font_normal {
   font-weight: normal;
 }
 
-#plizxmreip .gt_font_bold {
+#lfkcgbjele .gt_font_bold {
   font-weight: bold;
 }
 
-#plizxmreip .gt_font_italic {
+#lfkcgbjele .gt_font_italic {
   font-style: italic;
 }
 
-#plizxmreip .gt_super {
+#lfkcgbjele .gt_super {
   font-size: 65%;
 }
 
-#plizxmreip .gt_footnote_marks {
+#lfkcgbjele .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -923,32 +1047,199 @@ fibdl_listflor_transcode(listflor) %&gt;%
 <td class="gt_row gt_left">sp</td>
 <td class="gt_row gt_right">42</td>
 </tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">CMDU</td>
+<td class="gt_row gt_left">Cyclotella meduanae</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">62</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">CMEN</td>
+<td class="gt_row gt_left">Cyclotella meneghiniana</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">6</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">DPSG</td>
+<td class="gt_row gt_left">Discostella pseudostelligera</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">ENMI</td>
+<td class="gt_row gt_left">Encyonema minutum</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">8</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">ESLE</td>
+<td class="gt_row gt_left">Encyonema silesiacum</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">EUNO</td>
+<td class="gt_row gt_left">Eunotia</td>
+<td class="gt_row gt_left">gn</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">FPEC</td>
+<td class="gt_row gt_left">Fragilaria pectinalis</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">4</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">FVAU*</td>
+<td class="gt_row gt_left">Fragilaria vaucheriae var. vaucheriae</td>
+<td class="gt_row gt_left">other</td>
+<td class="gt_row gt_right">17</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GANG</td>
+<td class="gt_row gt_left">Gomphonema angustatum</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GAUR</td>
+<td class="gt_row gt_left">Gomphonema auritum</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GMIN*</td>
+<td class="gt_row gt_left">Gomphonema minutum f. minutum</td>
+<td class="gt_row gt_left">other</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">GPAR*</td>
+<td class="gt_row gt_left">Gomphonema parvulum var. parvulum f. parvulum</td>
+<td class="gt_row gt_left">other_0</td>
+<td class="gt_row gt_right">6</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NACI</td>
+<td class="gt_row gt_left">Nitzschia acicularis</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NADA</td>
+<td class="gt_row gt_left">Navicula adamata</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NCPL</td>
+<td class="gt_row gt_left">Nitzschia capitellata</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">6</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NCTE</td>
+<td class="gt_row gt_left">Navicula cryptotenella</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NIGR</td>
+<td class="gt_row gt_left">Nitzschia gracilis</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NPAL*</td>
+<td class="gt_row gt_left">Nitzschia palea var. palea</td>
+<td class="gt_row gt_left">other</td>
+<td class="gt_row gt_right">2</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NPML</td>
+<td class="gt_row gt_left">Nitzschia pumila</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">14</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">NSUA</td>
+<td class="gt_row gt_left">Nitzschia subacicularis</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">5</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">PROH</td>
+<td class="gt_row gt_left">Planothidium rostratoholarcticum</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">PTPU</td>
+<td class="gt_row gt_left">Praestephanos triporus</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">110</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">RABB</td>
+<td class="gt_row gt_left">Rhoicosphenia abbreviata</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">1</td>
+</tr>
+<tr>
+<td class="gt_row gt_right">314</td>
+<td class="gt_row gt_left">SPUP</td>
+<td class="gt_row gt_left">Sellaphora pupula</td>
+<td class="gt_row gt_left">sp</td>
+<td class="gt_row gt_right">2</td>
+</tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section level2">
-<h2 id="validation-des-listes-floristiques---fibdl_listflor_validate">Validation des listes floristiques - fibdl_listflor_validate<a class="anchor" aria-label="anchor" href="#validation-des-listes-floristiques---fibdl_listflor_validate"></a>
+<h2 id="validation-des-listes-floristiques---fibdl_listflor_validate">Validation des listes floristiques - <strong>fibdl_listflor_validate</strong><a class="anchor" aria-label="anchor" href="#validation-des-listes-floristiques---fibdl_listflor_validate"></a>
 </h2>
 <div class="section level3">
-<h3 id="qualification---fibdl_listflor_qualify">Qualification - fibdl_listflor_qualify<a class="anchor" aria-label="anchor" href="#qualification---fibdl_listflor_qualify"></a>
+<h3 id="qualification---fibdl_listflor_qualify">Qualification - <strong>fibdl_listflor_qualify</strong><a class="anchor" aria-label="anchor" href="#qualification---fibdl_listflor_qualify"></a>
 </h3>
-<p>fibdl_listflor_validate</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="calcul-des-métriques-au-niveau-de-la-liste-floristique">Calcul des métriques au niveau de la liste floristique<a class="anchor" aria-label="anchor" href="#calcul-des-m%C3%A9triques-au-niveau-de-la-liste-floristique"></a>
 </h2>
 <div class="section level3">
-<h3 id="fibdl_listflor_metrics">- fibdl_listflor_metrics<a class="anchor" aria-label="anchor" href="#fibdl_listflor_metrics"></a>
+<h3 id="fibdl_listflor_metrics">- <strong>fibdl_listflor_metrics</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_metrics"></a>
 </h3>
 </div>
 <div class="section level3">
-<h3 id="fibdl_listflor_eqr">- fibdl_listflor_EQR<a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr"></a>
+<h3 id="fibdl_listflor_eqr">- <strong>fibdl_listflor_EQR</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr"></a>
 </h3>
 </div>
 <div class="section level3">
-<h3 id="fibdl_listflor_eqr_standard">- fibdl_listflor_EQR_standard<a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr_standard"></a>
+<h3 id="fibdl_listflor_eqr_standard">- <strong>fibdl_listflor_EQR_standard</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr_standard"></a>
 </h3>
 </div>
 </div>
@@ -957,180 +1248,43 @@ fibdl_listflor_transcode(listflor) %&gt;%
 </h2>
 </div>
 <div class="section level2">
-<h2 id="calcul-de-libdl---fibdl">Calcul de l’IBDL - fibdl<a class="anchor" aria-label="anchor" href="#calcul-de-libdl---fibdl"></a>
+<h2 id="calcul-de-libdl-au-niveau-du-lac---fibdl">Calcul de l’IBDL au niveau du lac - <strong>fibdl</strong><a class="anchor" aria-label="anchor" href="#calcul-de-libdl-au-niveau-du-lac---fibdl"></a>
 </h2>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># ## Chargement du package</span>
-<span class="co"># if(!require("remotes")) {install.packages("remotes")} </span>
-<span class="co"># remotes::install_github("SebastienBoutry/IBDL",force = TRUE)</span>
-<span class="co"># library(IBDL)</span>
-
-<span class="co">## Chemins</span>
-<span class="va">chemin_flore</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"listflor.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span> <span class="co"># A remplacer par votre chemin</span>
-<span class="va">chemin_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"info_uo.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span> <span class="co"># A remplacer par votre chemin</span>
-
-<span class="co">### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue</span>
-<span class="co"># chemin_flore &lt;- rstudioapi::selectFile()</span>
-<span class="co"># chemin_uo &lt;- restudioapi::selectFile()</span>
-
-<span class="co">## Import</span>
-<span class="va">listflor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="va">chemin_flore</span>, fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span>
-<span class="va">info_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="va">chemin_uo</span>, fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span>
-
-<span class="co">## Calcul de l'IBDL</span>
+<div class="section level3">
+<h3 id="fibdl_ibdl">- <strong>fibdl_ibdl</strong><a class="anchor" aria-label="anchor" href="#fibdl_ibdl"></a>
+</h3>
+<p>A partir du jeu de sortie de la fonction <strong>fibdl_uo_score</strong>, la fonction <strong>fibdl_ibdl()</strong> calcule l’Indice Biologique Diatomées en Lac et la fournit la classe d’état du plan d’eau.</p>
+</div>
+<div class="section level3">
+<h3 id="fibdl_ibdl_qualify">- <strong>fibdl_ibdl_qualify</strong><a class="anchor" aria-label="anchor" href="#fibdl_ibdl_qualify"></a>
+</h3>
+<p>La fonction <strong>fibdl_ibdl_qualify</strong> détermine la qualité de l’évaluation, si celle la est représentative du plan d’eau.</p>
+<p>Deux critères sont pris en compte à ce niveau la :</p>
+<ul>
+<li>au moins 3 unités d’observation possèdent un score au nivau de l’UO,</li>
+<li>plus de 75% de type de rive est représenté.</li>
+</ul>
+</div>
+</div>
+<div class="section level2">
+<h2 id="la-fonction-intégratrice---fibdl">La fonction intégratrice - <strong>fibdl</strong><a class="anchor" aria-label="anchor" href="#la-fonction-int%C3%A9gratrice---fibdl"></a>
+</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## Calcul de l'IBDL</span>
 <span class="va">ibdl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fibdl.html">fibdl</a></span><span class="op">(</span><span class="va">listflor</span>,<span class="va">info_uo</span><span class="op">)</span>
 
 <span class="co">## Affichage des résultats</span>
 <span class="va">ibdl</span></code></pre></div>
-<!-- ```{r, echo=FALSE, eval=FALSE} -->
-<!-- ## Chemins -->
-<!-- chemin_flore <- system.file("listflor.csv", package = "IBDL") # A remplacer par votre chemin -->
-<!-- chemin_uo <- system.file("info_uo.csv", package = "IBDL") # A remplacer par votre chemin -->
-<!-- ### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue -->
-<!-- # chemin_flore <- rstudioapi::selectFile() -->
-<!-- # chemin_uo <- restudioapi::selectFile() -->
-<!-- ## Import -->
-<!-- listflor <- read.csv2(chemin_flore, fileEncoding = "utf-8") -->
-<!-- info_uo <- read.csv2(chemin_uo, fileEncoding = "utf-8") -->
-<!-- ## Calcul de l'IBDL -->
-<!-- ibdl <- fibdl(listflor,info_uo) -->
-<!-- # values=c("HG"="royalblue3", "G"="springgreen3", "M"="gold","P"= "darkorange","B"= "firebrick3") -->
-<!-- values <- c("HG"="#0072B2", "G"="#009E73", "M"="#F0E442","P"= "#E69F00","B"= "#D55E00") -->
-<!-- ## Affichage des résultats -->
-<!-- my_tab_lacs <- ibdl%>%  -->
-<!--   gt() %>%  -->
-<!--    tab_header( -->
-<!--     title = md("Exemple de sortie de la fonction fibdl_ibdl()."), -->
-<!--     # subtitle = "(extrait des 6 premières lignes)" -->
-<!--   ) %>%  -->
-<!--   tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "royalblue3"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = IBDL, -->
-<!--     rows = IBDL>=0.8 -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--     tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "springgreen3"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = IBDL, -->
-<!--     rows = between(IBDL,right = 0.8,left = 0.6) -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--       tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "gold"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = IBDL, -->
-<!--     rows = between(IBDL,right = 0.6,left = 0.4) -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--     tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "darkorange"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = IBDL, -->
-<!--     rows = between(IBDL,right = 0.4,left =0.2) -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--       tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "firebrick3"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = IBDL, -->
-<!--     rows = IBDL<0.2 -->
-<!--   ) -->
-<!--   ) %>%  -->
-<!--   tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "royalblue3"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = `Classe d'etat IBDL`, -->
-<!--     rows = `Classe d'etat IBDL`=="HG" -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--     tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "springgreen3"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = `Classe d'etat IBDL`, -->
-<!--     rows = `Classe d'etat IBDL`=="G" -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--       tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "gold"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = `Classe d'etat IBDL`, -->
-<!--     rows = `Classe d'etat IBDL`=="M" -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--     tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "darkorange"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = `Classe d'etat IBDL`, -->
-<!--     rows =`Classe d'etat IBDL`=="P" -->
-<!--   ) -->
-<!--   ) %>% -->
-<!--       tab_style( -->
-<!--   style = list( -->
-<!--      cell_fill(color = "firebrick3"), -->
-<!--     cell_text(style = "italic",color="#FFFFFF") -->
-<!--     ), -->
-<!--   locations = cells_body( -->
-<!--     columns = `Classe d'etat IBDL`, -->
-<!--     rows = `Classe d'etat IBDL`=="B" -->
-<!--   ) -->
-<!--   ) %>%  -->
-<!--   fmt_percent( -->
-<!--         columns = c("Somme des % types de rive"), -->
-<!--         decimals = 1, -->
-<!--         scale_values = FALSE -->
-<!--     ) %>%  -->
-<!--   text_transform( -->
-<!--     locations = cells_body(columns = c(Fiabilite), rows = Fiabilite == "ok"), -->
-<!--     fn = function(x){gt::html((fontawesome::fa("check-circle", fill = "green",height=px(30))))} -->
-<!--   ) %>%  -->
-<!--    text_transform( -->
-<!--     locations = cells_body(columns = c(Fiabilite), rows = Fiabilite != "ok"), -->
-<!--     fn = function(x){gt::html((fontawesome::fa("times-circle", fill = "red",height=px(30))))} -->
-<!--   ) %>%  -->
-<!--   cols_align(align = "center", columns = c(Fiabilite)) %>%  -->
-<!--   # cols_width(c(Fiabilite)~px(40)) %>%  -->
-<!--   tab_options(column_labels.background.color ="#275662", -->
-<!--                table.width = pct(100)) -->
-<!-- my_tab_lacs %>%  -->
-<!--   gtsave("man/figures/README-ibdl_ex.png", vwidth = 1500) -->
-<!-- ``` -->
-<p><img src="reference/figures/README-ibdl_ex.png" width="1494"></p>
-<div class="section level3">
-<h3 id="fibdl_ibdl">- fibdl_ibdl<a class="anchor" aria-label="anchor" href="#fibdl_ibdl"></a>
-</h3>
+<p>Après un mise en forme à l’aide du package <a href="https://gt.rstudio.com/" class="external-link">gt</a>, on obtient le résultat suivant :</p>
+<p><img src="reference/figures/README-ibdl_ex.png" width="100%"></p>
 </div>
-<div class="section level3">
-<h3 id="fibdl_ibdl_qualify">- fibdl_ibdl_qualify<a class="anchor" aria-label="anchor" href="#fibdl_ibdl_qualify"></a>
-</h3>
+</div>
+<div class="section level1 unnumbered">
+<h1 class="unnumbered" id="référence">Référence<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rence"></a>
+</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-morin:hal-02594105" class="csl-entry">
+Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M. Cellamare, and Alain Dutartre. 2010. <span>“<span class="nocase">Utilisation du phytobenthos pour la bioindication en plans d’eau : Etat de l’art des m<span class="nocase">é</span>thodes disponibles et test de m<span class="nocase">é</span>triques sur les plans d’eau aquitains</span>.”</span> Research Report. <span>Irstea</span>. <a href="https://hal.inrae.fr/hal-02594105" class="external-link">https://hal.inrae.fr/hal-02594105</a>.
 </div>
 </div>
 </div>

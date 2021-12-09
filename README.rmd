@@ -338,7 +338,7 @@ values <- c("HG"="#0072B2", "G"="#009E73", "M"="#F0E442","P"= "#E69F00","B"= "#D
 my_tab_lacs <- ibdl%>% 
   gt() %>% 
    tab_header(
-    title = md("Exemple de sortie de la fonction fibdl_ibdl()."),
+    title = md("Exemple de sortie de la fonction fibdl()."),
     # subtitle = "(extrait des 6 premières lignes)"
   ) %>% 
   tab_style(
