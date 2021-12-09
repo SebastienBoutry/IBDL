@@ -333,7 +333,7 @@ ibdl <- fibdl(listflor,info_uo)
 
 
 # values=c("HG"="royalblue3", "G"="springgreen3", "M"="gold","P"= "darkorange","B"= "firebrick3")
-
+values <- c("HG"="#0072B2", "G"="#009E73", "M"="#F0E442","P"= "#E69F00","B"= "#D55E00")
 ## Affichage des résultats
 my_tab_lacs <- ibdl%>% 
   gt() %>% 
