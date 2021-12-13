@@ -158,7 +158,7 @@ Deux critères sont pris en compte à ce niveau la :
 - au moins 3 unités d'observation possèdent un score au nivau de l'UO,
 - plus de 75% de type de rive est représenté.
 
-## La fonction intégratrice  - **fibdl**
+# La fonction intégratrice  - **fibdl**
 
 ```{r ibdl, echo=TRUE, eval=FALSE}
 ## Calcul de l'IBDL
