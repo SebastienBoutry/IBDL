@@ -306,7 +306,7 @@ f_format_value_vide <- function(data,noms_colonnes,table_orig){
 }
 
 
-f_format_value_inerval <- function(data,noms_colonnes,mini,maxi,table_orig){
+f_format_value_interval <- function(data,noms_colonnes,mini,maxi,table_orig){
   ##
   test <- NULL
   ##
