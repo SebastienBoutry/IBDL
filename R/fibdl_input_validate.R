@@ -306,14 +306,17 @@ f_format_value_vide <- function(data,noms_colonnes,table_orig){
 }
 
 
-f_format_value_inerval <- function(data,noms_colonnes,table_orig){
+f_format_value_inerval <- function(data,noms_colonnes,mini,maxi,table_orig){
   ##
   test <- NULL
   ##
   verif <- sapply(noms_colonnes,
                   function(i)
                     (
-                      sum(!(data %>% pull(i) %in% c(NA,""))) == nrow(data)
+                      sum(dplyr::between(data %>%
+                                           pull(i),
+                                         left = mini,
+                                         right = maxi),na.rm=TRUE) == nrow(data)
                     )
   )
   ##
