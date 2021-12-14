@@ -9,7 +9,7 @@ f_format_table <- function(data,table_orig){
   if(sum(class(data) %in% "data.frame")==0){
     test <- tibble(test="1.1",
                    valeur_test="non",
-                   nom_test="format_data.frame",
+                   nom_test="data.frame_format",
                    table_orig=table_orig,
                    # sortie=data.frame(
                    test_precis="1.1",
@@ -22,7 +22,7 @@ f_format_table <- function(data,table_orig){
   }else{
     test <- tibble(test="1.1",
                    valeur_test="oui",
-                   nom_test="format_data.frame",
+                   nom_test="data.frame_format",
                    table_orig=table_orig,
                    # sortie=data.frame(
                    test_precis="1.1",
@@ -46,7 +46,7 @@ f_format_colnames <- function(data,noms_colonnes,table_orig){
     if(length(verif)==0){
       test <- tibble(test="1.2",
                      valeur_test="oui",
-                     nom_test="colnames_data.frame",
+                     nom_test="data.frame_colnames",
                      table_orig=table_orig,
                      # sortie=data.frame(
                      test_precis="1.2",
@@ -56,7 +56,7 @@ f_format_colnames <- function(data,noms_colonnes,table_orig){
     }else{
       test <- tibble(test="1.2",
                      valeur_test="non",
-                     nom_test="colnames_data.frame",
+                     nom_test="data.frame_colnames",
                      table_orig=table_orig,
                      # sortie=data.frame(
                      test_precis="1.2",
@@ -378,10 +378,9 @@ table_test<- tibble(a=c(1:5,NA,-2),
 
 
 bind_rows(
-  table_test %>%
-    f_format_table(table_orig="tibble flore"),
-  table_test %>%
-    f_format_colnames(noms_colonnes=c("a","b"),
+    f_format_table(table_test,table_orig="tibble flore"),
+    f_format_colnames(table_test,
+                      noms_colonnes=c("a","b","c","d","e"),
                       table_orig="tibble flore")
 )
 
