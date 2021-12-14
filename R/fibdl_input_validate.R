@@ -114,7 +114,7 @@ f_format_type_numeric <- function(data,noms_colonnes,table_orig){
                    nom_test="colnames_type",
                    table_orig=table_orig,
                    # sortie=data.frame(
-                   test_precis=paste0("2.1.2_",i),
+                   # test_precis=paste0("2.1.2_",i),
                    # test="format_data.frame",
                    nom_test_precis="colnames_type_numeric") %>%
       mutate( test_precis=paste0("2.1.2_",noms_colonnes_non_conforme),
@@ -316,18 +316,19 @@ f_format_value_interval <- function(data,noms_colonnes,mini,maxi,table_orig){
                       sum(dplyr::between(data %>%
                                            pull(i),
                                          left = mini,
-                                         right = maxi),na.rm=TRUE) == nrow(data)
+                                         right = maxi),
+                          na.rm=TRUE) == nrow(data)
                     )
   )
   ##
   if(sum(verif) == length(noms_colonnes)){
-    test <- tibble(test="2.2",
+    test <- tibble(test="2.3",
                    valeur_test="oui",
                    nom_test="colnames_value",
                    table_orig=table_orig,
                    # sortie=data.frame(
-                   test_precis="2.2.1",
-                   nom_test_precis="colnames_value_empty",
+                   test_precis="2.3.1",
+                   nom_test_precis="colnames_value_interval",
                    # test="format_data.frame",
                    message=paste0("")
                    # )
@@ -335,22 +336,25 @@ f_format_value_interval <- function(data,noms_colonnes,mini,maxi,table_orig){
   }else{
     for(i in noms_colonnes[verif==FALSE]){
       verif <- which(
-        (data %>% pull(i) %in% c(NA,""))
+        (dplyr::between(data %>%
+                          pull(i),
+                        left = mini,
+                        right = maxi) %in% c(NA,FALSE))
       )
 
       ##
       test <- bind_rows(test,
-                        tibble(test="2.2",
+                        tibble(test="2.3",
                                valeur_test="non",
                                nom_test="colnames_value",
                                table_orig=table_orig,
                                # sortie=data.frame(
-                               test_precis=paste0("2.2.1_",i),
+                               test_precis=paste0("2.3.1_",i),
                                # test="format_data.frame",
-                               nom_test_precis="colnames_value_empty",
+                               nom_test_precis="colnames_value_interval",
                                message=paste0("La variable suivante ",
                                               i,
-                                              " possèdent ",length(verif)," valeur(s) vide(s).")
+                                              " possèdent ",length(verif)," valeur(s) non comprises dans l'intervalle [",mini,";",maxi,"].\n Lignes :",paste0(verif,collapse = ", "))
                         )
       )
     }
@@ -377,7 +381,8 @@ bind_rows(
   table_test %>%
     f_format_table(table_orig="tibble flore"),
   table_test %>%
-    f_format_colnames(noms_colonnes=c("a","b"),table_orig="tibble flore")
+    f_format_colnames(noms_colonnes=c("a","b"),
+                      table_orig="tibble flore")
 )
 
 
@@ -386,7 +391,8 @@ bind_rows(
   f_format_value_vide(table_test,c("a","b","c","d"),"liste"),
   f_format_type_character(table_test,c("b"),"liste"),
   f_format_type_numeric(table_test,c("a","b","c","d"),"liste"),
-  f_format_value_positive(table_test,c("a","b","c","d"),"liste")
+  f_format_value_positive(table_test,c("a","b","c","d"),"liste"),
+  f_format_value_interval(table_test,c("a","c"),mini=2,maxi=5,"liste")
 )
 
 
