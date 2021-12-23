@@ -208,7 +208,10 @@ f_format_value_positive <- function(data,noms_colonnes,table_orig){
                                nom_test_precis="colnames_value_positive",
                                message=paste0("La variable suivante ",
                                               i,
-                                              " possèdent ",length(verif)," valeur(s) négative(s).")
+                                              " possède ",
+                                              length(verif),
+                                              " valeur(s) négative(s).\n Lignes :",
+                                              paste0(verif,collapse = ", "))
                         )
       )
     }
@@ -297,7 +300,10 @@ f_format_value_vide <- function(data,noms_colonnes,table_orig){
                                nom_test_precis="colnames_value_empty",
                                message=paste0("La variable suivante ",
                                               i,
-                                              " possèdent ",length(verif)," valeur(s) vide(s).")
+                                              " possède ",
+                                              length(verif),
+                                              " valeur(s) vide(s).\n Lignes :",
+                                              paste0(verif,collapse = ", "))
                         )
       )
     }
@@ -354,7 +360,14 @@ f_format_value_interval <- function(data,noms_colonnes,mini,maxi,table_orig){
                                nom_test_precis="colnames_value_interval",
                                message=paste0("La variable suivante ",
                                               i,
-                                              " possèdent ",length(verif)," valeur(s) non comprises dans l'intervalle [",mini,";",maxi,"].\n Lignes :",paste0(verif,collapse = ", "))
+                                              " possède ",
+                                              length(verif),
+                                              " valeur(s) non comprises dans l'intervalle [",
+                                              mini,
+                                              ";",
+                                              maxi,
+                                              "].\n Lignes :",
+                                              paste0(verif,collapse = ", "))
                         )
       )
     }
@@ -365,7 +378,7 @@ f_format_value_interval <- function(data,noms_colonnes,mini,maxi,table_orig){
 
 table_test<- tibble(a=c(1:5,NA,-2),
                     b=letters[1:7],
-                    c=c(-12,2:6,-2),
+                    c=c(-12,0,1,2:4,-2),
                     d=c(1:6,"a")
 )
 
@@ -392,7 +405,8 @@ bind_rows(
   f_format_type_numeric(table_test,c("a","b","c","d"),"liste"),
   f_format_value_positive(table_test,c("a","b","c","d"),"liste"),
   f_format_value_interval(table_test,c("a","c"),mini=2,maxi=5,"liste")
-)
+) %>%
+  select(message)
 
 
 # library(tidyverse)
