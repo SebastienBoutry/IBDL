@@ -6,7 +6,7 @@ fibdl_checkof_listflor <- function(data){
   if(step_1$valeur_test=="Oui"){
     step_2 <- CheckOfTable::fcot_colnames(data,table_orig=table_orig)
     if(step_2$valeur_test=="Oui"){
-      bind_rows(
+      # bind_rows(
       #   fcot_value_vide(table_test,
       #                   c("a","b","c","d"),
       #                   table_orig),
