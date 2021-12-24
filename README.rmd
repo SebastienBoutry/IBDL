@@ -84,6 +84,17 @@ Des données mésologiques (au niveau de la campagne et l'unité d'observation) 
 - le premier contient les listes floristiques (id_prelevement, taxons, ab),
 - le second renseigne sur les données de contexte liées au site d'étude (id_prelevement, id_uo, nature_substrat, code_gene, date).
 
+### La validation des tableaux de données
+
+L'utilisation du package `{CheckOfTable}` permet de contrôler les tableaux d'importation. On utilisera les fonctions de ce package pour créer deux fonctions afin de valider les deux tableaux.
+
+- **fibdl_checkof_listflor**
+- **fibdl_checkof_infoscompl**
+
+```{r, echo=TRUE, value=FALSE}
+remotes::install_github("SebastienBoutry/CheckOfTable",force=TRUE)
+```
+
 
 ### Données internes embarquées
 

@@ -91,6 +91,17 @@ dans deux fichiers distincts :
     d’étude (id\_prelevement, id\_uo, nature\_substrat, code\_gene,
     date).
 
+### La validation des tableaux de données
+
+L’utilisation du package `{CheckOfTable}` permet de contrôler les
+tableaux d’importation.
+
+``` r
+remotes::install_github("SebastienBoutry/CheckOfTable")
+#> Skipping install of 'CheckOfTable' from a github remote, the SHA1 (0e2c1ff6) has not changed since last install.
+#>   Use `force = TRUE` to force installation
+```
+
 ### Données internes embarquées
 
 Les jeux de données internes embarquées correspondent aux jeux de
