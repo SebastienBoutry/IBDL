@@ -9,8 +9,8 @@
 #' @import tibble
 #'
 #' @examples
-#' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
-#' fibdl_checkof_infoscomp(list_flor)
+#' infos_uo <- read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")
+#' fibdl_checkof_infoscomp(infos_uo)
 
 fibdl_checkof_infoscomp <- function(data){
   ##
