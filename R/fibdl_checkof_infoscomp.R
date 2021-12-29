@@ -47,7 +47,6 @@ fibdl_checkof_infoscomp <- function(data){
         dplyr::mutate(nom_test = nom_test_precis) %>%
         dplyr::select(-nom_test_precis)
       sortie <- dplyr::bind_rows(sortie,step_3)
-      #   select(message)
     }else{
     }
   }else{
