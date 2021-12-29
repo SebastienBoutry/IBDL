@@ -1,10 +1,12 @@
-#' Contrôle du tableau informations complémentaires sur le site pour le calcul de l'IBDL
+#' Controle du tableau informations complementaires sur le site pour le calcul de l'IBDL
 #'
-#' @param data tableau représentant les informations complémentaires sur l'unité d'observation
+#' @param data tableau representant les informations complementaires sur l'unite d'observation
 #'
 #' @return
 #' @export
 #' @import CheckOfTable
+#' @import dplyr
+#' @import tibble
 #'
 #' @examples
 #' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")

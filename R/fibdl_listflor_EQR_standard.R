@@ -5,6 +5,8 @@
 #' @return tableau des résultats en EQR standardisés, avec des répartitions identiques et donc des seuils identiques
 #'
 #' @export
+#' @import tibble
+#' @import dplyr
 #'
 #' @examples
 fibdl_listflor_EQR_standard <- function(data){

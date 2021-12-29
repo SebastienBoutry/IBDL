@@ -126,6 +126,15 @@
 </ul>
 </div>
 <div class="section level3">
+<h3 id="la-validation-des-tableaux-de-données">La validation des tableaux de données<a class="anchor" aria-label="anchor" href="#la-validation-des-tableaux-de-donn%C3%A9es"></a>
+</h3>
+<p>L’utilisation du package <code>{CheckOfTable}</code> permet de contrôler les tableaux d’importation.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"SebastienBoutry/CheckOfTable"</span><span class="op">)</span>
+<span class="co">#&gt; Skipping install of 'CheckOfTable' from a github remote, the SHA1 (0e2c1ff6) has not changed since last install.</span>
+<span class="co">#&gt;   Use `force = TRUE` to force installation</span></code></pre></div>
+</div>
+<div class="section level3">
 <h3 id="données-internes-embarquées">Données internes embarquées<a class="anchor" aria-label="anchor" href="#donn%C3%A9es-internes-embarqu%C3%A9es"></a>
 </h3>
 <p>Les jeux de données internes embarquées correspondent aux jeux de données dit de référence. Ils sont décrits ci-dessous :</p>
@@ -153,7 +162,7 @@
 <h2 id="les-étapes">Les étapes<a class="anchor" aria-label="anchor" href="#les-%C3%A9tapes"></a>
 </h2>
 <p>On trouve 10 fonctions dans ce package. L’une d’elle <strong>fibdl</strong> est une fonction intégratrice (utilisant les 9 autres) afin de définir l’indice IBDL. Il est possible de faire une seule partie du cheminement afin de d’avoir les résultats intermédiaires à différentes échelles spatiales.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># ## Chargement du package</span>
 <span class="co"># if(!require("remotes")) {install.packages("remotes")} </span>
 <span class="co"># remotes::install_github("SebastienBoutry/IBDL",force = TRUE)</span>
