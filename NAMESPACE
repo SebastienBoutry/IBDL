@@ -2,6 +2,7 @@
 
 export(fibdl)
 export(fibdl_checkof_infoscomp)
+export(fibdl_checkof_inputs)
 export(fibdl_checkof_listflor)
 export(fibdl_ibdl)
 export(fibdl_ibdl_qualify)
