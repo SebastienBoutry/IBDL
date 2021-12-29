@@ -88,8 +88,13 @@ Des données mésologiques (au niveau de la campagne et l'unité d'observation) 
 
 L'utilisation du package `{CheckOfTable}` permet de contrôler les tableaux d'importation. On utilisera les fonctions de ce package pour créer deux fonctions afin de valider les deux tableaux.
 
-- **fibdl_checkof_listflor**
-- **fibdl_checkof_infoscompl**
+#### **fibdl_checkof_listflor**
+
+```{r}
+
+```
+
+#### **fibdl_checkof_infoscompl**
 
 ```{r, echo=TRUE, value=FALSE}
 remotes::install_github("SebastienBoutry/CheckOfTable",force=TRUE)

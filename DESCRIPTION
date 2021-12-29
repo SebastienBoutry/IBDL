@@ -28,7 +28,8 @@ Imports:
     tidyr,
     pkgdown,
     tibble,
-    gt
+    gt,
+    CheckOfTable
 Depends: 
     tidyverse,
     R (>= 2.10)
