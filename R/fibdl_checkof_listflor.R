@@ -1,54 +1,55 @@
+#' Contrôle du tableau liste floristique pour le calcul de l'IBDL
+#'
+#' @param data tableau représentant la liste floristique
+#'
+#' @return
+#' @export
+#' @import CheckOfTable
+#'
+#' @examples
+#' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
+#' fibdl_checkof_listflor(list_flor)
+
 fibdl_checkof_listflor <- function(data){
   ##
   table_orig <- "liste flore"
   ##
   step_1 <- CheckOfTable::fcot_table(data,table_orig=table_orig)
-  if(step_1$valeur_test=="Oui"){
-    step_2 <- CheckOfTable::fcot_colnames(data,table_orig=table_orig)
-    if(step_2$valeur_test=="Oui"){
-      # bind_rows(
-      #   fcot_value_vide(table_test,
-      #                   c("a","b","c","d"),
-      #                   table_orig),
-      #   fcot_type_character(table_test,
-      #                       c("b"),
-      #                       table_orig),
-      #   fcot_type_numeric(table_test,
-      #                     c("a","b","c","d"),
-      #                     table_orig),
-      #   fcot_value_positive(table_test,
-      #                       c("a","b","c","d"),
-      #                       table_orig),
-      #   fcot_value_interval(table_test,
-      #                       c("a","c"),
-      #                       mini=2,
-      #                       maxi=5,table_orig)
-      # ) %>%
+  sortie <- step_1
+  if(step_1$valeur_test=="oui"){
+    step_2 <- CheckOfTable::fcot_colnames(data,
+                                          noms_colonnes = c("id_prelevement","taxons","ab"),
+                                          table_orig=table_orig)
+    sortie <- bind_rows(sortie,step_2)
+    if(step_2$valeur_test=="oui"){
+      step_3 <- bind_rows(
+        CheckOfTable::fcot_value_empty(data,
+                                       c("id_prelevement","taxons","ab"),
+                                       table_orig),
+        CheckOfTable::fcot_type_character(data,
+                                          c("taxons"),
+                                          table_orig),
+        CheckOfTable::fcot_type_numeric(data,
+                                        c("id_prelevement","ab"),
+                                        table_orig),
+        CheckOfTable::fcot_value_positive(data,
+                                          c("id_prelevement","ab"),
+                                          table_orig),
+        CheckOfTable::fcot_value_interval(data,
+                                          c("ab"),
+                                          mini=1,
+                                          maxi=400,
+                                          table_orig)
+      )
+      step_3 <- step_3 %>%
+        mutate(nom_test = nom_test_precis) %>%
+        select(-nom_test_precis)
+      sortie <- bind_rows(sortie,step_3)
       #   select(message)
     }else{
-      return(step_2)
     }
   }else{
-    return(step_1)
+
   }
-}
-  # bind_rows(
-  #   f_format_table(data,table_orig="liste flore"),
-  #   f_format_colnames(data,
-  #                     noms_colonnes=c(""),
-  #                     table_orig="liste flore")
-  # )
-
-
-
-  bind_rows(
-    f_format_value_vide(table_test,c("a","b","c","d"),"liste"),
-    f_format_type_character(table_test,c("b"),"liste"),
-    f_format_type_numeric(table_test,c("a","b","c","d"),"liste"),
-    f_format_value_positive(table_test,c("a","b","c","d"),"liste"),
-    f_format_value_interval(table_test,c("a","c"),mini=2,maxi=5,"liste")
-  ) %>%
-    select(message)
-
-  ##
+  return(sortie)
 }
