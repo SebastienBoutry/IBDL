@@ -1,6 +1,6 @@
-#' Controle du tableau informations complementaires sur le site pour le calcul de l'IBDL
+#' Controle du tableau informations complementaires sur le site pour le calcul de l IBDL
 #'
-#' @param data tableau representant les informations complementaires sur l'unite d'observation
+#' @param data tableau representant les informations complementaires sur l unite d observation
 #'
 #' @return
 #' @export
@@ -14,7 +14,7 @@
 
 fibdl_checkof_infoscomp <- function(data){
   ##
-  table_orig <- "informations complémentaires sur l'uo"
+  table_orig <- "informations complementaires sur l uo"
   ##
   step_1 <- CheckOfTable::fcot_table(data,table_orig=table_orig)
   sortie <- step_1

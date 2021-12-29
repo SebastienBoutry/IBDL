@@ -2,18 +2,18 @@
 % Please edit documentation in R/fibdl_checkof_infoscomp.R
 \name{fibdl_checkof_infoscomp}
 \alias{fibdl_checkof_infoscomp}
-\title{Controle du tableau informations complementaires sur le site pour le calcul de l'IBDL}
+\title{Controle du tableau informations complementaires sur le site pour le calcul de l IBDL}
 \usage{
 fibdl_checkof_infoscomp(data)
 }
 \arguments{
-\item{data}{tableau representant les informations complementaires sur l'unite d'observation}
+\item{data}{tableau representant les informations complementaires sur l unite d observation}
 }
 \value{
 
 }
 \description{
-Controle du tableau informations complementaires sur le site pour le calcul de l'IBDL
+Controle du tableau informations complementaires sur le site pour le calcul de l IBDL
 }
 \examples{
 infos_uo <- read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")

@@ -20,7 +20,7 @@ Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomi
 
 \item{seuil_pour_taxons_indiciels}{seuil en pourcentage des taxons indiciels dans le prelevement}
 
-\item{table_tax_alerts}{tableau de référence au format binaire des taxons d'alertes et indiciels, par défaut Table_taxons_alertes (table interne embarquée)}
+\item{table_tax_alerts}{tableau de reference au format binaire des taxons d'alertes et indiciels, par defaut Table_taxons_alertes (table interne embarquee)}
 }
 \value{
 tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.
