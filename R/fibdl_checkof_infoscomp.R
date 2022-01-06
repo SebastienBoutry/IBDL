@@ -43,14 +43,18 @@ fibdl_checkof_infoscomp <- function(data){
                                           maxi=4,
                                           table_orig)
       )
+
       step_3 <- step_3 %>%
         dplyr::mutate(nom_test = nom_test_precis) %>%
         dplyr::select(-nom_test_precis)
+
       sortie <- dplyr::bind_rows(sortie,step_3)
     }else{
+
     }
   }else{
 
   }
+  ##
   return(sortie)
 }
