@@ -12,11 +12,11 @@
 #' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
 #' info_uo<- utils::read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")
 
-#' fibdl_checkof_inputs(list_flor=list_flor,info_uo=info_uo)
+#' fibdl_checkof_inputs(list_flor=list_flor,add_information_station=info_uo)
 
 
-fibdl_checkof_inputs <- function(list_flor,info_uo){
-  sortie_infoscomp <- IBDL::fibdl_checkof_infoscomp(info_uo)
+fibdl_checkof_inputs <- function(list_flor,add_information_station){
+  sortie_infoscomp <- IBDL::fibdl_checkof_infoscomp(add_information_station)
   output <- list()
 
   if(sum(sortie_infoscomp$valeur_test=="oui") == nrow(sortie_infoscomp)){
