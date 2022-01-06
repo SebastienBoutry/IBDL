@@ -9,11 +9,13 @@ fibdl_listflor_qualify(
   seuil_nbr_valves = 350,
   seuil_pour_valves_sp = 0.25,
   seuil_pour_taxons_indiciels = 0.75,
-  table_tax_alerts = Table_taxons_alertes
+  table_tax_alerts = IBDL:::Table_taxons_alertes
 )
 }
 \arguments{
-\item{seuil_nbr_valves}{nombre de valves compte dans le prélèvement. Dans la norme, il est demande de compter 400 valves.}
+\item{data}{tableau representant la liste floristique}
+
+\item{seuil_nbr_valves}{nombre de valves compte dans le prelevement. Dans la norme, il est demande de compter 400 valves.}
 
 \item{seuil_pour_valves_sp}{seuil en pourcentage de valves determinees au rang taxonomique espece dans le prelevement.
 Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).}
@@ -27,4 +29,11 @@ tableau avec les informations liees au prelevement. La colonne validation rensei
 }
 \description{
 Qualification des listes floristiques
+}
+\examples{
+list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8") \%>\%
+IBDL::fibdl_listflor_transcode()
+fibdl_listflor_qualify(data=list_flor)
+
+
 }
