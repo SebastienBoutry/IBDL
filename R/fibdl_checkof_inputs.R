@@ -1,7 +1,7 @@
 #' Controle des tableaux pour le calcul de l IBDL
 #'
 #' @param list_flor tableau representant la liste floristique
-#' @param info_uo tableau representant les informations complementaires sur l unite d observation
+#' @param add_information_station tableau representant les informations complementaires sur l unite d observation
 #'
 #'
 #' @return
