@@ -1,4 +1,4 @@
-#' Check of inputs
+#' Check of inputs to calculate IBDL
 #'
 #' @param list_flor
 #' @param info_uo
