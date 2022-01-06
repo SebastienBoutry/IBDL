@@ -9,13 +9,19 @@
 #'
 #' @return tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.
 #' @export
+#' @import dplyr
 #'
 #' @examples
+#' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8") %>%
+#' IBDL::fibdl_listflor_transcode()
+#' fibdl_listflor_qualify(data=list_flor)
+#'
+#'
 fibdl_listflor_qualify <- function(data,
                                    seuil_nbr_valves = 350,
                                    seuil_pour_valves_sp = 0.25,
                                    seuil_pour_taxons_indiciels = 0.75,
-                                   table_tax_alerts = Table_taxons_alertes){
+                                   table_tax_alerts = IBDL:::Table_taxons_alertes){
   ## create table validation
   table_validation <- data %>%
     ## récupération des taxons d'alertes
