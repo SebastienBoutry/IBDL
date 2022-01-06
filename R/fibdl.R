@@ -12,7 +12,7 @@
 #'
 #' fibdl(list_flor, info_uo)
 
-fibdl <- function(listflor, info_uo) {
+fibdl <- function(listflor, add_information_station) {
 
   test <- fibdl_checkof_inputs(listflor, info_uo)
 
