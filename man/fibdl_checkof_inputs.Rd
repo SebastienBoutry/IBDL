@@ -9,7 +9,7 @@ fibdl_checkof_inputs(list_flor, add_information_station)
 \arguments{
 \item{list_flor}{tableau representant la liste floristique}
 
-\item{info_uo}{tableau representant les informations complementaires sur l unite d observation}
+\item{add_information_station}{tableau representant les informations complementaires sur l unite d observation}
 }
 \value{
 
