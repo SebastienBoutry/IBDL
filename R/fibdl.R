@@ -8,7 +8,9 @@
 #'
 #' @examples
 fibdl <- function(listflor, info_uo) {
+
   test <- fibdl_checkof_inputs(listflor, info_uo)
+
   if(test[[1]]==TRUE){
   ##
   table_ibdl <- listflor %>%
@@ -21,7 +23,10 @@ fibdl <- function(listflor, info_uo) {
     fibdl_ibdl() %>%
     fibdl_ibdl_qualify()
   return(table_ibdl)
+
   }else{
-    return(test[[2]])
+
+      return(test[[2]])
+
   }
 }
