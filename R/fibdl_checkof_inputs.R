@@ -18,6 +18,7 @@
 fibdl_checkof_inputs <- function(list_flor,info_uo){
   sortie_infoscomp <- IBDL::fibdl_checkof_infoscomp(info_uo)
   output <- list()
+
   if(sum(sortie_infoscomp$valeur_test=="oui") == nrow(sortie_infoscomp)){
     output[[1]] <- TRUE
   }else{
@@ -25,7 +26,9 @@ fibdl_checkof_inputs <- function(list_flor,info_uo){
       dplyr::filter(valeur_test=="non") %>%
       dplyr::pull(message)
   }
+
   sortie_list_flor <- IBDL::fibdl_checkof_listflor(list_flor)
+
   if(sum(sortie_list_flor$valeur_test=="oui") == nrow(sortie_list_flor)){
     output[[2]] <- TRUE
   }else{
