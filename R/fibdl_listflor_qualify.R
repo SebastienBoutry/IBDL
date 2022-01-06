@@ -1,7 +1,7 @@
 #' Qualification des listes floristiques
 #'
-#' @param data tableau représentant la liste floristique
-#' @param seuil_nbr_valves nombre de valves compte dans le prélèvement. Dans la norme, il est demande de compter 400 valves.
+#' @param data tableau representant la liste floristique
+#' @param seuil_nbr_valves nombre de valves compte dans le prelevement. Dans la norme, il est demande de compter 400 valves.
 #' @param seuil_pour_valves_sp  seuil en pourcentage de valves determinees au rang taxonomique espece dans le prelevement.
 #' Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).
 #' @param seuil_pour_taxons_indiciels seuil en pourcentage des taxons indiciels dans le prelevement
