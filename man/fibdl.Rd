@@ -2,18 +2,24 @@
 % Please edit documentation in R/fibdl.R
 \name{fibdl}
 \alias{fibdl}
-\title{Fonction intégratrice}
+\title{Fonction integratrice pour le calcul de Indice Biologique Diatomees en Lac (IBDL)}
 \usage{
 fibdl(listflor, info_uo)
 }
 \arguments{
-\item{listflor}{table renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab}
+\item{listflor}{tableau renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab}
 
-\item{info_uo}{table d'informations complémentaires sur le prélevement.}
+\item{add_information_station}{tableau d informations complementaires sur le prelevement.}
 }
 \value{
 
 }
 \description{
-Fonction intégratrice
+Fonction integratrice pour le calcul de Indice Biologique Diatomees en Lac (IBDL)
+}
+\examples{
+list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
+info_uo<- utils::read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")
+
+fibdl(list_flor, info_uo)
 }

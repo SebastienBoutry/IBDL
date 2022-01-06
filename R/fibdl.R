@@ -1,7 +1,7 @@
-#' Fonction intégratrice pour le calcul de Indice Biologique Diatomees en Lac (IBDL)
+#' Fonction integratrice pour le calcul de Indice Biologique Diatomees en Lac (IBDL)
 #'
-#' @param listflor table renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab
-#' @param info_uo table d informations complementaires sur le prelevement.
+#' @param listflor tableau renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab
+#' @param add_information_station tableau d informations complementaires sur le prelevement.
 #'
 #' @return
 #' @export
@@ -9,7 +9,8 @@
 #' @examples
 #' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
 #' info_uo<- utils::read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")
-#' fibdl(listflor, info_uo)
+#'
+#' fibdl(list_flor, info_uo)
 
 fibdl <- function(listflor, info_uo) {
 

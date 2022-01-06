@@ -2,21 +2,23 @@
 % Please edit documentation in R/fibdl_checkof_inputs.R
 \name{fibdl_checkof_inputs}
 \alias{fibdl_checkof_inputs}
-\title{Check of inputs}
+\title{Controle des tableaux pour le calcul de l IBDL}
 \usage{
-fibdl_checkof_inputs(list_flor, info_uo)
+fibdl_checkof_inputs(list_flor, add_information_station)
 }
 \arguments{
-\item{info_uo}{}
+\item{list_flor}{tableau representant la liste floristique}
+
+\item{info_uo}{tableau representant les informations complementaires sur l unite d observation}
 }
 \value{
 
 }
 \description{
-Check of inputs
+Controle des tableaux pour le calcul de l IBDL
 }
 \examples{
 list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
 info_uo<- utils::read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")
-fibdl_checkof_inputs(list_flor,info_uo)
+fibdl_checkof_inputs(list_flor=list_flor,add_information_station=info_uo)
 }
