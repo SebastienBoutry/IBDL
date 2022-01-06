@@ -1,7 +1,8 @@
 #' Check of inputs to calculate IBDL
 #'
-#' @param list_flor
-#' @param info_uo
+#' @param list_flor tableau représentant la liste floristique
+#' @param info_uo tableau representant les informations complementaires sur l unite d observation
+#'
 #'
 #' @return
 #' @export
