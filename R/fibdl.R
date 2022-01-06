@@ -22,6 +22,7 @@ fibdl <- function(listflor, info_uo) {
     fibdl_uo_score() %>%
     fibdl_ibdl() %>%
     fibdl_ibdl_qualify()
+
   return(table_ibdl)
 
   }else{
