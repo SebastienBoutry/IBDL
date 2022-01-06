@@ -4,7 +4,7 @@
 \alias{fibdl}
 \title{Fonction integratrice pour le calcul de Indice Biologique Diatomees en Lac (IBDL)}
 \usage{
-fibdl(listflor, info_uo)
+fibdl(listflor, add_information_station)
 }
 \arguments{
 \item{listflor}{tableau renseignant les listes floristiques avec trois colonnes id_prelevement, taxons, et ab}
