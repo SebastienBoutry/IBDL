@@ -21,17 +21,17 @@ fibdl_listflor_EQR<- function(data,add_information_station){
     dplyr::left_join(SES_ref_type,by="join") %>%
     dplyr::mutate(SES=(value-Mtype)/SDtype) %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(SESnor=dplyr::case_when(metrics=="DBO5"~ (SES-(-4.25))/(1.00-(-4.25)),
-                            metrics=="MES" ~ (SES-( -5.33))/(1.02-( -5.33)),
-                            metrics=="NKJ" ~ (SES-(-5.21))/(1.00-(-5.21)),
-                            metrics=="Ptot" ~ (SES-(-3.73))/(1.41-(-3.73))
+    dplyr::mutate(SESnor=dplyr::case_when(metrics=="DBO5"~ (SES-(-4.25))/(0.9-(-4.25)),
+                            metrics=="MES" ~ (SES-( -4.16))/(1.00-(  -4.16)),
+                            metrics=="NKJ" ~ (SES-(-4.80))/(1.00-(-4.80)),
+                            metrics=="Ptot" ~ (SES-(-3.56))/(1.17-(-3.56))
     )
     ) %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(EQR=dplyr::case_when(metrics=="DBO5"~SESnor/0.915,
-                         metrics=="MES"~SESnor/0.918,
-                         metrics=="NKJ"~SESnor/0.912,
-                         metrics=="Ptot"~SESnor/0.855
+    dplyr::mutate(EQR=dplyr::case_when(metrics=="DBO5"~SESnor/0.936,
+                         metrics=="MES"~SESnor/0.908,
+                         metrics=="NKJ"~SESnor/0.914,
+                         metrics=="Ptot"~SESnor/0.888
     )
     ) %>%
     dplyr::select(-join,-Mtype,-SDtype)
