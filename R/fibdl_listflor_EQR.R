@@ -36,15 +36,5 @@ fibdl_listflor_EQR<- function(data,add_information_station){
     ) %>%
     dplyr::select(-join,-Mtype,-SDtype)
   ##
-  # table_listflor_EQR<-table_listflor_EQR |>
-  #   # mutate(EQR = ifelse(
-  #   #   EQR >= Lim_HG_G,
-  #   #   EQR * coeff_a + coeff_b,
-  #   #   EQR * coeff
-  #   # )) %>%
-  #   mutate(EQR = EQR) %>%
-  #   mutate(EQR = ifelse(EQR > 1, 1, EQR))
-
-  ##
   return(table_listflor_EQR)
 }
