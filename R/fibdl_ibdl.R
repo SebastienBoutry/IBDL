@@ -32,7 +32,7 @@ fibdl_ibdl<- function(data){
     dplyr::group_by(id_campagne,datedebut,code_lac,nbr_uo) %>%
     dplyr::summarise(IBDL=sum(Note_type),
               SommePourcent=sum(value/100),
-              IBDL=round(IBDL,3)# arrondi à deux décimales après la virgule
+              IBDL=(IBDL)# arrondi à deux décimales après la virgule
               ) %>%
     dplyr::mutate(ClassIBDL=cut(IBDL,c(0,0.2,0.4,0.6,0.8,1),
                          labels=c("B","P","M","G","HG"))) %>%
