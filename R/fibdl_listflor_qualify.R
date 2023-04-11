@@ -35,7 +35,7 @@ fibdl_listflor_qualify <- function(data,
                      r_esp=sum(ab[! rang %in% c("erreur","gn",NA_character_)])/tot,
                      r_ADMI = sum(ab[!taxons %in% "ADMI"]) / tot,
                      Ab_tot_indiciel = sum(ab[indiciel==1])) %>%
-    dplyr::mutate(r_esp=tot_sans_ADMI/tot,
+    dplyr::mutate(r_esp=r_esp/tot,
                   pour_taxons_indiciels=Ab_tot_indiciel/tot) %>%
     dplyr::mutate(nbr_valves =ifelse(tot>=seuil_nbr_valves,
                                      TRUE,
