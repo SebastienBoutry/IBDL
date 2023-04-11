@@ -28,10 +28,10 @@ fibdl_listflor_EQR<- function(data,add_information_station){
     )
     ) %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(EQR=dplyr::case_when(metrics=="DBO5"~SESnor/0.936,
-                         metrics=="MES"~SESnor/0.908,
-                         metrics=="NKJ"~SESnor/0.914,
-                         metrics=="Ptot"~SESnor/0.888
+    dplyr::mutate(EQR=dplyr::case_when(metrics=="DBO5"~SESnor/0.9358017,
+                         metrics=="MES"~SESnor/0.9081657,
+                         metrics=="NKJ"~SESnor/0.9138570,
+                         metrics=="Ptot"~SESnor/0.8880905
     )
     ) %>%
     dplyr::select(-join,-Mtype,-SDtype)
