@@ -21,10 +21,10 @@ fibdl_listflor_EQR<- function(data,add_information_station){
     dplyr::left_join(SES_ref_type,by="join") %>%
     dplyr::mutate(SES=(value-Mtype)/SDtype) %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(SESnor=dplyr::case_when(metrics=="DBO5"~ (SES-(-4.248347))/(0.9-(-4.25)),
-                            metrics=="MES" ~ (SES-(  -4.158029 ))/(1.00-(  -4.16)),
-                            metrics=="NKJ" ~ (SES-(-4.804299))/(1.00-(-4.80)),
-                            metrics=="Ptot" ~ (SES-(-3.559219 ))/(1.173913-(-3.56))
+    dplyr::mutate(SESnor=dplyr::case_when(metrics=="DBO5"~ (SES-(-4.248347))/(0.9-(-4.248347)),
+                            metrics=="MES" ~ (SES-(  -4.158029 ))/(1.00-(  -4.158029)),
+                            metrics=="NKJ" ~ (SES-(-4.804299))/(1.00-(4.804299)),
+                            metrics=="Ptot" ~ (SES-(-3.559219 ))/(1.173913-(-3.559219))
     )
     ) %>%
     dplyr::ungroup() %>%
