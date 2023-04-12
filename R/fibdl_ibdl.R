@@ -36,7 +36,7 @@ fibdl_ibdl<- function(data){
               ) %>%
     dplyr::mutate(ClassIBDL=cut(IBDL,c(0,0.2,0.4,0.6,0.8,1),
                          labels=c("B","P","M","G","HG"))) %>%
-    dplyr::mutate(IBDL=IBDL/SommePourcent) %>%  # arrondi à deux décimales après la virgule
+    dplyr::mutate(IBDL=round(IBDL/SommePourcent,2)) %>%  # arrondi à deux décimales après la virgule
     dplyr::ungroup()
   ##
   return(table_ibdl)
