@@ -7,10 +7,7 @@
 #' @export
 #'
 #' @examples
-#' list_flor <- read.csv2(system.file("listflor.csv", package = "IBDL"),fileEncoding = "utf-8")
-#' info_uo<- utils::read.csv2(system.file("info_uo.csv", package = "IBDL"),fileEncoding = "utf-8")
-#'
-#' fibdl(listflor=list_flor, info_uo)
+
 
 fibdl <- function(listflor, add_information_station) {
 

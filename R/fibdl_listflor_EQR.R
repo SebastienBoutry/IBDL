@@ -7,6 +7,7 @@
 #' @export
 #'
 #' @examples
+
 fibdl_listflor_EQR<- function(data,add_information_station){
   ###
   data <- data %>%
