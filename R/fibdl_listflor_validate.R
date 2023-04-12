@@ -10,7 +10,7 @@
 #' @examples
 fibdl_listflor_validate <- function(data){
   ## create table validation
-  table_validation <- fibdl_listflor_qualify(data)
+  table_validation <- fibdl_listflor_qualify(data)[["table_validation"]]
   ##
   table_listflor_validate <- data %>%
     dplyr::left_join(table_validation,

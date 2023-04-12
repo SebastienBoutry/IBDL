@@ -55,7 +55,10 @@ fibdl_listflor_qualify <- function(data,
     mutate(Validation_admi = ifelse(r_ADMI >= 0.5, TRUE, FALSE)) %>%
     filter(Validation_admi == FALSE) %>%
     pull(id_prelevement)
-
   ##
-  return(table_validation)
+  output<-list()
+  output[["table_validation"]]<-table_validation
+  output[["id_prelevement_admi"]]<-id_prelevement_admi
+  ##
+  return(output)
 }
