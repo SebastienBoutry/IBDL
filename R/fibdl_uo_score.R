@@ -7,16 +7,28 @@
 #' @export
 #'
 #' @examples
-fibdl_uo_score <- function(data){
+fibdl_uo_score <- function(data,id_prelevement_admi){
   ##
   table_score_ibdl <- data %>%
     dplyr::group_by(id_prelevement,code_pe,nature_substrat,id_uo,type_dominant,id_campagne,datedebut) %>%
     dplyr::summarise(Moy_EQR=mean(EQR)) %>% # moyenne des métriques selon le uo et le substrat
     dplyr::ungroup() %>%
     dplyr::arrange(id_uo) %>%
+    ## identification admi
+    dplyr::mutate(commentaires = if_else(!id_prelevement %in% id_prelevement_admi, "ok", "pas fiable")) %>%
+    dplyr::group_by( code_pe, id_uo, id_campagne) %>%
+    dplyr::mutate(nbr_prel = n()) %>%
+    dplyr::ungroup() |>
+    ##
     dplyr::group_by(code_pe,id_uo,type_dominant,id_campagne,datedebut) %>%
-    dplyr::summarise(Note_UO=min(Moy_EQR)) %>% # la valeur minimale selon les deux substrat sur l'UO
-    dplyr::ungroup()
+    dplyr::summarise(Note_UO=min(Moy_EQR),
+                     commentaires_sep = paste0(commentaires, collapse = "_")) %>% # la valeur minimale selon les deux substrat sur l'UO
+    dplyr::ungroup() |>
+    ## suppression de colonnes
+    dplyr::filter(!(commentaires_sep == "pas fiable" & nbr_prel == 2)) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(id_uo = as.numeric(id_uo)) %>%
+    dplyr::select(-commentaires_sep, -nbr_prel)
   ##
 
   return(table_score_ibdl)
