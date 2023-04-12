@@ -23,7 +23,7 @@ fibdl_ibdl<- function(data){
     dplyr::select(-join,-code_lac) %>%
     dplyr::rename("code_lac"="code_pe") %>%
     ##
-    group_by(id_campagne, datedebut, reference, code_lac, pourcentage, value, nbr_uo, nbr_uo_valides) %>%
+    group_by(id_campagne, datedebut, reference, code_lac, pourcentage, value, nbr_uo) %>%
     mutate(nbr_uo_type = n()) %>%
     ungroup() %>%
     ##
