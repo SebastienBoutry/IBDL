@@ -24,7 +24,8 @@ fibdl_uo_score <- function(data){
     dplyr::ungroup() |>
     ##
     dplyr::group_by(code_pe,id_uo,type_dominant,id_campagne,datedebut,nbr_prel) %>%
-    dplyr::summarise(Note_UO=min(Moy_EQR)
+    dplyr::summarise(Note_UO=min(Moy_EQR),
+                     commentaires= paste0(commentaires, collapse = "_")
                      ) %>% # la valeur minimale selon les deux substrat sur l'UO
     dplyr::ungroup()
     ## suppression de colonnes
