@@ -28,7 +28,8 @@ fibdl_ibdl<- function(data){
     ungroup() %>%
     ##
     dplyr::group_by(id_campagne,datedebut,code_lac,pourcentage,value,nbr_uo,commentaires_sep,nbr_uo_type) %>%
-    dplyr::summarise(Min_type=min(Note_UO,na.rm=TRUE)) %>%
+    dplyr::summarise(Min_type=min(Note_UO,na.rm=TRUE),
+                     commentaires_sep = paste0(commentaires, collapse = "_")) %>%
     filter(!(str_detect(commentaires_sep, "pas fiable") & nbr_uo_type >= 1)) %>%
     dplyr::ungroup() %>%
     dplyr::arrange(id_campagne) %>%
