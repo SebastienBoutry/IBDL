@@ -32,7 +32,7 @@ fibdl_ibdl<- function(data){
     filter(!(str_detect(commentaires_sep, "pas fiable") & nbr_uo_type >= 1)) %>%
     dplyr::ungroup() %>%
     dplyr::arrange(id_campagne) %>%
-    dplyr::mutate(Note_type=Min_type*(value/100))
+    dplyr::mutate(Note_type=Min_type*(value/100)) %>%
     ##
     dplyr::group_by(id_campagne,datedebut,code_lac,nbr_uo) %>%
     dplyr::summarise(IBDL=sum(Note_type),
