@@ -2,7 +2,7 @@
 title: "Les fonctions"
 output: rmarkdown::html_vignette
 bibliography: bibliography.bib
-# output: 
+# output:
 #   rmarkdown::html_vignette:
 #     css:
 #       - "style/inrae.css"
