@@ -1,0 +1,9 @@
+cff-version: 0.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Boutry
+    given-names: Sébastien
+    orcid: https://orcid.org/0000-0001-8046-585X
+title: SebastienBoutry/IBDL: Version article
+version: IBDL
+date-released: 2023-04-17
