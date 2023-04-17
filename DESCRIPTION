@@ -28,6 +28,7 @@ Imports:
     tidyr,
     pkgdown,
     tibble,
+    bslib,
     gt,
     CheckOfTable
 Depends: 
