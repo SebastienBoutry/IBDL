@@ -4,9 +4,10 @@
 # Indice Biologique Diatomées en Lac (IBDL) <img src='man/figures/logo.png' align="right" height="139" />
 
 <!-- badges: start -->
+<!-- [![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) -->
 
-[![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![packageversion](https://img.shields.io/badge/Package%20version-0.0.1-orange.svg?style=flat-square)](commits/master)
+[![packageversion](https://img.shields.io/badge/Package%20version-0.2.0-orange.svg?style=flat-square)](commits/master)
+[![DOI](https://zenodo.org/badge/433845227.svg)](https://zenodo.org/badge/latestdoi/433845227)
 [![Licence](https://img.shields.io/badge/licence-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 <!-- [![R build status](https://github.com/SebastienBoutry/IBDL/workflows/R-CMD-check/badge.svg)](https://github.com/SebastienBoutry/IBDL/actions) -->
 <!-- badges: end -->
@@ -85,21 +86,36 @@ Des données mésologiques (au niveau de la campagne et l’unité
 d’observation) et des listes floristiques sont acquises sont réparties
 dans deux fichiers distincts :
 
--   le premier contient les listes floristiques (id\_prelevement,
-    taxons, ab),
--   le second renseigne sur les données de contexte liées au site
-    d’étude (id\_prelevement, id\_uo, nature\_substrat, code\_gene,
-    date).
+- le premier contient les listes floristiques (id_prelevement, taxons,
+  ab),
+- le second renseigne sur les données de contexte liées au site d’étude
+  (id_prelevement, id_uo, nature_substrat, code_gene, date).
 
 ### La validation des tableaux de données
 
 L’utilisation du package `{CheckOfTable}` permet de contrôler les
-tableaux d’importation.
+tableaux d’importation. On utilisera les fonctions de ce package pour
+créer deux fonctions afin de valider les deux tableaux.
+
+#### **fibdl_checkof_listflor**
+
+#### **fibdl_checkof_infoscompl**
 
 ``` r
-remotes::install_github("SebastienBoutry/CheckOfTable")
-#> Skipping install of 'CheckOfTable' from a github remote, the SHA1 (0e2c1ff6) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+remotes::install_github("SebastienBoutry/CheckOfTable",force=TRUE)
+#> Downloading GitHub repo SebastienBoutry/CheckOfTable@HEAD
+#> 
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#>      checking for file ‘/tmp/RtmpkY635Q/remotes35db2b1481fb/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpkY635Q/remotes35db2b1481fb/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (439ms)
+#>   ─  preparing ‘CheckOfTable’:
+#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+#>   ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building ‘CheckOfTable_0.0.0.9000.tar.gz’
+#>      
+#> 
+#> Installation du package dans '/home/sboutry/R/x86_64-pc-linux-gnu-library/4.2'
+#> (car 'lib' n'est pas spécifié)
 ```
 
 ### Données internes embarquées
@@ -108,7 +124,7 @@ Les jeux de données internes embarquées correspondent aux jeux de
 données dit de référence. Ils sont décrits ci-dessous :
 
 **`table_transcodage`** : Table de transcodage permettant de faire
-correspondre le code\_taxon 4 lettres (type OMNIDIA) à son entité
+correspondre le code_taxon 4 lettres (type OMNIDIA) à son entité
 taxonomique qui a été considérée pour la construction de l’IBDL. Le
 choix pour l’indice est d’harmoniser les taxons à un rang taxonomique de
 l’espèce. On a pris en compte la synonymie et l’héritage taxonomique.
@@ -141,9 +157,9 @@ selon leur superficie (Afnor 2010).
 
 Les classes d’alcalinité des plans d’eau sont définis comme ceci :
 
--   LA (basse) : alcalinité &lt;0.2 meq.l-1;
--   MA (moyenne) : 0.2 meq.l-1 &lt;= alcalinité &lt; 1 meq.l-1;
--   HA (haute) : alcalinité alcalinité &gt;=1 meq.l-1.
+- LA (basse) : alcalinité \<0.2 meq.l-1;
+- MA (moyenne) : 0.2 meq.l-1 \<= alcalinité \< 1 meq.l-1;
+- HA (haute) : alcalinité alcalinité \>=1 meq.l-1.
 
 <img src="man/figures/README-my_tab_lacs_ex.png" width="100%" />
 
@@ -205,7 +221,7 @@ Toutes les fonctions sont détaillées dans la vignette du package.
 <div align="center">
 
    :e-mail:
-[Email](mailto:sebastien.boutry@inrae.fr)   \|   :speech\_balloon:
+[Email](mailto:sebastien.boutry@inrae.fr)   \|   :speech_balloon:
 [Twitter](https://twitter.com/SebBoutry)   \|   :necktie:
 [LinkedIn](https://www.linkedin.com/in/s%C3%A9bastien-boutry-4a77ba10/)
 
@@ -214,6 +230,23 @@ Quick Link
 -->
 
 </div>
+
+# Citation
+
+Carayon D (2023). *IDEATools: Individual and Group Farm Sustainability
+Assessments using the IDEA4 Method*. R package version 3.4.1,
+<https://CRAN.R-project.org/package=IDEATools>.
+
+A BibTeX entry for LaTeX users is
+
+      @Manual{,
+        title = {IDEATools: Individual and Group Farm Sustainability Assessments using the
+    IDEA4 Method},
+        author = {David Carayon},
+        year = {2023},
+        note = {R package version 3.4.1},
+        url = {https://CRAN.R-project.org/package=IDEATools},
+      }
 
 # Références
 
@@ -229,7 +262,7 @@ Communautés de Macrophytes En Plans d’eau.”
 <div id="ref-Boutry2021" class="csl-entry">
 
 Boutry, Sébastien, Soizic Morin, Vincent Bertrin, and Juliette Rosebery.
-2021. “Évaluation écologique Des Plans d’eau Basée Sur Les Communautés
+2021. “Évaluation Écologique Des Plans d’eau Basée Sur Les Communautés
 de Diatomées Benthiques.” INRAE, UR EABX, équipe ECOVEA.
 
 </div>
