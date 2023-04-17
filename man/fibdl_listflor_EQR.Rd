@@ -11,9 +11,6 @@ fibdl_listflor_EQR(data, add_information_station)
 
 \item{add_information_station}{tableau d'entrée renseignant sur les la nature du substrat et la classe d'alcalinité du plan d'eau échantillonné.}
 }
-\value{
-
-}
 \description{
 Transformation en EQR au niveau du prélèvement
 }

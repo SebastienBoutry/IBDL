@@ -15,7 +15,7 @@ Description: Ce package regroupe toutes les fonctions necessaires afin de calcul
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Suggests: 
     knitr,
     rmarkdown

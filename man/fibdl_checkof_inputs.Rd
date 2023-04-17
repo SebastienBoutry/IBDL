@@ -11,9 +11,6 @@ fibdl_checkof_inputs(list_flor, add_information_station)
 
 \item{add_information_station}{tableau representant les informations complementaires sur l unite d observation}
 }
-\value{
-
-}
 \description{
 Controle des tableaux pour le calcul de l IBDL
 }

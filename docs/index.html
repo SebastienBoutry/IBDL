@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">IBDL</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0</span>
       </span>
     </div>
 
@@ -50,7 +50,7 @@
   <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -79,6 +79,7 @@
 <div class="page-header"><h1 id="indice-biologique-diatomées-en-lac-ibdl-">Indice Biologique Diatomées en Lac (IBDL) <img src="reference/figures/logo.png" align="right" height="139"><a class="anchor" aria-label="anchor" href="#indice-biologique-diatom%C3%A9es-en-lac-ibdl-"></a>
 </h1></div>
 <!-- badges: start -->
+<!-- [![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing) -->
 
 </div>
 <div class="section level1">
@@ -87,11 +88,11 @@
 </h1>
 <p>La version du package <code>{IBDL}</code> peut se télécharger via le site Github pour cela on aura besoin du package <a href="https://remotes.r-lib.org" class="external-link">remotes</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"SebastienBoutry/IBDL"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"SebastienBoutry/IBDL"</span><span class="op">)</span></span></code></pre></div>
 <p><em>NB : Le logiciel RTools est parfois nécessaire sur les machines Windows pour pouvoir installer le package <a href="https://remotes.r-lib.org" class="external-link">remotes</a>, puisque l’installation ici se fait depuis un dépôt de développement (Github) et non un dépôt officiel R. Vous pouvez l’installer ici : <a href="https://cran.r-project.org/bin/windows/Rtools/" class="external-link">Rtools</a></em></p>
 <p>Une fois installé, vous pouvez charger le package avec :</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">IBDL</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">IBDL</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="objectif">Objectif<a class="anchor" aria-label="anchor" href="#objectif"></a>
@@ -128,11 +129,32 @@
 <div class="section level3">
 <h3 id="la-validation-des-tableaux-de-données">La validation des tableaux de données<a class="anchor" aria-label="anchor" href="#la-validation-des-tableaux-de-donn%C3%A9es"></a>
 </h3>
-<p>L’utilisation du package <code>{CheckOfTable}</code> permet de contrôler les tableaux d’importation.</p>
+<p>L’utilisation du package <code>{CheckOfTable}</code> permet de contrôler les tableaux d’importation. On utilisera les fonctions de ce package pour créer deux fonctions afin de valider les deux tableaux.</p>
+<div class="section level4">
+<h4 id="fibdl_checkof_listflor">
+<strong>fibdl_checkof_listflor</strong><a class="anchor" aria-label="anchor" href="#fibdl_checkof_listflor"></a>
+</h4>
+</div>
+<div class="section level4">
+<h4 id="fibdl_checkof_infoscompl">
+<strong>fibdl_checkof_infoscompl</strong><a class="anchor" aria-label="anchor" href="#fibdl_checkof_infoscompl"></a>
+</h4>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"SebastienBoutry/CheckOfTable"</span><span class="op">)</span>
-<span class="co">#&gt; Skipping install of 'CheckOfTable' from a github remote, the SHA1 (0e2c1ff6) has not changed since last install.</span>
-<span class="co">#&gt;   Use `force = TRUE` to force installation</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"SebastienBoutry/CheckOfTable"</span>,force<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Downloading GitHub repo SebastienBoutry/CheckOfTable@HEAD</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ── R CMD build ─────────────────────────────────────────────────────────────────</span></span>
+<span><span class="co">#&gt;      checking for file ‘/tmp/Rtmpk0PygL/remotes49e45f059487/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/Rtmpk0PygL/remotes49e45f059487/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (386ms)</span></span>
+<span><span class="co">#&gt;   ─  preparing ‘CheckOfTable’:</span></span>
+<span><span class="co">#&gt;    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information</span></span>
+<span><span class="co">#&gt;   ─  checking for LF line-endings in source and make files and shell scripts</span></span>
+<span><span class="co">#&gt;   ─  checking for empty or unneeded directories</span></span>
+<span><span class="co">#&gt;   ─  building ‘CheckOfTable_0.0.0.9000.tar.gz’</span></span>
+<span><span class="co">#&gt;      </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Installation du package dans '/home/sboutry/R/x86_64-pc-linux-gnu-library/4.2'</span></span>
+<span><span class="co">#&gt; (car 'lib' n'est pas spécifié)</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="données-internes-embarquées">Données internes embarquées<a class="anchor" aria-label="anchor" href="#donn%C3%A9es-internes-embarqu%C3%A9es"></a>
@@ -163,28 +185,28 @@
 </h2>
 <p>On trouve 10 fonctions dans ce package. L’une d’elle <strong>fibdl</strong> est une fonction intégratrice (utilisant les 9 autres) afin de définir l’indice IBDL. Il est possible de faire une seule partie du cheminement afin de d’avoir les résultats intermédiaires à différentes échelles spatiales.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># ## Chargement du package</span>
-<span class="co"># if(!require("remotes")) {install.packages("remotes")} </span>
-<span class="co"># remotes::install_github("SebastienBoutry/IBDL",force = TRUE)</span>
-<span class="co"># library(IBDL)</span>
-
-<span class="co">## Chemins</span>
-<span class="va">chemin_flore</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"listflor.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span> <span class="co"># A remplacer par votre chemin</span>
-<span class="va">chemin_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"info_uo.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span> <span class="co"># A remplacer par votre chemin</span>
-
-<span class="co">### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue</span>
-<span class="co"># chemin_flore &lt;- rstudioapi::selectFile()</span>
-<span class="co"># chemin_uo &lt;- restudioapi::selectFile()</span>
-
-<span class="co">## Import</span>
-<span class="va">listflor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="va">chemin_flore</span>, fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span>
-<span class="va">info_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="va">chemin_uo</span>, fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span>
-
-<span class="co">## Calcul de l'IBDL</span>
-<span class="va">ibdl</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/fibdl.html">fibdl</a></span><span class="op">(</span><span class="va">listflor</span>,<span class="va">info_uo</span><span class="op">)</span>
-
-<span class="co">## Affichage des résultats</span>
-<span class="va">ibdl</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># ## Chargement du package</span></span>
+<span><span class="co"># if(!require("remotes")) {install.packages("remotes")} </span></span>
+<span><span class="co"># remotes::install_github("SebastienBoutry/IBDL",force = TRUE)</span></span>
+<span><span class="co"># library(IBDL)</span></span>
+<span></span>
+<span><span class="co">## Chemins</span></span>
+<span><span class="va">chemin_flore</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"listflor.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span> <span class="co"># A remplacer par votre chemin</span></span>
+<span><span class="va">chemin_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"info_uo.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span> <span class="co"># A remplacer par votre chemin</span></span>
+<span></span>
+<span><span class="co">### Si besoin d'aide pour les chemins, dé-commenter et exécuter ces lignes à la place pour sélectionner les fichiers via une fenêtre de dialogue</span></span>
+<span><span class="co"># chemin_flore &lt;- rstudioapi::selectFile()</span></span>
+<span><span class="co"># chemin_uo &lt;- restudioapi::selectFile()</span></span>
+<span></span>
+<span><span class="co">## Import</span></span>
+<span><span class="va">listflor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="va">chemin_flore</span>, fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span></span>
+<span><span class="va">info_uo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="va">chemin_uo</span>, fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Calcul de l'IBDL</span></span>
+<span><span class="va">ibdl</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/fibdl.html">fibdl</a></span><span class="op">(</span><span class="va">listflor</span>,<span class="va">info_uo</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Affichage des résultats</span></span>
+<span><span class="va">ibdl</span></span></code></pre></div>
 <p><img src="reference/figures/README-ibdl_ex.png" width="100%"></p>
 <!-- Certaines fonctions permettent de :  -->
 <!-- - harmoniser les données, -->
@@ -200,11 +222,27 @@
 <h1 id="contact">Contact<a class="anchor" aria-label="anchor" href="#contact"></a>
 </h1>
 <div align="center">
-<p>   <span class="emoji" data-emoji="e-mail">📧</span> <a href="mailto:sebastien.boutry@inrae.fr">Email</a>   |   :speech_balloon: <a href="https://twitter.com/SebBoutry" class="external-link">Twitter</a>   |   <span class="emoji" data-emoji="necktie">👔</span> <a href="https://www.linkedin.com/in/s%C3%A9bastien-boutry-4a77ba10/" class="external-link">LinkedIn</a></p>
+<p>   <span class="emoji" data-emoji="e-mail">📧</span> <a href="mailto:sebastien.boutry@inrae.fr">Email</a>   |   <span class="emoji" data-emoji="speech_balloon">💬</span> <a href="https://twitter.com/SebBoutry" class="external-link">Twitter</a>   |   <span class="emoji" data-emoji="necktie">👔</span> <a href="https://www.linkedin.com/in/s%C3%A9bastien-boutry-4a77ba10/" class="external-link">LinkedIn</a></p>
 <!--
 Quick Link
 -->
 </div>
+</div>
+<div class="section level1">
+<h1 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
+</h1>
+<p>Boutry S, Morin S, Bertrin V, Rosebery J (2023). IBDL Outil de calcul l’Indice Biologique Diatomées en Lac. R package version 0.2.0, <a href="https://github.com/SebastienBoutry/IBDL" class="external-link uri">https://github.com/SebastienBoutry/IBDL</a>.</p>
+<!-- A BibTeX entry for LaTeX users is -->
+<!-- ``` -->
+<!--   @Manual{, -->
+<!--     title = {IDEATools: Individual and Group Farm Sustainability Assessments using the -->
+<!-- IDEA4 Method}, -->
+<!--     author = {David Carayon}, -->
+<!--     year = {2023}, -->
+<!--     note = {R package version 3.4.1}, -->
+<!--     url = {https://CRAN.R-project.org/package=IDEATools}, -->
+<!--   } -->
+<!-- ``` -->
 </div>
 <div class="section level1">
 <h1 id="références">Références<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rences"></a>
@@ -214,7 +252,7 @@ Quick Link
 Afnor. 2010. “XP T90-328 Qualité de l’eau Echantillonnage Des Communautés de Macrophytes En Plans d’eau.”
 </div>
 <div id="ref-Boutry2021" class="csl-entry">
-Boutry, Sébastien, Soizic Morin, Vincent Bertrin, and Juliette Rosebery. 2021. “Évaluation écologique Des Plans d’eau Basée Sur Les Communautés de Diatomées Benthiques.” INRAE, UR EABX, équipe ECOVEA.
+Boutry, Sébastien, Soizic Morin, Vincent Bertrin, and Juliette Rosebery. 2021. “Évaluation Écologique Des Plans d’eau Basée Sur Les Communautés de Diatomées Benthiques.” INRAE, UR EABX, équipe ECOVEA.
 </div>
 <div id="ref-Directive2000" class="csl-entry">
 Commission, European. 2000. “Water Framework Directive.” <em>Journal Reference OJL</em> 327: 1–73.
@@ -262,8 +300,8 @@ Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M. Cellamare
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle:experimental"></a></li>
-<li><a href="commits/master"><img src="https://img.shields.io/badge/Package%20version-0.0.1-orange.svg?style=flat-square" alt="packageversion"></a></li>
+<li><a href="commits/master"><img src="https://img.shields.io/badge/Package%20version-0.2.0-orange.svg?style=flat-square" alt="packageversion"></a></li>
+<li><a href="https://zenodo.org/badge/latestdoi/433845227" class="external-link"><img src="https://zenodo.org/badge/433845227.svg" alt="DOI"></a></li>
 <li><a href="https://www.gnu.org/licenses/gpl-3.0.en.html" class="external-link"><img src="https://img.shields.io/badge/licence-GPL--3-blue.svg" alt="Licence"></a></li>
 </ul>
 </div>
@@ -279,7 +317,7 @@ Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M. Cellamare
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

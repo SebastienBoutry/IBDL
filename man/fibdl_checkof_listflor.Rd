@@ -9,9 +9,6 @@ fibdl_checkof_listflor(data)
 \arguments{
 \item{data}{tableau représentant la liste floristique}
 }
-\value{
-
-}
 \description{
 Contrôle du tableau liste floristique pour le calcul de l'IBDL
 }

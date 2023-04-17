@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">IBDL</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0</span>
       </span>
     </div>
 
@@ -50,7 +50,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -76,9 +76,10 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Les fonctions</h1>
-                        <h4 data-toc-skip class="author">Sébastien Boutry</h4>
+                        <h4 data-toc-skip class="author">Sébastien
+Boutry</h4>
             
-            <h4 data-toc-skip class="date">2022-01-06</h4>
+            <h4 data-toc-skip class="date">2023-04-17</h4>
       
       
       <div class="hidden name"><code>1_fonctions.Rmd</code></div>
@@ -87,53 +88,75 @@
 
     
     
-<div class="section level1">
-<h1 id="le-jeu-de-données-test">Le jeu de données test<a class="anchor" aria-label="anchor" href="#le-jeu-de-donn%C3%A9es-test"></a>
-</h1>
-<p>Pour faciliter la prise en main du package, un jeu de données est mis à disposition pour faire tourner les différentes fonctions.</p>
-<p>Il représente une campagne d’échantillonage sur un plan d’eau donné à l’aide du protocole <span class="citation">(Morin et al. 2010)</span>.</p>
 <div class="section level2">
-<h2 id="les-listes-floristiques">Les listes floristiques<a class="anchor" aria-label="anchor" href="#les-listes-floristiques"></a>
+<h2 id="le-jeu-de-données-test">Le jeu de données test<a class="anchor" aria-label="anchor" href="#le-jeu-de-donn%C3%A9es-test"></a>
 </h2>
-<pre><code><span class="co">#&gt;   id_prelevement taxons ab</span>
-<span class="co">#&gt; 1            314   AAMB 17</span>
-<span class="co">#&gt; 2            314   ADEG  1</span>
-<span class="co">#&gt; 3            314   ADMI  3</span>
-<span class="co">#&gt; 4            314   ALFF  1</span>
-<span class="co">#&gt; 5            314   APED  2</span>
-<span class="co">#&gt; 6            314   AUAJ 69</span></code></pre>
+<p>Pour faciliter la prise en main du package, un jeu de données est mis
+à disposition pour faire tourner les différentes fonctions.</p>
+<p>Il représente une campagne d’échantillonage sur un plan d’eau donné à
+l’aide du protocole <span class="citation">(Morin et al.
+2010)</span>.</p>
+<div class="section level3">
+<h3 id="les-listes-floristiques">Les listes floristiques<a class="anchor" aria-label="anchor" href="#les-listes-floristiques"></a>
+</h3>
+<pre><code><span><span class="co">#&gt;   id_prelevement taxons ab</span></span>
+<span><span class="co">#&gt; 1            314   AAMB 17</span></span>
+<span><span class="co">#&gt; 2            314   ADEG  1</span></span>
+<span><span class="co">#&gt; 3            314   ADMI  3</span></span>
+<span><span class="co">#&gt; 4            314   ALFF  1</span></span>
+<span><span class="co">#&gt; 5            314   APED  2</span></span>
+<span><span class="co">#&gt; 6            314   AUAJ 69</span></span></code></pre>
+</div>
+<div class="section level3">
+<h3 id="les-informations-complémentaires-sur-la-station">Les informations complémentaires sur la station<a class="anchor" aria-label="anchor" href="#les-informations-compl%C3%A9mentaires-sur-la-station"></a>
+</h3>
+</div>
 </div>
 <div class="section level2">
-<h2 id="les-informations-complémentaires-sur-la-station">Les informations complémentaires sur la station<a class="anchor" aria-label="anchor" href="#les-informations-compl%C3%A9mentaires-sur-la-station"></a>
-</h2>
-</div>
-</div>
-<div class="section level1">
-<h1 id="les-fonctions-du-package-ibdl">Les fonctions du package IBDL<a class="anchor" aria-label="anchor" href="#les-fonctions-du-package-ibdl"></a>
-</h1>
-<div class="section level2">
-<h2 id="au-niveau-du-prélèvement">Au niveau du prélèvement<a class="anchor" aria-label="anchor" href="#au-niveau-du-pr%C3%A9l%C3%A8vement"></a>
+<h2 id="les-fonctions-du-package-ibdl">Les fonctions du package IBDL<a class="anchor" aria-label="anchor" href="#les-fonctions-du-package-ibdl"></a>
 </h2>
 <div class="section level3">
-<h3 id="harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode">Harmonisation taxonomique de la liste floristique - <strong>fibdl_listflor_transcode</strong><a class="anchor" aria-label="anchor" href="#harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode"></a>
+<h3 id="au-niveau-du-prélèvement">Au niveau du prélèvement<a class="anchor" aria-label="anchor" href="#au-niveau-du-pr%C3%A9l%C3%A8vement"></a>
 </h3>
-<p>A partir d’une liste floristique diatomique, on harmonise la dénomination de la flore au rang taxonomique de l’espèce.</p>
-<p>Nous avons construis une table de transcodage à partir du fichier d’Omnidia (Michel Coste) de Mars 2020. On prend en compte :</p>
+<div class="section level4">
+<h4 id="harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode">Harmonisation taxonomique de la liste floristique -
+<strong>fibdl_listflor_transcode</strong><a class="anchor" aria-label="anchor" href="#harmonisation-taxonomique-de-la-liste-floristique---fibdl_listflor_transcode"></a>
+</h4>
+<p>A partir d’une liste floristique diatomique, on harmonise la
+dénomination de la flore au rang taxonomique de l’espèce.</p>
+<p>Nous avons construis une table de transcodage à partir du fichier
+d’Omnidia (Michel Coste) de Mars 2020. On prend en compte :</p>
 <ul>
 <li>l’évolution taxonomique</li>
 <li>la synonymie</li>
-<li>et l’héritage (les rangs taxonmiques inférieurs à l’espèce sont remontés à ce niveau)</li>
+<li>et l’héritage (les rangs taxonmiques inférieurs à l’espèce sont
+remontés à ce niveau)</li>
 </ul>
 <p>Selon Omnidia (date) :</p>
-<p><em>Achnanthes abundans var. elliptica</em> a pour nom valide <em>Psammothidium abundans var. ellipticum</em> <em>Actinocyclus tenellus</em>(ACTE) a pour nom valide <em>Actinocyclus octonarius var. tenellus</em></p>
-<div id="lyicyjxryr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<p><em>Achnanthes abundans var. elliptica</em> a pour nom valide
+<em>Psammothidium abundans var. ellipticum</em> <em>Actinocyclus
+tenellus</em>(ACTE) a pour nom valide <em>Actinocyclus octonarius var.
+tenellus</em></p>
+<div id="xwokrlzyih" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xwokrlzyih table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#lyicyjxryr .gt_table {
+#xwokrlzyih thead, #xwokrlzyih tbody, #xwokrlzyih tfoot, #xwokrlzyih tr, #xwokrlzyih td, #xwokrlzyih th {
+  border-style: none;
+}
+
+#xwokrlzyih p {
+  margin: 0;
+  padding: 0;
+}
+
+#xwokrlzyih .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -156,7 +179,36 @@
   border-left-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_heading {
+#xwokrlzyih .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xwokrlzyih .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xwokrlzyih .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xwokrlzyih .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -168,33 +220,13 @@
   border-right-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#lyicyjxryr .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#lyicyjxryr .gt_bottom_border {
+#xwokrlzyih .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_col_headings {
+#xwokrlzyih .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -209,7 +241,7 @@
   border-right-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_col_heading {
+#xwokrlzyih .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -229,7 +261,7 @@
   overflow-x: hidden;
 }
 
-#lyicyjxryr .gt_column_spanner_outer {
+#xwokrlzyih .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -241,15 +273,15 @@
   padding-right: 4px;
 }
 
-#lyicyjxryr .gt_column_spanner_outer:first-child {
+#xwokrlzyih .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lyicyjxryr .gt_column_spanner_outer:last-child {
+#xwokrlzyih .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lyicyjxryr .gt_column_spanner {
+#xwokrlzyih .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -261,8 +293,15 @@
   width: 100%;
 }
 
-#lyicyjxryr .gt_group_heading {
-  padding: 8px;
+#xwokrlzyih .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xwokrlzyih .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -281,9 +320,10 @@
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#lyicyjxryr .gt_empty_group_heading {
+#xwokrlzyih .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -298,15 +338,15 @@
   vertical-align: middle;
 }
 
-#lyicyjxryr .gt_from_md > :first-child {
+#xwokrlzyih .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lyicyjxryr .gt_from_md > :last-child {
+#xwokrlzyih .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lyicyjxryr .gt_row {
+#xwokrlzyih .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +365,7 @@
   overflow-x: hidden;
 }
 
-#lyicyjxryr .gt_stub {
+#xwokrlzyih .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -334,10 +374,33 @@
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#lyicyjxryr .gt_summary_row {
+#xwokrlzyih .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xwokrlzyih .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xwokrlzyih .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xwokrlzyih .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -347,17 +410,26 @@
   padding-right: 5px;
 }
 
-#lyicyjxryr .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
+#xwokrlzyih .gt_first_summary_row {
   border-top-style: solid;
-  border-top-width: 2px;
   border-top-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_grand_summary_row {
+#xwokrlzyih .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xwokrlzyih .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xwokrlzyih .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -367,7 +439,7 @@
   padding-right: 5px;
 }
 
-#lyicyjxryr .gt_first_grand_summary_row {
+#xwokrlzyih .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -377,11 +449,21 @@
   border-top-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_striped {
+#xwokrlzyih .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xwokrlzyih .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lyicyjxryr .gt_table_body {
+#xwokrlzyih .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -390,7 +472,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_footnotes {
+#xwokrlzyih .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -404,13 +486,16 @@
   border-right-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_footnote {
+#xwokrlzyih .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#lyicyjxryr .gt_sourcenotes {
+#xwokrlzyih .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -424,251 +509,291 @@
   border-right-color: #D3D3D3;
 }
 
-#lyicyjxryr .gt_sourcenote {
+#xwokrlzyih .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#lyicyjxryr .gt_left {
+#xwokrlzyih .gt_left {
   text-align: left;
 }
 
-#lyicyjxryr .gt_center {
+#xwokrlzyih .gt_center {
   text-align: center;
 }
 
-#lyicyjxryr .gt_right {
+#xwokrlzyih .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lyicyjxryr .gt_font_normal {
+#xwokrlzyih .gt_font_normal {
   font-weight: normal;
 }
 
-#lyicyjxryr .gt_font_bold {
+#xwokrlzyih .gt_font_bold {
   font-weight: bold;
 }
 
-#lyicyjxryr .gt_font_italic {
+#xwokrlzyih .gt_font_italic {
   font-style: italic;
 }
 
-#lyicyjxryr .gt_super {
+#xwokrlzyih .gt_super {
   font-size: 65%;
 }
 
-#lyicyjxryr .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
+#xwokrlzyih .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xwokrlzyih .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xwokrlzyih .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xwokrlzyih .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xwokrlzyih .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xwokrlzyih .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xwokrlzyih .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="table gt_table">
-<thead class="gt_col_headings"><tr>
-<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">id_prelevement</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">taxons</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom_scientifique</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">ab</th>
+<table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="id_prelevement">id_prelevement</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="taxons">taxons</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="nom_scientifique">nom_scientifique</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ab">ab</th>
     </tr></thead>
 <tbody class="gt_table_body">
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AAMB</td>
-<td class="gt_row gt_left">Aulacoseira ambigua</td>
-<td class="gt_row gt_right">17</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AAMB</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Aulacoseira ambigua</td>
+<td headers="ab" class="gt_row gt_right">17</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ADEG</td>
-<td class="gt_row gt_left">Achnanthidium exiguum</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ADEG</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Achnanthidium exiguum</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ADMI</td>
-<td class="gt_row gt_left">Achnanthidium minutissimum</td>
-<td class="gt_row gt_right">3</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ADMI</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Achnanthidium minutissimum</td>
+<td headers="ab" class="gt_row gt_right">3</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ALFF</td>
-<td class="gt_row gt_left">Achnanthes lanceolata subsp. frequentissima var. rostratiformis</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ALFF</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Achnanthes lanceolata subsp. frequentissima var. rostratiformis</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">APED</td>
-<td class="gt_row gt_left">Amphora pediculus</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">APED</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Amphora pediculus</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AUAJ</td>
-<td class="gt_row gt_left">Aulacoseira ambigua f. japonica</td>
-<td class="gt_row gt_right">69</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AUAJ</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Aulacoseira ambigua f. japonica</td>
+<td headers="ab" class="gt_row gt_right">69</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AUGR</td>
-<td class="gt_row gt_left">Aulacoseira granulata</td>
-<td class="gt_row gt_right">7</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AUGR</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Aulacoseira granulata</td>
+<td headers="ab" class="gt_row gt_right">7</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AUPU</td>
-<td class="gt_row gt_left">Aulacoseira pusilla</td>
-<td class="gt_row gt_right">42</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AUPU</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Aulacoseira pusilla</td>
+<td headers="ab" class="gt_row gt_right">42</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">CMED</td>
-<td class="gt_row gt_left">Cyclotella meduanae</td>
-<td class="gt_row gt_right">62</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">CMED</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Cyclotella meduanae</td>
+<td headers="ab" class="gt_row gt_right">62</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">CMEN</td>
-<td class="gt_row gt_left">Cyclotella meneghiniana</td>
-<td class="gt_row gt_right">6</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">CMEN</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Cyclotella meneghiniana</td>
+<td headers="ab" class="gt_row gt_right">6</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">DPST</td>
-<td class="gt_row gt_left">Discostella pseudostelligera</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">DPST</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Discostella pseudostelligera</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ENMI</td>
-<td class="gt_row gt_left">Encyonema minutum</td>
-<td class="gt_row gt_right">8</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ENMI</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Encyonema minutum</td>
+<td headers="ab" class="gt_row gt_right">8</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ESLE</td>
-<td class="gt_row gt_left">Encyonema silesiacum</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ESLE</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Encyonema silesiacum</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">EUNO</td>
-<td class="gt_row gt_left">Eunotia</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">EUNO</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Eunotia</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">FCVA</td>
-<td class="gt_row gt_left">Fragilaria capucina var. vaucheriae</td>
-<td class="gt_row gt_right">17</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">FCVA</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Fragilaria capucina var. vaucheriae</td>
+<td headers="ab" class="gt_row gt_right">17</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">FPEC</td>
-<td class="gt_row gt_left">Fragilaria pectinalis</td>
-<td class="gt_row gt_right">4</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">FPEC</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Fragilaria pectinalis</td>
+<td headers="ab" class="gt_row gt_right">4</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GANG</td>
-<td class="gt_row gt_left">Gomphonema angustatum</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GANG</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Gomphonema angustatum</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GAUR</td>
-<td class="gt_row gt_left">Gomphonema auritum</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GAUR</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Gomphonema auritum</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GMIN</td>
-<td class="gt_row gt_left">Gomphonema minutum f. minutum</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GMIN</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Gomphonema minutum f. minutum</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GPAR</td>
-<td class="gt_row gt_left">Gomphonema parvulum var. parvulum f. parvulum</td>
-<td class="gt_row gt_right">6</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GPAR</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Gomphonema parvulum var. parvulum f. parvulum</td>
+<td headers="ab" class="gt_row gt_right">6</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NACI</td>
-<td class="gt_row gt_left">Nitzschia acicularis</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NACI</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Nitzschia acicularis</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NADA</td>
-<td class="gt_row gt_left">Navicula adamata</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NADA</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Navicula adamata</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NCPL</td>
-<td class="gt_row gt_left">Nitzschia capitellata</td>
-<td class="gt_row gt_right">6</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NCPL</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Nitzschia capitellata</td>
+<td headers="ab" class="gt_row gt_right">6</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NCTE</td>
-<td class="gt_row gt_left">Navicula cryptotenella</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NCTE</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Navicula cryptotenella</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NIGR</td>
-<td class="gt_row gt_left">Nitzschia gracilis</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NIGR</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Nitzschia gracilis</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NPAL</td>
-<td class="gt_row gt_left">Nitzschia palea var. palea</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NPAL</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Nitzschia palea var. palea</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NPML</td>
-<td class="gt_row gt_left">Nitzschia pumila</td>
-<td class="gt_row gt_right">14</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NPML</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Nitzschia pumila</td>
+<td headers="ab" class="gt_row gt_right">14</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NSUA</td>
-<td class="gt_row gt_left">Nitzschia subacicularis</td>
-<td class="gt_row gt_right">5</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NSUA</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Nitzschia subacicularis</td>
+<td headers="ab" class="gt_row gt_right">5</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">RABB</td>
-<td class="gt_row gt_left">Rhoicosphenia abbreviata</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">RABB</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Rhoicosphenia abbreviata</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">SPUP</td>
-<td class="gt_row gt_left">Sellaphora pupula</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">SPUP</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Sellaphora pupula</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">STRU</td>
-<td class="gt_row gt_left">Stephanodiscus triporus</td>
-<td class="gt_row gt_right">110</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">STRU</td>
+<td headers="nom_scientifique" class="gt_row gt_left">Stephanodiscus triporus</td>
+<td headers="ab" class="gt_row gt_right">110</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="fnzsdfdsri" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+<div id="mnjjtjjtrn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mnjjtjjtrn table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#fnzsdfdsri .gt_table {
+#mnjjtjjtrn thead, #mnjjtjjtrn tbody, #mnjjtjjtrn tfoot, #mnjjtjjtrn tr, #mnjjtjjtrn td, #mnjjtjjtrn th {
+  border-style: none;
+}
+
+#mnjjtjjtrn p {
+  margin: 0;
+  padding: 0;
+}
+
+#mnjjtjjtrn .gt_table {
   display: table;
   border-collapse: collapse;
+  line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
@@ -691,7 +816,36 @@
   border-left-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_heading {
+#mnjjtjjtrn .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mnjjtjjtrn .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mnjjtjjtrn .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mnjjtjjtrn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -703,33 +857,13 @@
   border-right-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#fnzsdfdsri .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#fnzsdfdsri .gt_bottom_border {
+#mnjjtjjtrn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_col_headings {
+#mnjjtjjtrn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -744,7 +878,7 @@
   border-right-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_col_heading {
+#mnjjtjjtrn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -764,7 +898,7 @@
   overflow-x: hidden;
 }
 
-#fnzsdfdsri .gt_column_spanner_outer {
+#mnjjtjjtrn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -776,15 +910,15 @@
   padding-right: 4px;
 }
 
-#fnzsdfdsri .gt_column_spanner_outer:first-child {
+#mnjjtjjtrn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fnzsdfdsri .gt_column_spanner_outer:last-child {
+#mnjjtjjtrn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fnzsdfdsri .gt_column_spanner {
+#mnjjtjjtrn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -796,8 +930,15 @@
   width: 100%;
 }
 
-#fnzsdfdsri .gt_group_heading {
-  padding: 8px;
+#mnjjtjjtrn .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mnjjtjjtrn .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -816,9 +957,10 @@
   border-right-width: 1px;
   border-right-color: #D3D3D3;
   vertical-align: middle;
+  text-align: left;
 }
 
-#fnzsdfdsri .gt_empty_group_heading {
+#mnjjtjjtrn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -833,15 +975,15 @@
   vertical-align: middle;
 }
 
-#fnzsdfdsri .gt_from_md > :first-child {
+#mnjjtjjtrn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fnzsdfdsri .gt_from_md > :last-child {
+#mnjjtjjtrn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fnzsdfdsri .gt_row {
+#mnjjtjjtrn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -860,7 +1002,7 @@
   overflow-x: hidden;
 }
 
-#fnzsdfdsri .gt_stub {
+#mnjjtjjtrn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -869,10 +1011,33 @@
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#fnzsdfdsri .gt_summary_row {
+#mnjjtjjtrn .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mnjjtjjtrn .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mnjjtjjtrn .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mnjjtjjtrn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -882,17 +1047,26 @@
   padding-right: 5px;
 }
 
-#fnzsdfdsri .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
+#mnjjtjjtrn .gt_first_summary_row {
   border-top-style: solid;
-  border-top-width: 2px;
   border-top-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_grand_summary_row {
+#mnjjtjjtrn .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mnjjtjjtrn .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mnjjtjjtrn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -902,7 +1076,7 @@
   padding-right: 5px;
 }
 
-#fnzsdfdsri .gt_first_grand_summary_row {
+#mnjjtjjtrn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -912,11 +1086,21 @@
   border-top-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_striped {
+#mnjjtjjtrn .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mnjjtjjtrn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fnzsdfdsri .gt_table_body {
+#mnjjtjjtrn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -925,7 +1109,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_footnotes {
+#mnjjtjjtrn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -939,13 +1123,16 @@
   border-right-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_footnote {
+#mnjjtjjtrn .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#fnzsdfdsri .gt_sourcenotes {
+#mnjjtjjtrn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -959,344 +1146,384 @@
   border-right-color: #D3D3D3;
 }
 
-#fnzsdfdsri .gt_sourcenote {
+#mnjjtjjtrn .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#fnzsdfdsri .gt_left {
+#mnjjtjjtrn .gt_left {
   text-align: left;
 }
 
-#fnzsdfdsri .gt_center {
+#mnjjtjjtrn .gt_center {
   text-align: center;
 }
 
-#fnzsdfdsri .gt_right {
+#mnjjtjjtrn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fnzsdfdsri .gt_font_normal {
+#mnjjtjjtrn .gt_font_normal {
   font-weight: normal;
 }
 
-#fnzsdfdsri .gt_font_bold {
+#mnjjtjjtrn .gt_font_bold {
   font-weight: bold;
 }
 
-#fnzsdfdsri .gt_font_italic {
+#mnjjtjjtrn .gt_font_italic {
   font-style: italic;
 }
 
-#fnzsdfdsri .gt_super {
+#mnjjtjjtrn .gt_super {
   font-size: 65%;
 }
 
-#fnzsdfdsri .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
+#mnjjtjjtrn .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mnjjtjjtrn .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mnjjtjjtrn .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mnjjtjjtrn .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mnjjtjjtrn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mnjjtjjtrn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mnjjtjjtrn .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
-<table class="table gt_table">
-<thead class="gt_col_headings"><tr>
-<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">id_prelevement</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">taxons</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">nom_scientifique (transcode)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">rang_taxonomique (transcode)</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">ab</th>
+<table class="table gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="id_prelevement">id_prelevement</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="taxons">taxons</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="nom_scientifique (transcode)">nom_scientifique (transcode)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="rang_taxonomique (transcode)">rang_taxonomique (transcode)</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="ab">ab</th>
     </tr></thead>
 <tbody class="gt_table_body">
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AAMB</td>
-<td class="gt_row gt_left">Aulacoseira ambigua</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">86</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AAMB</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Aulacoseira ambigua</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">86</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ADEG</td>
-<td class="gt_row gt_left">Achnanthidium exiguum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ADEG</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Achnanthidium exiguum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ADMI</td>
-<td class="gt_row gt_left">Achnanthidium minutissimum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">3</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ADMI</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Achnanthidium minutissimum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">3</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">APED</td>
-<td class="gt_row gt_left">Amphora pediculus</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">APED</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Amphora pediculus</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AUGR</td>
-<td class="gt_row gt_left">Aulacoseira granulata</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">7</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AUGR</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Aulacoseira granulata</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">7</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">AUPU</td>
-<td class="gt_row gt_left">Aulacoseira pusilla</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">42</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">AUPU</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Aulacoseira pusilla</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">42</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">CMDU</td>
-<td class="gt_row gt_left">Cyclotella meduanae</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">62</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">CMDU</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Cyclotella meduanae</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">62</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">CMEN</td>
-<td class="gt_row gt_left">Cyclotella meneghiniana</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">6</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">CMEN</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Cyclotella meneghiniana</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">6</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">DPSG</td>
-<td class="gt_row gt_left">Discostella pseudostelligera</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">DPSG</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Discostella pseudostelligera</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ENMI</td>
-<td class="gt_row gt_left">Encyonema minutum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">8</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ENMI</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Encyonema minutum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">8</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">ESLE</td>
-<td class="gt_row gt_left">Encyonema silesiacum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">ESLE</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Encyonema silesiacum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">EUNO</td>
-<td class="gt_row gt_left">Eunotia</td>
-<td class="gt_row gt_left">gn</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">EUNO</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Eunotia</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">gn</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">FPEC</td>
-<td class="gt_row gt_left">Fragilaria pectinalis</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">4</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">FPEC</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Fragilaria pectinalis</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">4</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">FVAU*</td>
-<td class="gt_row gt_left">Fragilaria vaucheriae var. vaucheriae</td>
-<td class="gt_row gt_left">other</td>
-<td class="gt_row gt_right">17</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">FVAU*</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Fragilaria vaucheriae var. vaucheriae</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">other</td>
+<td headers="ab" class="gt_row gt_right">17</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GANG</td>
-<td class="gt_row gt_left">Gomphonema angustatum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GANG</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Gomphonema angustatum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GAUR</td>
-<td class="gt_row gt_left">Gomphonema auritum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GAUR</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Gomphonema auritum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GMIN*</td>
-<td class="gt_row gt_left">Gomphonema minutum f. minutum</td>
-<td class="gt_row gt_left">other</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GMIN*</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Gomphonema minutum f. minutum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">other</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">GPAR*</td>
-<td class="gt_row gt_left">Gomphonema parvulum var. parvulum f. parvulum</td>
-<td class="gt_row gt_left">other_0</td>
-<td class="gt_row gt_right">6</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">GPAR*</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Gomphonema parvulum var. parvulum f. parvulum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">other_0</td>
+<td headers="ab" class="gt_row gt_right">6</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NACI</td>
-<td class="gt_row gt_left">Nitzschia acicularis</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NACI</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Nitzschia acicularis</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NADA</td>
-<td class="gt_row gt_left">Navicula adamata</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NADA</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Navicula adamata</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NCPL</td>
-<td class="gt_row gt_left">Nitzschia capitellata</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">6</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NCPL</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Nitzschia capitellata</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">6</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NCTE</td>
-<td class="gt_row gt_left">Navicula cryptotenella</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NCTE</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Navicula cryptotenella</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NIGR</td>
-<td class="gt_row gt_left">Nitzschia gracilis</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NIGR</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Nitzschia gracilis</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NPAL*</td>
-<td class="gt_row gt_left">Nitzschia palea var. palea</td>
-<td class="gt_row gt_left">other</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NPAL*</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Nitzschia palea var. palea</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">other</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NPML</td>
-<td class="gt_row gt_left">Nitzschia pumila</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">14</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NPML</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Nitzschia pumila</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">14</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">NSUA</td>
-<td class="gt_row gt_left">Nitzschia subacicularis</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">5</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">NSUA</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Nitzschia subacicularis</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">5</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">PROH</td>
-<td class="gt_row gt_left">Planothidium rostratoholarcticum</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">PROH</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Planothidium rostratoholarcticum</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">PTPU</td>
-<td class="gt_row gt_left">Praestephanos triporus</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">110</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">PTPU</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Praestephanos triporus</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">110</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">RABB</td>
-<td class="gt_row gt_left">Rhoicosphenia abbreviata</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">1</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">RABB</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Rhoicosphenia abbreviata</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">1</td>
 </tr>
 <tr>
-<td class="gt_row gt_right">314</td>
-<td class="gt_row gt_left">SPUP</td>
-<td class="gt_row gt_left">Sellaphora pupula</td>
-<td class="gt_row gt_left">sp</td>
-<td class="gt_row gt_right">2</td>
+<td headers="id_prelevement" class="gt_row gt_right">314</td>
+<td headers="taxons" class="gt_row gt_left">SPUP</td>
+<td headers="nom_scientifique (transcode)" class="gt_row gt_left">Sellaphora pupula</td>
+<td headers="rang_taxonomique (transcode)" class="gt_row gt_left">sp</td>
+<td headers="ab" class="gt_row gt_right">2</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-<div class="section level2">
-<h2 id="validation-des-listes-floristiques---fibdl_listflor_validate">Validation des listes floristiques - <strong>fibdl_listflor_validate</strong><a class="anchor" aria-label="anchor" href="#validation-des-listes-floristiques---fibdl_listflor_validate"></a>
-</h2>
 <div class="section level3">
-<h3 id="qualification---fibdl_listflor_qualify">Qualification - <strong>fibdl_listflor_qualify</strong><a class="anchor" aria-label="anchor" href="#qualification---fibdl_listflor_qualify"></a>
-</h3>
-</div>
-<div class="section level3">
-<h3 id="calcul-des-métriques-au-niveau-de-la-liste-floristique">Calcul des métriques au niveau de la liste floristique<a class="anchor" aria-label="anchor" href="#calcul-des-m%C3%A9triques-au-niveau-de-la-liste-floristique"></a>
+<h3 id="validation-des-listes-floristiques---fibdl_listflor_validate">Validation des listes floristiques -
+<strong>fibdl_listflor_validate</strong><a class="anchor" aria-label="anchor" href="#validation-des-listes-floristiques---fibdl_listflor_validate"></a>
 </h3>
 <div class="section level4">
-<h4 id="fibdl_listflor_metrics">- <strong>fibdl_listflor_metrics</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_metrics"></a>
+<h4 id="qualification---fibdl_listflor_qualify">Qualification - <strong>fibdl_listflor_qualify</strong><a class="anchor" aria-label="anchor" href="#qualification---fibdl_listflor_qualify"></a>
 </h4>
 </div>
 <div class="section level4">
-<h4 id="fibdl_listflor_eqr">- <strong>fibdl_listflor_EQR</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr"></a>
+<h4 id="calcul-des-métriques-au-niveau-de-la-liste-floristique">Calcul des métriques au niveau de la liste floristique<a class="anchor" aria-label="anchor" href="#calcul-des-m%C3%A9triques-au-niveau-de-la-liste-floristique"></a>
 </h4>
+<div class="section level5">
+<h5 id="fibdl_listflor_metrics">- <strong>fibdl_listflor_metrics</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_metrics"></a>
+</h5>
 </div>
-<div class="section level4">
-<h4 id="fibdl_listflor_eqr_standard">- <strong>fibdl_listflor_EQR_standard</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr_standard"></a>
-</h4>
+<div class="section level5">
+<h5 id="fibdl_listflor_eqr">- <strong>fibdl_listflor_EQR</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr"></a>
+</h5>
+</div>
+<div class="section level5">
+<h5 id="fibdl_listflor_eqr_standard">- <strong>fibdl_listflor_EQR_standard</strong><a class="anchor" aria-label="anchor" href="#fibdl_listflor_eqr_standard"></a>
+</h5>
 </div>
 </div>
 </div>
-<div class="section level2">
-<h2 id="au-niveau-de-lunité-dobservation">Au niveau de l’unité d’observation<a class="anchor" aria-label="anchor" href="#au-niveau-de-lunit%C3%A9-dobservation"></a>
-</h2>
 <div class="section level3">
-<h3 id="score-au-niveau-de-lunité-dobservation---fibdl_uo_score">Score au niveau de l’unité d’observation - fibdl_uo_score<a class="anchor" aria-label="anchor" href="#score-au-niveau-de-lunit%C3%A9-dobservation---fibdl_uo_score"></a>
-</h3>
-</div>
-</div>
-<div class="section level2">
-<h2 id="au-niveau-du-lac">Au niveau du lac<a class="anchor" aria-label="anchor" href="#au-niveau-du-lac"></a>
-</h2>
-<div class="section level3">
-<h3 id="calcul-de-libdl-au-niveau-du-lac---fibdl">Calcul de l’IBDL au niveau du lac - <strong>fibdl</strong><a class="anchor" aria-label="anchor" href="#calcul-de-libdl-au-niveau-du-lac---fibdl"></a>
+<h3 id="au-niveau-de-lunité-dobservation">Au niveau de l’unité d’observation<a class="anchor" aria-label="anchor" href="#au-niveau-de-lunit%C3%A9-dobservation"></a>
 </h3>
 <div class="section level4">
-<h4 id="fibdl_ibdl">- <strong>fibdl_ibdl</strong><a class="anchor" aria-label="anchor" href="#fibdl_ibdl"></a>
+<h4 id="score-au-niveau-de-lunité-dobservation---fibdl_uo_score">Score au niveau de l’unité d’observation - fibdl_uo_score<a class="anchor" aria-label="anchor" href="#score-au-niveau-de-lunit%C3%A9-dobservation---fibdl_uo_score"></a>
 </h4>
-<p>A partir du jeu de sortie de la fonction <strong>fibdl_uo_score</strong>, la fonction <strong>fibdl_ibdl()</strong> calcule l’Indice Biologique Diatomées en Lac et la fournit la classe d’état du plan d’eau.</p>
 </div>
+</div>
+<div class="section level3">
+<h3 id="au-niveau-du-lac">Au niveau du lac<a class="anchor" aria-label="anchor" href="#au-niveau-du-lac"></a>
+</h3>
 <div class="section level4">
-<h4 id="fibdl_ibdl_qualify">- <strong>fibdl_ibdl_qualify</strong><a class="anchor" aria-label="anchor" href="#fibdl_ibdl_qualify"></a>
+<h4 id="calcul-de-libdl-au-niveau-du-lac---fibdl">Calcul de l’IBDL au niveau du lac - <strong>fibdl</strong><a class="anchor" aria-label="anchor" href="#calcul-de-libdl-au-niveau-du-lac---fibdl"></a>
 </h4>
-<p>La fonction <strong>fibdl_ibdl_qualify</strong> détermine la qualité de l’évaluation, si celle la est représentative du plan d’eau.</p>
+<div class="section level5">
+<h5 id="fibdl_ibdl">- <strong>fibdl_ibdl</strong><a class="anchor" aria-label="anchor" href="#fibdl_ibdl"></a>
+</h5>
+<p>A partir du jeu de sortie de la fonction
+<strong>fibdl_uo_score</strong>, la fonction
+<strong>fibdl_ibdl()</strong> calcule l’Indice Biologique Diatomées en
+Lac et la fournit la classe d’état du plan d’eau.</p>
+</div>
+<div class="section level5">
+<h5 id="fibdl_ibdl_qualify">- <strong>fibdl_ibdl_qualify</strong><a class="anchor" aria-label="anchor" href="#fibdl_ibdl_qualify"></a>
+</h5>
+<p>La fonction <strong>fibdl_ibdl_qualify</strong> détermine la qualité
+de l’évaluation, si celle la est représentative du plan d’eau.</p>
 <p>Deux critères sont pris en compte à ce niveau la :</p>
 <ul>
-<li>au moins 3 unités d’observation possèdent un score au nivau de l’UO,</li>
+<li>au moins 3 unités d’observation possèdent un score au nivau de
+l’UO,</li>
 <li>plus de 75% de type de rive est représenté.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="section level1">
-<h1 id="la-fonction-intégratrice---fibdl">La fonction intégratrice - <strong>fibdl</strong><a class="anchor" aria-label="anchor" href="#la-fonction-int%C3%A9gratrice---fibdl"></a>
-</h1>
+<div class="section level2">
+<h2 id="la-fonction-intégratrice---fibdl">La fonction intégratrice - <strong>fibdl</strong><a class="anchor" aria-label="anchor" href="#la-fonction-int%C3%A9gratrice---fibdl"></a>
+</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## Calcul de l'IBDL</span>
-<span class="va">ibdl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fibdl.html">fibdl</a></span><span class="op">(</span><span class="va">listflor</span>,<span class="va">info_uo</span><span class="op">)</span>
-
-<span class="co">## Affichage des résultats</span>
-<span class="va">ibdl</span></code></pre></div>
-<p>Après un mise en forme à l’aide du package <a href="https://gt.rstudio.com/" class="external-link">gt</a>, on obtient le résultat suivant :</p>
+<code class="sourceCode R"><span><span class="co">## Calcul de l'IBDL</span></span>
+<span><span class="va">ibdl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/fibdl.html">fibdl</a></span><span class="op">(</span><span class="va">listflor</span>,<span class="va">info_uo</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Affichage des résultats</span></span>
+<span><span class="va">ibdl</span></span></code></pre></div>
+<p>Après un mise en forme à l’aide du package <a href="https://gt.rstudio.com/" class="external-link">gt</a>, on
+obtient le résultat suivant :</p>
 <p><img src="reference/figures/README-ibdl_ex.png" width="100%"></p>
 </div>
-<div class="section level1 unnumbered">
-<h1 class="unnumbered" id="référence">Référence<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rence"></a>
-</h1>
+<div class="section level2">
+<h2 class="unnumbered" id="référence">Référence<a class="anchor" aria-label="anchor" href="#r%C3%A9f%C3%A9rence"></a>
+</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-morin:hal-02594105" class="csl-entry">
-Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M. Cellamare, and Alain Dutartre. 2010. <span>“<span class="nocase">Utilisation du phytobenthos pour la bioindication en plans d’eau : Etat de l’art des m<span class="nocase">é</span>thodes disponibles et test de m<span class="nocase">é</span>triques sur les plans d’eau aquitains</span>.”</span> Research Report. <span>Irstea</span>. <a href="https://hal.inrae.fr/hal-02594105" class="external-link">https://hal.inrae.fr/hal-02594105</a>.
+Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M.
+Cellamare, and Alain Dutartre. 2010. <span>“<span class="nocase">Utilisation du phytobenthos pour la bioindication en
+plans d’eau : Etat de l’art des m<span class="nocase">é</span>thodes
+disponibles et test de m<span class="nocase">é</span>triques sur les
+plans d’eau aquitains</span>.”</span> Research Report.
+<span>Irstea</span>. <a href="https://hal.inrae.fr/hal-02594105" class="external-link">https://hal.inrae.fr/hal-02594105</a>.
 </div>
 </div>
 </div>
@@ -1319,7 +1546,7 @@ Morin, Soizic, D. Valade, Juliette Tison-Rosebery, Vincent Bertrin, M. Cellamare
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

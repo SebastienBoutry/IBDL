@@ -11,10 +11,6 @@ fibdl(listflor, add_information_station)
 
 \item{add_information_station}{tableau d informations complementaires sur le prelevement.}
 }
-\value{
-
-}
 \description{
 Fonction integratrice pour le calcul de Indice Biologique Diatomees en Lac (IBDL)
 }
-

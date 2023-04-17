@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">IBDL</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0</span>
       </span>
     </div>
 
@@ -26,7 +26,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -54,26 +54,29 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fibdl_listflor_transcode</span><span class="op">(</span><span class="va">data</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fibdl_listflor_transcode</span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>data</dt>
 <dd><p>liste floristique dans le bon format</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>liste floristique au niveau taxonomique espèce</p>
+    
+
+<p>liste floristique au niveau taxonomique espèce</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">listflor</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span>id_prelevement<span class="op">=</span><span class="fl">1</span>,</span>
-<span class="r-in">taxons<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"NITZ"</span>,<span class="st">"ADPA"</span>,<span class="st">"ABAS"</span>,<span class="st">"PBTH"</span>,<span class="st">"PHAO"</span>,<span class="st">"PSDG"</span>,<span class="st">"NXDS"</span>,<span class="st">"GLAT"</span>,</span>
-<span class="r-in"><span class="st">"DSTE"</span>,<span class="st">"RABB"</span>,<span class="st">"COCE"</span>,<span class="st">"ENCM"</span>,<span class="st">"PSBR"</span>,<span class="st">"PLTD"</span>,<span class="st">"ADEU"</span>,<span class="st">"AUPU"</span><span class="op">)</span>,</span>
-<span class="r-in">ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">202</span>,<span class="fl">20</span>,<span class="fl">2</span>,<span class="fl">26</span>,<span class="fl">12</span>,<span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">74</span>,<span class="fl">5</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">3</span>,<span class="fl">15</span>,<span class="fl">10</span>,<span class="fl">5</span>,<span class="fl">20</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">fibdl_listflor_transcode</span><span class="op">(</span><span class="va">listflor</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">listflor</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span>id_prelevement<span class="op">=</span><span class="fl">1</span>,</span></span>
+<span class="r-in"><span>taxons<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"NITZ"</span>,<span class="st">"ADPA"</span>,<span class="st">"ABAS"</span>,<span class="st">"PBTH"</span>,<span class="st">"PHAO"</span>,<span class="st">"PSDG"</span>,<span class="st">"NXDS"</span>,<span class="st">"GLAT"</span>,</span></span>
+<span class="r-in"><span><span class="st">"DSTE"</span>,<span class="st">"RABB"</span>,<span class="st">"COCE"</span>,<span class="st">"ENCM"</span>,<span class="st">"PSBR"</span>,<span class="st">"PLTD"</span>,<span class="st">"ADEU"</span>,<span class="st">"AUPU"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>ab<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">202</span>,<span class="fl">20</span>,<span class="fl">2</span>,<span class="fl">26</span>,<span class="fl">12</span>,<span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">74</span>,<span class="fl">5</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">3</span>,<span class="fl">15</span>,<span class="fl">10</span>,<span class="fl">5</span>,<span class="fl">20</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">fibdl_listflor_transcode</span><span class="op">(</span><span class="va">listflor</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 16 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    id_prelevement taxons denominations_sans_auteur.y               rang     ab</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
@@ -93,7 +96,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span>              1 PSBR   Pseudostaurosira brevistriata             sp       15</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span>              1 PTDE   Planothidium delicatulum                  sp       20</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span>              1 RABB   Rhoicosphenia abbreviata                  sp        2</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -108,7 +111,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

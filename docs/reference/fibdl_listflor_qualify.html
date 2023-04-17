@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">IBDL</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0</span>
       </span>
     </div>
 
@@ -26,7 +26,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -54,32 +54,70 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">fibdl_listflor_qualify</span><span class="op">(</span>
-  <span class="va">data</span>,
-  seuil_nbr_valves <span class="op">=</span> <span class="fl">350</span>,
-  seuil_pour_valves_sp <span class="op">=</span> <span class="fl">0.25</span>,
-  seuil_pour_taxons_indiciels <span class="op">=</span> <span class="fl">0.75</span>,
-  table_tax_alerts <span class="op">=</span> <span class="va">Table_taxons_alertes</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">fibdl_listflor_qualify</span><span class="op">(</span></span>
+<span>  <span class="va">data</span>,</span>
+<span>  seuil_nbr_valves <span class="op">=</span> <span class="fl">350</span>,</span>
+<span>  seuil_pour_valves_sp <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>  seuil_pour_taxons_indiciels <span class="op">=</span> <span class="fl">0.75</span>,</span>
+<span>  table_tax_alerts <span class="op">=</span> <span class="fu">IBDL</span><span class="fu">:::</span><span class="va">Table_taxons_alertes</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>seuil_nbr_valves</dt>
-<dd><p>nombre de valves compte dans le prélèvement. Dans la norme, il est demande de compter 400 valves.</p></dd>
+    <dl><dt>data</dt>
+<dd><p>tableau representant la liste floristique</p></dd>
+
+
+<dt>seuil_nbr_valves</dt>
+<dd><p>nombre de valves compte dans le prelevement. Dans la norme, il est demande de compter 400 valves.</p></dd>
+
+
 <dt>seuil_pour_valves_sp</dt>
 <dd><p>seuil en pourcentage de valves determinees au rang taxonomique espece dans le prelevement.
 Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomique).</p></dd>
+
+
 <dt>seuil_pour_taxons_indiciels</dt>
 <dd><p>seuil en pourcentage des taxons indiciels dans le prelevement</p></dd>
+
+
 <dt>table_tax_alerts</dt>
 <dd><p>tableau de reference au format binaire des taxons d'alertes et indiciels, par defaut Table_taxons_alertes (table interne embarquee)</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.</p>
+    
+
+<p>tableau avec les informations liees au prelevement. La colonne validation renseigne la selection finale.</p>
     </div>
 
+    <div id="ref-examples">
+    <h2>Examples</h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">list_flor</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv2</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"listflor.csv"</span>, package <span class="op">=</span> <span class="st">"IBDL"</span><span class="op">)</span>,fileEncoding <span class="op">=</span> <span class="st">"utf-8"</span><span class="op">)</span> <span class="op">%&gt;%</span></span></span>
+<span class="r-in"><span><span class="fu">IBDL</span><span class="fu">::</span><span class="fu"><a href="fibdl_listflor_transcode.html">fibdl_listflor_transcode</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">fibdl_listflor_qualify</span><span class="op">(</span>data<span class="op">=</span><span class="va">list_flor</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $table_validation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 8</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   id_prelevement   tot r_esp r_ADMI Ab_tot_indiciel pour_taxons_indiciels</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>            314   402 TRUE   0.993             398                 0.990</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span>            315   402 FALSE  0.978             115                 0.286</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span>            316   402 TRUE   0.973             402                 1    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span>            317   400 TRUE   1                 400                 1    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span>            318   408 TRUE   0.983             315                 0.772</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span>            319   401 TRUE   0.995             328                 0.818</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span>            320   408 TRUE   0.998             224                 0.549</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 2 more variables: nbr_valves &lt;lgl&gt;, Validation &lt;lgl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $id_prelevement_admi</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> integer(0)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top"><h2 data-toc-skip>Contents</h2>
@@ -92,7 +130,7 @@ Petite specificite, on ne prend pas compte le code taxon ADMI (complexe taxonomi
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

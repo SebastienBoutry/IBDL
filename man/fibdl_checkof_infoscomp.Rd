@@ -9,9 +9,6 @@ fibdl_checkof_infoscomp(data)
 \arguments{
 \item{data}{tableau representant les informations complementaires sur l unite d observation}
 }
-\value{
-
-}
 \description{
 Controle du tableau informations complementaires sur le site pour le calcul de l IBDL
 }
