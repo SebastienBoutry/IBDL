@@ -106,11 +106,11 @@ remotes::install_github("SebastienBoutry/CheckOfTable",force=TRUE)
 #> Downloading GitHub repo SebastienBoutry/CheckOfTable@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/tmp/RtmpnmqRID/remotes69e917aa63ab/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpnmqRID/remotes69e917aa63ab/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (427ms)
+#>      checking for file ‘/tmp/RtmpgscccY/remotes6b25558596ed/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpgscccY/remotes6b25558596ed/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’
 #>   ─  preparing ‘CheckOfTable’:
 #>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
+#> ─  checking for empty or unneeded directories
 #>   ─  building ‘CheckOfTable_0.0.0.9000.tar.gz’
 #>      
 #> 
@@ -239,10 +239,12 @@ l’Indice Biologique Diatomées en Lac. R package version 0.2.0,
 
 Sortie Bibtex pour les utilisateurs de Latex :
 
-(**Manual?**){, title = {IBDL: Outil de calcul l’Indice Biologique
-Diatomées en Lac}, author = {Sebastien Boutry and Soizic Morin and
-Vincent Bertrin and Juliette Rosebery}, year = {2023}, note = {R package
-version 0.2.0}, }
+    @Manual{,
+      title = {IBDL: Outil de calcul l'Indice Biologique Diatomées en Lac},
+      author = {Sebastien Boutry and Soizic Morin and Vincent Bertrin and Juliette Rosebery},
+      year = {2023},
+      note = {R package version 0.2.0},
+    }
 
 # Références
 
