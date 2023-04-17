@@ -523,18 +523,16 @@ Quick Link
   Boutry S, Morin S, Bertrin V, Rosebery J (2023).  IBDL Outil de calcul l'Indice Biologique Diatomées en Lac. R package version 0.2.0,
   <https://github.com/SebastienBoutry/IBDL>.
 
-<!-- A BibTeX entry for LaTeX users is -->
+Sortie Bibtex pour les utilisateurs de Latex :
 
-<!-- ``` -->
-<!--   @Manual{, -->
-<!--     title = {IDEATools: Individual and Group Farm Sustainability Assessments using the -->
-<!-- IDEA4 Method}, -->
-<!--     author = {David Carayon}, -->
-<!--     year = {2023}, -->
-<!--     note = {R package version 3.4.1}, -->
-<!--     url = {https://CRAN.R-project.org/package=IDEATools}, -->
-<!--   } -->
-<!-- ``` -->
+```
+@Manual{,
+  title = {IBDL: Outil de calcul l'Indice Biologique Diatomées en Lac},
+  author = {Sebastien Boutry and Soizic Morin and Vincent Bertrin and Juliette Rosebery},
+  year = {2023},
+  note = {R package version 0.2.0},
+}
+```
 
 # Références
 

@@ -106,7 +106,7 @@ remotes::install_github("SebastienBoutry/CheckOfTable",force=TRUE)
 #> Downloading GitHub repo SebastienBoutry/CheckOfTable@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/tmp/Rtmpk0PygL/remotes49e45f059487/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/Rtmpk0PygL/remotes49e45f059487/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (386ms)
+#>      checking for file ‘/tmp/RtmpnmqRID/remotes69e917aa63ab/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpnmqRID/remotes69e917aa63ab/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (427ms)
 #>   ─  preparing ‘CheckOfTable’:
 #>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -237,17 +237,12 @@ Boutry S, Morin S, Bertrin V, Rosebery J (2023). IBDL Outil de calcul
 l’Indice Biologique Diatomées en Lac. R package version 0.2.0,
 <https://github.com/SebastienBoutry/IBDL>.
 
-<!-- A BibTeX entry for LaTeX users is -->
-<!-- ``` -->
-<!--   @Manual{, -->
-<!--     title = {IDEATools: Individual and Group Farm Sustainability Assessments using the -->
-<!-- IDEA4 Method}, -->
-<!--     author = {David Carayon}, -->
-<!--     year = {2023}, -->
-<!--     note = {R package version 3.4.1}, -->
-<!--     url = {https://CRAN.R-project.org/package=IDEATools}, -->
-<!--   } -->
-<!-- ``` -->
+Sortie Bibtex pour les utilisateurs de Latex :
+
+(**Manual?**){, title = {IBDL: Outil de calcul l’Indice Biologique
+Diatomées en Lac}, author = {Sebastien Boutry and Soizic Morin and
+Vincent Bertrin and Juliette Rosebery}, year = {2023}, note = {R package
+version 0.2.0}, }
 
 # Références
 
