@@ -106,7 +106,7 @@ remotes::install_github("SebastienBoutry/CheckOfTable",force=TRUE)
 #> Downloading GitHub repo SebastienBoutry/CheckOfTable@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/tmp/RtmpkY635Q/remotes35db2b1481fb/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpkY635Q/remotes35db2b1481fb/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (439ms)
+#>      checking for file ‘/tmp/Rtmpk0PygL/remotes49e45f059487/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/Rtmpk0PygL/remotes49e45f059487/SebastienBoutry-CheckOfTable-e933967/DESCRIPTION’ (386ms)
 #>   ─  preparing ‘CheckOfTable’:
 #>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -233,20 +233,21 @@ Quick Link
 
 # Citation
 
-Carayon D (2023). *IDEATools: Individual and Group Farm Sustainability
-Assessments using the IDEA4 Method*. R package version 3.4.1,
-<https://CRAN.R-project.org/package=IDEATools>.
+Boutry S, Morin S, Bertrin V, Rosebery J (2023). IBDL Outil de calcul
+l’Indice Biologique Diatomées en Lac. R package version 0.2.0,
+<https://github.com/SebastienBoutry/IBDL>.
 
-A BibTeX entry for LaTeX users is
-
-      @Manual{,
-        title = {IDEATools: Individual and Group Farm Sustainability Assessments using the
-    IDEA4 Method},
-        author = {David Carayon},
-        year = {2023},
-        note = {R package version 3.4.1},
-        url = {https://CRAN.R-project.org/package=IDEATools},
-      }
+<!-- A BibTeX entry for LaTeX users is -->
+<!-- ``` -->
+<!--   @Manual{, -->
+<!--     title = {IDEATools: Individual and Group Farm Sustainability Assessments using the -->
+<!-- IDEA4 Method}, -->
+<!--     author = {David Carayon}, -->
+<!--     year = {2023}, -->
+<!--     note = {R package version 3.4.1}, -->
+<!--     url = {https://CRAN.R-project.org/package=IDEATools}, -->
+<!--   } -->
+<!-- ``` -->
 
 # Références
 
