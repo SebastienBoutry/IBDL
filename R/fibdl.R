@@ -27,11 +27,10 @@ fibdl <- function(listflor, add_information_station) {
     fibdl_ibdl() %>%
     fibdl_ibdl_qualify()
 
-  return(table_ibdl)
-
   }else{
 
-      return(test[[2]])
+    table_ibdl<-test[[2]]
 
   }
+  return(table_ibdl)
 }
