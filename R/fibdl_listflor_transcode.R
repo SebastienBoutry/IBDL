@@ -14,11 +14,12 @@
 #'
 fibdl_listflor_transcode <- function(data){
 
-  table_transcodage<-IBDL:::table_transcodage
 
-  table_listflor_transcode <- dplyr::left_join(data,table_transcodage %>%
-                dplyr::select(abre, code_espece_boucle2, denominations_sans_auteur.y,niveau2),
-              by = c("taxons" = "abre")
+  table_listflor_transcode <- data %>%
+    dplyr::left_join(table_transcodage %>%
+                       dplyr::select(abre, code_espece_boucle2,
+                                     denominations_sans_auteur.y,niveau2),
+                     by = c("taxons" = "abre")
     ) %>%
     dplyr::rename("ex_taxons" = "taxons",
                   "taxons" = "code_espece_boucle2") %>%
