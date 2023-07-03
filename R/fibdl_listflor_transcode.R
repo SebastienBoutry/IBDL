@@ -12,13 +12,13 @@
 #' ab=c(202,20,2,26,12,5,6,74,5,2,3,3,15,10,5,20))
 #' fibdl_listflor_transcode(listflor)
 #'
-fibdl_listflor_transcode <- function(listflor=listflor){
+fibdl_listflor_transcode <- function(listflor){
 
   transcodage<-IBDL:::table_transcodage %>%
     dplyr::select(abre, code_espece_boucle2,
                   denominations_sans_auteur.y,niveau2)
 
-  table_listflor_transcode <- data %>%
+  table_listflor_transcode <- listflor %>%
     dplyr::left_join(transcodage,
                      by = c("taxons" = "abre")
     ) %>%
