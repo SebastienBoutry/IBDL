@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-fibdl_uo_score <- function(data,listflor=listflor){
+fibdl_uo_score <- function(data,listflor){
 
   id_prelevement_admi<-fibdl_listflor_qualify(fibdl_listflor_transcode(listflor))[[2]]
   ##
