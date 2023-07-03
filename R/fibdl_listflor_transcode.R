@@ -13,6 +13,7 @@
 #' fibdl_listflor_transcode(listflor)
 #'
 fibdl_listflor_transcode <- function(data,table_transcodage=IBDL:::table_transcodage){
+
   table_listflor_transcode <- data %>%
     dplyr::left_join(table_transcodage %>%
                 dplyr::select(abre, code_espece_boucle2, denominations_sans_auteur.y,niveau2),
@@ -24,5 +25,6 @@ fibdl_listflor_transcode <- function(data,table_transcodage=IBDL:::table_transco
     dplyr::rename("rang"="niveau2") %>%
     dplyr::summarise(ab = sum(ab)) %>%
     dplyr::ungroup()
+
   return(table_listflor_transcode)
 }
