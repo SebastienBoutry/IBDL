@@ -9,8 +9,7 @@
 #' @examples
 fibdl_uo_score <- function(data,listflor=listflor){
 
-  id_prelevement_admi<-fibdl_listflor_qualify(listflor %>%
-                           fibdl_listflor_transcode())[[2]]
+  id_prelevement_admi<-fibdl_listflor_qualify(fibdl_listflor_transcode(listflor))[[2]]
   ##
   table_score_ibdl <- data %>%
     dplyr::group_by(id_prelevement,code_pe,nature_substrat,id_uo,type_dominant,id_campagne,datedebut) %>%
