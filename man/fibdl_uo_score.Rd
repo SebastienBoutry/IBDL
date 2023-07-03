@@ -4,7 +4,7 @@
 \alias{fibdl_uo_score}
 \title{Calcul du score au niveau de l'unité d'observation}
 \usage{
-fibdl_uo_score(data)
+fibdl_uo_score(data, listflor)
 }
 \arguments{
 \item{data}{tableau de sortie de la fonction fibdl_listflor_EQR_standard, correspondant à un tableau de résultats des métriques exprimées en EQR standardisées.}

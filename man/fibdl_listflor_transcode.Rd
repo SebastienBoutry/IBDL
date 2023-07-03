@@ -4,7 +4,7 @@
 \alias{fibdl_listflor_transcode}
 \title{Harmonisation taxonomique au niveau espèce de la liste flroistique}
 \usage{
-fibdl_listflor_transcode(data)
+fibdl_listflor_transcode(listflor)
 }
 \arguments{
 \item{data}{liste floristique dans le bon format}

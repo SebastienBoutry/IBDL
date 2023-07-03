@@ -7,9 +7,9 @@
 #' @export
 #'
 #' @examples
-fibdl_uo_score <- function(data,listflor){
+fibdl_uo_score <- function(data,list_flor){
 
-  id_prelevement_admi<-fibdl_listflor_qualify(fibdl_listflor_transcode(listflor))[[2]]
+  id_prelevement_admi<-fibdl_listflor_qualify(fibdl_listflor_transcode(list_flor))[[2]]
   ##
   table_score_ibdl <- data %>%
     dplyr::group_by(id_prelevement,

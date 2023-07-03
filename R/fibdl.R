@@ -23,7 +23,7 @@ fibdl <- function(listflor, add_information_station) {
     fibdl_listflor_metrics() %>%
     fibdl_listflor_EQR(data=.,add_information_station=info_uo) %>%
     fibdl_listflor_EQR_standard() %>%
-    fibdl_uo_score(listflor=listflor) %>%
+    fibdl_uo_score(list_flor=listflor) %>%
     fibdl_ibdl() %>%
     fibdl_ibdl_qualify()
 
