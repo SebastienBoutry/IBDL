@@ -12,7 +12,13 @@ fibdl_uo_score <- function(data,listflor=listflor){
   id_prelevement_admi<-fibdl_listflor_qualify(fibdl_listflor_transcode(listflor))[[2]]
   ##
   table_score_ibdl <- data %>%
-    dplyr::group_by(id_prelevement,code_pe,nature_substrat,id_uo,type_dominant,id_campagne,datedebut) %>%
+    dplyr::group_by(id_prelevement,
+                    code_pe,
+                    nature_substrat,
+                    id_uo,
+                    type_dominant,
+                    id_campagne,
+                    datedebut) %>%
     dplyr::summarise(Moy_EQR=mean(EQR)) %>% # moyenne des métriques selon le uo et le substrat
     dplyr::ungroup() %>%
     dplyr::arrange(id_uo) %>%
