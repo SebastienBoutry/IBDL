@@ -14,7 +14,7 @@
 #'
 fibdl_listflor_transcode <- function(data){
 
-  table_transcodage<-IBDL:::table_transocdage
+  table_transcodage<-IBDL:::table_transcodage
 
   table_listflor_transcode <- data %>%
     dplyr::left_join(table_transcodage %>%
