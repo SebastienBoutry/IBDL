@@ -22,6 +22,7 @@ fibdl_ibdl<- function(data){
               by="join") %>%
     dplyr::select(-join,-code_lac) %>%
     dplyr::rename("code_lac"="code_pe") %>%
+    filter(!(str_detect(commentaires_sep, "pas fiable"))) %>%
     ##
     group_by(id_campagne, datedebut, code_lac, pourcentage, value, nbr_uo) %>%
     mutate(nbr_uo_type = n()) %>%
@@ -30,7 +31,7 @@ fibdl_ibdl<- function(data){
     dplyr::group_by(id_campagne,datedebut,code_lac,pourcentage,value,nbr_uo,nbr_uo_type) %>%
     dplyr::summarise(Min_type=min(Note_UO,na.rm=TRUE),
                      commentaires_sep = paste0(commentaires, collapse = "_")) %>%
-    filter(!(str_detect(commentaires_sep, "pas fiable") & nbr_uo_type >= 1)) %>%
+    # filter(!(str_detect(commentaires_sep, "pas fiable") & nbr_uo_type >= 1)) %>%
     dplyr::ungroup() %>%
     dplyr::arrange(id_campagne) %>%
     dplyr::mutate(Note_type=Min_type*(value/100)) %>%
