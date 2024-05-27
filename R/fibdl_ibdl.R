@@ -22,7 +22,7 @@ fibdl_ibdl<- function(data){
               by="join") %>%
     dplyr::select(-join,-code_lac) %>%
     dplyr::rename("code_lac"="code_pe") %>%
-    filter(!(str_detect(commentaires_sep, "pas fiable"))) %>%
+    filter(!(str_detect(commentaires, "pas fiable"))) %>%
     ##
     group_by(id_campagne, datedebut, code_lac, pourcentage, value, nbr_uo) %>%
     mutate(nbr_uo_type = n()) %>%
