@@ -38,7 +38,7 @@ fibdl_checkof_listflor <- function(data){
         CheckOfTable::fcot_value_interval(data,
                                           c("ab"),
                                           mini=1,
-                                          maxi=400,
+                                          maxi=1000,
                                           table_orig)
       )
       step_3 <- step_3 %>%
